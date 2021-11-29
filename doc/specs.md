@@ -1,18 +1,29 @@
-Spécifications (en cours de mise ordre)
+# Spécifications (en cours de mise ordre)
 
-Verbatim est une application pour publier et chercher dans des corpus de grec ancien conforme au schéma XML/TEI/Epidoc.
+Verbatim est une application pour publier, chercher et annoter des corpus de grec ancien conforme au schéma XML/[TEI](https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html)/[Epidoc](http://epidoc.stoa.org/). Il sera en premier lieu dédié à l’oeuvre de Galien pour des recherches linguistiques, mais tout de suite conçu pour s’adapter à d’autres oeuvres, dont notamment, de la correspondance byzantine.
 
-* URL pérenne pour chaque découpage du texte : fichier / livre / chapitre / occurrence | page Kühn (cf. Athénée de Naucratis).
+## Fonctionnalités de base
 
+Ces fonctionnalités sont prioritaires et requises pour l’oeuvre de Galien.
 
-Pouvoir lire chaque texte avec une mise en valeur par changement de police (italique, surlignage, gras, couleurs) qui permet de distinguer des entités nommées ou des citations au sein du texte.
-    Lemmatisation du texte permettant d’effectuer une recherche au sein de tout le corpus ou du texte lu (pour Galien du traité ou d’une lettre en particulier)
-    Lien entre les personnes qui permet de cliquer sur une personne et de voir si par exemple elle écrit une lettre ou est mentionné dans une autre lettre
-    Moteur de recherche qui peut proposer à partir du lemme des suggestions pour les homonymes (définir si on recherche en grec ou en translitérant. Si oui, selon qu’elle norme ? Bon exemple, le modèle de Perseus ).
-    Un index pour chaque texte des personnes et des citations répliquer à un index global pour l’ensemble des textes. Si pas trop compliqué à coder, un index verborum memoribilum peut être intéressant comme complément.
-    Menu de navigation qui permet une recherche dans le texte ou dans le corpus global un lien vers l’index global et la page d’accueil et un menu déroulant pour des textes. Définir si les listes des personnes et des citations par texte sont ajoutées en dessus du texte ou sur une page tierce.
-    Possibilité de survoler un mot encodé et d’obtenir directement les informations disponibles dans l’XML. Exemple sur cette balise :
+* Doit pouvoir s’installer sur un hébergément mutualisé PHP à bas coût (ex : doctorant)
+* Possibilité de mise en parallèle de plusieurs éditions et traductions d’une même unité textuelle 
+* URL pérenne pour chaque découpage du texte : fichier / livre / chapitre / occurrence | page Kühn, conforme au patrons d’identification cts de Perseus (cf. [Athénée de Naucratis](https://digitalathenaeus.org/))
+* Système d’annotation au mot prêt d’une unité textuelle, indépendamment de l’édition ou la langue
+* Recherche plein texte lemmatisée du grec (fonctionnalité en cours de réflexion qui doit pouvoir permettre plusieurs approches selon les progrès des lemmatiseurs)
+* Navigation claire dans une oeuvre par la table des matières
+* Accueil et  WordPress pour ajouter des document rédigé autour de l’édition
+* Personnalisation XSLT et CSS pour adapter la présentation du texte en ligne à du balisage supplémentaire (ex: bulle au survol d’une oeuvre cité donnant un référence bibliographique complète)
 
-<bibl> <title type=“poetry” ref=”Theriaka"></title> <author> <name type=” poet” nymRef=”Nicander_of_Colophon"> </name> </author> Θηριακὰ </bibl>
+## Fonctionnalités supplémentaires
 
-Si on survole le mot Thêriaka sur le site, on pourra voir « Therriaka, poetry, written by Nicander of Colophon »
+D’autres fonctionnalités sont souhaitées et doivent être permises par l’architecture
+
+* Index des noms de personnes
+* Index des citations
+* Index des oeuvres
+* Index verborum memoribilum (???)
+
+## Question concrètes
+
+* Quelle norme de translitération pour chercher dans le grec ? Le BetaCode Perseus ?
