@@ -22,7 +22,7 @@ D’autres fonctionnalités sont souhaitées et doivent être permises par l’a
 * Index des noms de personnes
 * Index des citations
 * Index des œuvres citées
-* Index verborum memoribilum (???)
+* Index verborum memoribilum (index des mots rares définit comme moins de 3 apparitions dans la TLG)
 
 ## Question concrètes
 
