@@ -6,14 +6,14 @@ Verbatim est une application pour publier, chercher et annoter des corpus de gre
 
 Ces fonctionnalités sont prioritaires et requises pour l’œuvre de Galien.
 
-* Doit pouvoir s’installer sur un hébergément mutualisé PHP à bas coût (ex : doctorant)
+* Doit pouvoir s’installer sur un hébergement mutualisé PHP à bas coût (ex : doctorant)
 * Possibilité de mise en parallèle de plusieurs éditions et traductions d’une même unité textuelle 
 * URL pérenne pour chaque découpage du texte : fichier / livre / chapitre / occurrence | page Kühn, conforme au patrons d’identification cts de Perseus (cf. [Athénée de Naucratis](https://digitalathenaeus.org/))
-* Système d’annotation au mot prêt d’une unité textuelle, indépendamment de l’édition ou la langue
+* Système d’annotation au mot près d’une unité textuelle, indépendamment de l’édition ou de la langue
 * Recherche plein texte lemmatisée du grec (fonctionnalité en cours de réflexion qui doit pouvoir permettre plusieurs approches selon les progrès des lemmatiseurs)
 * Navigation claire dans une œuvre par la table des matières
-* Accueil personnalisable et textes rédigés auttour de l’édition dans l’esprit d’un WordPress
-* Personnalisation XSLT et CSS pour adapter la présentation du texte en ligne à du balisage supplémentaire (ex: bulle au survol d’une oeuvre cité donnant un référence bibliographique complète)
+* Accueil personnalisable et textes rédigés autour de l’édition dans l’esprit d’un WordPress
+* Personnalisation XSLT et CSS pour adapter la présentation du texte en ligne à du balisage supplémentaire (ex: bulle au survol d’une oeuvre citée donnant une référence bibliographique complète)
 
 ## Fonctionnalités supplémentaires
 
@@ -22,8 +22,8 @@ D’autres fonctionnalités sont souhaitées et doivent être permises par l’a
 * Index des noms de personnes
 * Index des citations
 * Index des œuvres citées
-* Index verborum memoribilum (index des mots rares définit comme moins de 3 apparitions dans la TLG)
+* Index verborum memorabilium (index des mots rares défini comme moins de 3 apparitions dans le TLG)
 
 ## Question concrètes
 
-* Quelle norme de translitération pour chercher dans le grec ? Le BetaCode Perseus ?
+* Quelle norme de translittération pour chercher dans le grec ? Le BetaCode Perseus ?
