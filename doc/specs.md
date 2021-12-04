@@ -1,4 +1,4 @@
-# Spécifications (en cours de mise ordre)
+# Spécifications (en cours de mise en ordre)
 
 Verbatim est une application pour publier, chercher et annoter des corpus de grec ancien conforme au schéma XML/[TEI](https://tei-c.org/release/doc/tei-p5-doc/en/html/REF-ELEMENTS.html)/[Epidoc](http://epidoc.stoa.org/). Il sera en premier lieu dédié à l’œuvre de Galien pour des recherches linguistiques, mais tout de suite conçu pour s’adapter à d’autres oeuvres, dont notamment, de la correspondance byzantine.
 
