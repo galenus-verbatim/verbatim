@@ -1,0 +1,66 @@
+:root {
+    --bg: #555550;
+    --bghi: #40403c;
+    --text: #eee;
+    --texthi: #afa;
+    --textlo: #aaa;
+    --textinv: #000;
+    --link: #9fb79f;
+    --bg2: #608060;
+    --text2: #000;
+    --text2hi: #fff;
+    --text2inv: #fff;
+    --bg3: #ddd;
+    --text3: #333;
+}
+
+body {
+    font-family: sans-serif;
+    background-color: var(--bg);
+    background-color: var(--text);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    padding: 2rem;
+}
+
+nav.tabs {
+    display: flex;
+    justify-content: flex-start;
+}
+
+nav.tabs a,
+nav.tabs {
+    background-color: var(--bg3);
+    color: var(--text3);
+}
+
+nav.tabs a {
+    text-decoration: none;
+    padding: 5px 0.5rem;
+}
+
+nav.tabs a.selected,
+nav.tabs a:hover {
+    background-color: var(--bg2);
+    color: var(--text2hi);
+    text-decoration: none;
+}
+
+.kwict {
+    padding-left: 15em;
+}
+
+.kwicl {
+    width: 30em;
+    display: inline-block;
+    text-align: right;
+    padding-right: 0.5em;
+}
+
+td.nb {
+    text-align: right;
+    padding-right: 1rem;
+}
