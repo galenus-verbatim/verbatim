@@ -1,17 +1,10 @@
 <?php
 /**
- * Part of verbapy https://github.com/galenus-verbatim/verbapy
+ * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-mb_internal_encoding("UTF-8");
-
-include_once(dirname(__DIR__) . '/teinte/php/autoload.php');
-
-use Oeuvres\Kit\{Sqlite,Xml};
-
-$pars = include(__DIR__ . "/pars.php");
-$pdo = Sqlite::open($pars['corpus.db']);
+include(__DIR__ . "/verbatim.php");
 $conc = "conc.php?q=";
 
 ?>
@@ -38,8 +31,8 @@ $conc = "conc.php?q=";
             <?php
 
 $sql = "SELECT orth, COUNT(orth) AS count FROM tok GROUP BY orth ORDER BY count DESC LIMIT 500";
-$qFreqs = $pdo->prepare($sql);
-$qForm = $pdo->prepare("
+$qFreqs = Verbatim::$pdo->prepare($sql);
+$qForm = Verbatim::$pdo->prepare("
     SELECT orth.form AS orth, lem.form AS lem 
     FROM orth, lem 
     WHERE orth.id = ? AND orth.lem = lem.id

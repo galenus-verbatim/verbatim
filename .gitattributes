@@ -1,4 +1,6 @@
 * text eol=lf
 
-# Sqlite files, truly binary and should not be modified.
+# binary files that git must not modified
 *.db binary
+*.png binary
+*.jpg binary

@@ -1,18 +1,12 @@
 <?php
 /**
- * Part of verbapy https://github.com/galenus-verbatim/verbapy
+ * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
+include(__DIR__ . "/verbatim.php");
 
-include_once(dirname(__DIR__) . '/teinte/php/autoload.php');
-
-use Oeuvres\Kit\{Sqlite,Xml};
-
-$pars = include(__DIR__ . "/pars.php");
-$pdo = Sqlite::open($pars['corpus.db']);
-
-mb_internal_encoding("UTF-8");
+use Oeuvres\Kit\{Xml};
 
 $q = null;
 if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
@@ -36,7 +30,7 @@ if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
 <?php
 
 foreach(array('lem', 'orth') as $field) {
-    $qForm = $pdo->prepare("SELECT id FROM $field WHERE form = ?");
+    $qForm = Verbatim::$pdo->prepare("SELECT id FROM $field WHERE form = ?");
     $qForm->execute(array($q));
     $res = $qForm->fetchAll();
     if (count($res)) break;
@@ -47,10 +41,10 @@ else if (!count($res)) {
     echo "$q, pas de documents trouvés.";
 }
 else {
-    $qDoc =  $pdo->prepare("SELECT * FROM doc WHERE id = ?");
+    $qDoc =  Verbatim::$pdo->prepare("SELECT * FROM doc WHERE id = ?");
 
     $formId = $res[0][0];
-    $qTok =  $pdo->prepare("SELECT * FROM tok WHERE $field = ? LIMIT 10000");
+    $qTok =  Verbatim::$pdo->prepare("SELECT * FROM tok WHERE $field = ? LIMIT 10000");
     $qTok->execute(array($formId));
     $lastDoc = -1;
     $html;
@@ -60,7 +54,7 @@ else {
             $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
             $lastDoc = $tok['doc'];
             $html = Xml::detag($doc['html']);
-            echo "<h4 class=\"kwict\">" . $doc['title'] . "</h4>";
+            echo "<h4>" . Verbatim::bibl($doc, $q) . "</h4>";
         }
         $start = $tok['offset'] - 50;
         if ($start < 0) $start = 0;

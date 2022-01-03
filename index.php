@@ -12,7 +12,7 @@
             <h1>Verbatim</h1>
             <p>Un moteur de recherche lemmatisé sur de textes en grec ancien.</p>
             <p>Chercher un mot ?</p>
-            <form action="table.php">
+            <form action="conc.php">
                 <input name="q" value="ὁ"/>
                 <button type="submit">Go</button>
             </form>
