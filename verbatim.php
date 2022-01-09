@@ -7,9 +7,12 @@
 
 mb_internal_encoding("UTF-8");
 
-include_once(dirname(__DIR__) . '/teinte/php/autoload.php');
+include_once(__DIR__ . '/php/autoload.php');
+
+use Oeuvres\Kit\Route;
 
 
+Verbatim::init();
 class Verbatim
 {
     static $pars;
@@ -28,16 +31,35 @@ class Verbatim
 
     static public function bibl($doc, $q)
     {
+        if (Route::$routed) $href = '%s?q=%s';
+        else $href = "doc.php?cts=%s&amp;q=%s";
         // parts
         preg_match('@\.(\d+(\.\d+)*)$@', $doc['identifier'], $matches);
         $no = $matches[1];
-        $href = "doc.php?cts=%s&amp;q=%s";
-        return '<a href="' . sprintf($href, $doc['identifier'], $q) . '">'
-        . '<em>' . $doc['title'] . '</em>' 
-        . ' (' . $no . ')'
-        . ', « ' . $doc['chapter'] . ' »'
-        . '</a>';
 
+        $line = '';
+        $line .= '<a href="' . sprintf($href, $doc['identifier'], $q) . '">';
+        $line .= 'Galien'; // TODO author
+        $line .= ', <em>' . $doc['title'] . '</em>';
+        if (isset($doc['book']) && isset($doc['chapter'])) {
+            $line .= ', ' . $doc['book'] . '.' . $doc['chapter'] . '';
+        }
+        else if (isset($doc['chapter'])) {
+            $line .= ', ' . $doc['chapter'] . '';
+        }
+        $line .= ' (';
+        $line .= $doc['edition'] . ' ';
+        if (isset($doc['volume']) && $doc['volume']) {
+            $line .= $doc['volume'] . '.';
+        }
+        if (isset($doc['pageto']) && $doc['pageto']) {
+            $line .= $doc['pagefrom'] . '-' . $doc['pageto'];
+        }
+        else {
+            $line .= $doc['pagefrom'];
+        }
+        $line .= ')';
+        $line .= '</a>';
+        return $line;
     }
 }
-Verbatim::init();

@@ -27,7 +27,9 @@ if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
                 <input name="q" value="<?= htmlspecialchars($q) ?>"/>
                 <button type="submit">Go</button>
             </form>
+
 <?php
+
 
 foreach(array('lem', 'orth') as $field) {
     $qForm = Verbatim::$pdo->prepare("SELECT id FROM $field WHERE form = ?");

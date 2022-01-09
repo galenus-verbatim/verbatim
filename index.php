@@ -1,21 +1,13 @@
-<html>
-    <head>
-        <meta charset="utf-8"/>
-        <title>Test moteur de recherche Sqlite</title>
-        <link rel="stylesheet" href="theme/verbatim.css"/>
-    </head>
-    <body>
-        <header>
-            <?php include(__DIR__ . "/tabs.php"); ?>
-        </header>
-        <main>
-            <h1>Verbatim</h1>
-            <p>Un moteur de recherche lemmatisé sur de textes en grec ancien.</p>
-            <p>Chercher un mot ?</p>
-            <form action="conc.php">
-                <input name="q" value="ὁ"/>
-                <button type="submit">Go</button>
-            </form>
-        </main>
-    </body>
-</html>
+<?php
+declare(strict_types=1);
+
+require_once(__DIR__ . "/php/autoload.php");
+
+use Oeuvres\Kit\Route;
+
+
+Route::get('/', 'welcome.php');
+Route::get('/conc', 'conc.php');
+Route::get('/table', 'table.php');
+Route::get('/$cts', 'doc.php', '@^/tlg@');
+Route::route('/404','404.php');

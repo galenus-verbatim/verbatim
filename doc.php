@@ -31,6 +31,7 @@ $qDoc->execute(array($cts));
 $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
 // test if not results
 if (!$doc) {
+    http_response_code(404);
     echo "<p>Pas de document trouvé pour l’identifiant cts : \"$cts\"</p>\n";
 }
 else {
