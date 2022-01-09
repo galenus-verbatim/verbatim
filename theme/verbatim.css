@@ -91,3 +91,33 @@ span.pb {
     color: var(--textlo);
     font-size: 75%;
 }
+
+/* doc.php */
+
+div.reader {
+    display: flex;
+}
+
+div.reader div.doc {
+    width: 40rem;
+}
+
+
+div.reader div.prev,
+div.reader div.next {
+    width: 5rem;
+}
+div.reader div.prev a,
+div.reader div.next a{
+    display: table-cell;
+    vertical-align:middle;
+    font-size: 10rem;
+    text-decoration: none;
+    color:#ccc;
+    height: 100%;
+    position: fixed;
+}
+div.reader div.prev a:hover,
+div.reader div.next a:hover {
+    background-color: #fff;
+}

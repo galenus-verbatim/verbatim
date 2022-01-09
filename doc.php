@@ -11,7 +11,14 @@ if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
 $cts = null;
 if (isset($_REQUEST['cts'])) $cts = trim($_REQUEST['cts']);
 
+use Oeuvres\Kit\Route;
+
+if (Route::$routed) $href = '%s?q=%s';
+else $href = "doc.php?cts=%s&amp;q=%s";
+
+
 ?>
+<!doctype html>
 <html>
     <head>
         <meta charset="utf-8"/>
@@ -23,18 +30,30 @@ if (isset($_REQUEST['cts'])) $cts = trim($_REQUEST['cts']);
             <?php include(__DIR__ . "/tabs.php"); ?>
         </header>
         <main>
-            <?php
+<?php
 // get document
 $sql = "SELECT * FROM doc WHERE identifier = ?";
 $qDoc = Verbatim::$pdo->prepare($sql);
 $qDoc->execute(array($cts));
 $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
-// test if not results
 if (!$doc) {
     http_response_code(404);
     echo "<p>Pas de document trouvé pour l’identifiant cts : \"$cts\"</p>\n";
 }
 else {
+echo '
+            <div class="reader">
+                <div class="prev">';
+if (isset($doc['prev']) && $doc['prev']) {
+    echo '<a href="' . sprintf($href, $doc['prev'], $q) . '">
+        <div>⟨</div>
+    <a>';
+}
+echo '
+                </div>
+                <div class="doc">
+                    ';
+
     echo "<h3>" . Verbatim::bibl($doc, $q) . "</h3>\n";
     $html = $doc['html'];
     // if a word to find, get lem_id or orth_id
@@ -66,11 +85,20 @@ else {
         echo $html;
     }
 }
-
-
-
+echo '
+                </div>
+                <div class="next">
+                    ';
+if (isset($doc['next']) && $doc['next']) {
+    echo '<a href="' . sprintf($href, $doc['next'], $q) . '">
+        <div>⟩</div>
+    </a>';
+}
+echo '
+                </div>
+            </div>
+';
 ?>
-
         </main>
     </body>
 </html>
