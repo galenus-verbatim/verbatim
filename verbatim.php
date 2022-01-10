@@ -29,18 +29,39 @@ class Verbatim
         self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
     }
 
-    static public function bibl($doc, $q)
+    static public function opus($opus)
+    {
+        $line = '';
+        $line .= $opus['author']; // TODO author
+        $line .= ', <em>' . $opus['title'] . '</em>';
+        $line .= ' (';
+        $line .= $opus['editor'];
+        if (isset($opus['volume']) && $opus['volume']) {
+            $line .= ' ' . $opus['volume'] . '.';
+        }
+        else {
+            $line .= ' ';
+        }
+        if (isset($opus['pageto']) && $opus['pageto']) {
+            $line .= $opus['pagefrom'] . '-' . $opus['pageto'];
+        }
+        else if (isset($opus['pagefrom']) && $opus['pagefrom']){
+            $line .= $opus['pagefrom'];
+        }
+        $line .= ')';
+        return $line;
+    }
+
+
+    static public function bibl($opus, $doc, $q)
     {
         if (Route::$routed) $href = '%s?q=%s';
         else $href = "doc.php?cts=%s&amp;q=%s";
         // parts
-        preg_match('@\.(\d+(\.\d+)*)$@', $doc['identifier'], $matches);
-        $no = $matches[1];
-
         $line = '';
         $line .= '<a href="' . sprintf($href, $doc['identifier'], $q) . '">';
         $line .= 'Galien'; // TODO author
-        $line .= ', <em>' . $doc['title'] . '</em>';
+        $line .= ', <em>' . $opus['title'] . '</em>';
         if (isset($doc['book']) && isset($doc['chapter'])) {
             $line .= ', ' . $doc['book'] . '.' . $doc['chapter'] . '';
         }
@@ -48,9 +69,10 @@ class Verbatim
             $line .= ', ' . $doc['chapter'] . '';
         }
         $line .= ' (';
-        $line .= $doc['edition'] . ' ';
-        if (isset($doc['volume']) && $doc['volume']) {
-            $line .= $doc['volume'] . '.';
+        $line .= $opus['editor'] . ' ';
+        // TODO, something here for opus on more than one volume
+        if (isset($opus['volume']) && $opus['volume']) {
+            $line .= $opus['volume'] . '.';
         }
         if (isset($doc['pageto']) && $doc['pageto']) {
             $line .= $doc['pagefrom'] . '-' . $doc['pageto'];

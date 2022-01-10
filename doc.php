@@ -29,7 +29,7 @@ else $href = "doc.php?cts=%s&amp;q=%s";
         <header>
             <?php include(__DIR__ . "/tabs.php"); ?>
         </header>
-        <main>
+        <div class="container" id="page">
 <?php
 // get document
 $sql = "SELECT * FROM doc WHERE identifier = ?";
@@ -41,20 +41,47 @@ if (!$doc) {
     echo "<p>Pas de document trouvé pour l’identifiant cts : \"$cts\"</p>\n";
 }
 else {
-echo '
-            <div class="reader">
-                <div class="prev">';
-if (isset($doc['prev']) && $doc['prev']) {
-    echo '<a href="' . sprintf($href, $doc['prev'], $q) . '">
-        <div>⟨</div>
-    <a>';
-}
-echo '
-                </div>
-                <div class="doc">
-                    ';
+    $sql = "SELECT * FROM opus WHERE id = ?";
+    $qOpus = Verbatim::$pdo->prepare($sql);
+    $qOpus->execute(array($doc['opus']));
+    $opus = $qOpus->fetch(PDO::FETCH_ASSOC);
 
-    echo "<h3>" . Verbatim::bibl($doc, $q) . "</h3>\n";
+    /*
+    if (isset($doc['prev']) && $doc['prev']) {
+        echo '<a href="' . sprintf($href, $doc['prev'], $q) . '">
+            <div>⟨</div>
+        <a>';
+    }
+    */
+    /*
+    if (isset($doc['next']) && $doc['next']) {
+        echo '<a href="' . sprintf($href, $doc['next'], $q) . '">
+            <div>⟩</div>
+        </a>';
+    }
+    */
+
+    echo '
+            <div class="reader">
+                <div class="toc">';
+    if (isset($opus['toc']) && $opus['toc']) {
+
+
+        echo preg_replace(
+            '@<li>(\s*.*?href="'. $doc['identifier'] .'")@',
+            '<li class="selected">$1',
+            $opus['toc']
+        );
+    }
+    echo '
+                </div>';
+
+echo '
+                <div class="doc">';
+    echo '<h1 class="title">' . Verbatim::bibl($opus, $doc, $q) . "</h1>\n";
+    echo '
+                    <div class="text">';
+
     $html = $doc['html'];
     // if a word to find, get lem_id or orth_id
     $form = array();
@@ -86,20 +113,12 @@ echo '
     }
 }
 echo '
-                </div>
-                <div class="next">
-                    ';
-if (isset($doc['next']) && $doc['next']) {
-    echo '<a href="' . sprintf($href, $doc['next'], $q) . '">
-        <div>⟩</div>
-    </a>';
-}
-echo '
+                    </div>
                 </div>
             </div>
 ';
 ?>
-        </main>
+        </div>
     </body>
 </html>
 

@@ -1,29 +1,31 @@
 :root {
-    --bg: #555550;
-    --bghi: #40403c;
-    --text: #eee;
+    --bg: #fff;
+    --bghi: #efb93f;
+    --bglo: #ead1b9;
+    --text: #000;
     --texthi: #afa;
-    --textlo: #aaa;
+    --textlo: #666;
     --textinv: #000;
-    --link: #9fb79f;
-    --bg2: #608060;
-    --text2: #000;
+    --link: #e09143;
+    --bg2: #454e5c;
+    --text2: #fff;
     --text2hi: #fff;
     --text2inv: #fff;
-    --bg3: #ddd;
-    --text3: #333;
+    --bg3: #f0f0f0;
+    --text3: #666;
 }
 
 body {
     font-family: sans-serif;
-    background-color: var(--bg);
-    background-color: var(--text);
+    background-color: var(--bglo);
+    color: var(--text);
     margin: 0;
     padding: 0;
 }
 
-main {
-    padding: 2rem;
+
+a {
+    color: var(--link);
 }
 
 nav.tabs {
@@ -33,8 +35,8 @@ nav.tabs {
 
 nav.tabs a,
 nav.tabs {
-    background-color: var(--bg3);
-    color: var(--text3);
+    background-color: var(--bg2);
+    color: var(--text2);
 }
 
 nav.tabs a {
@@ -82,26 +84,122 @@ div.lg div.l {
     margin: 0;
 }
 
-span.pb::before {
-    content: '';
-    display: block;
-}
 
-span.pb {
-    color: var(--textlo);
-    font-size: 75%;
-}
 
 /* doc.php */
 
+#page {
+    margin: 2rem 2rem;
+    position: relative;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+nav ul ul {
+    margin-left: 1rem ;
+}
+nav a {
+    text-decoration: none;
+}
+
+
+span.pb[data-page]::before {
+    color: var(--textlo);
+    content: " [p." attr(data-page) "]";
+    display: block;
+    text-align: right;
+}
+
+wbr.milestone[data-n]::after {
+    content: " (" attr(data-n) ") ";
+    display: inline;
+    margin: 1em;
+}
+
+
+span.lb::before {
+    white-space:pre;
+    content: '\A';
+}
+
+span.pb[data-line]::after,
+span.lb[data-line]::after {
+    text-indent: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+    display: inline-block;
+    content: attr(data-line) " ";
+    width: 2rem;
+    color: var(--textlo);
+}
+
+
 div.reader {
+    position: relative;
     display: flex;
 }
 
-div.reader div.doc {
-    width: 40rem;
+div.reader div.toc {
+    background-color: var(--bg3);
+    color: var(--text3);
+    padding: 1rem 0 1rem 1rem;
 }
 
+div.toc a {
+    display: block;
+    padding: 0.1rem 1rem;
+}
+
+div.toc a:hover {
+    background-color: var(--bg);
+    color: var(--text);
+}
+
+div.toc li.selected {
+    background-color: var(--bg);
+    color: var(--text);
+}
+li.selected a {
+    color: inherit;
+}
+
+li.selected a:hover {
+    color: var(--link);
+}
+
+
+div.doc {
+    width: 40rem;
+    background-color: var(--bg);
+    color: var(--text);
+    position: relative;
+}
+
+div.doc div.text {
+    padding: 1rem;
+}
+
+/* generated title */
+h1.title {
+    background-color: var(--link);
+    color: var(--bg);
+    margin: 0;
+    padding: 0.5rem 2rem;
+    text-align: center;
+    font-size: 115%;
+    font-weight: 500;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+}
+
+h1 a {
+    color: inherit;
+    text-decoration: none;
+}
 
 div.reader div.prev,
 div.reader div.next {
