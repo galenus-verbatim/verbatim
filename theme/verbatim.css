@@ -1,9 +1,9 @@
 :root {
     --bg: #fff;
-    --bghi: #efb93f;
+    --text: #333;
+    --bghi: #e09143;
+    --texthi: #fff;
     --bglo: #ead1b9;
-    --text: #000;
-    --texthi: #afa;
     --textlo: #666;
     --textinv: #000;
     --link: #e09143;
@@ -172,7 +172,7 @@ li.selected a:hover {
 
 
 div.doc {
-    width: 40rem;
+    width: 47rem;
     background-color: var(--bg);
     color: var(--text);
     position: relative;
@@ -218,4 +218,38 @@ div.reader div.next a{
 div.reader div.prev a:hover,
 div.reader div.next a:hover {
     background-color: #fff;
+}
+
+/** biblio */
+
+div.opus {
+    color: var(--text);
+}
+.doc a,
+.opus a {
+    display: block;
+    text-decoration: none;
+    padding: 0.1rem 1rem;
+    color: inherit;
+    font-weight: normal;
+}
+div.opus a:hover {
+    display: block;
+    background-color: var(--bghi);
+    color: var(--texthi);
+}
+
+/** Concordance */
+
+div.conc {
+    background-color: var(--bg);
+}
+div.conc .doc {
+    margin: 0.5rem 0;
+    background-color: var(--bghi);
+    color: var(--texthi);
+}
+
+.doc a:hover {
+    color: var(--text);
 }

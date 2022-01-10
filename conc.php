@@ -6,7 +6,8 @@
  */
 include(__DIR__ . "/verbatim.php");
 
-use Oeuvres\Kit\{Xml};
+use Oeuvres\Kit\{Route, Xml};
+
 
 $q = null;
 if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
@@ -22,11 +23,13 @@ if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
         <header>
             <?php include(__DIR__ . "/tabs.php"); ?>
         </header>
-        <main>
+        <div class="container" id="page">
             <form>
                 <input name="q" value="<?= htmlspecialchars($q) ?>"/>
                 <button type="submit">Go</button>
             </form>
+            <div class="reader">
+                <div class="conc">
 
 <?php
 
@@ -44,6 +47,7 @@ else if (!count($res)) {
 }
 else {
     $qDoc =  Verbatim::$pdo->prepare("SELECT * FROM doc WHERE id = ?");
+    $qOpus = Verbatim::$pdo->prepare("SELECT * FROM opus WHERE id = ?");
 
     $formId = $res[0][0];
     $qTok =  Verbatim::$pdo->prepare("SELECT * FROM tok WHERE $field = ? LIMIT 10000");
@@ -54,9 +58,23 @@ else {
         if ($tok['doc'] != $lastDoc) {
             $qDoc->execute(array($tok['doc']));
             $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
+
+            $qOpus->execute(array($doc['opus']));
+            $opus = $qOpus->fetch(PDO::FETCH_ASSOC);
+            if (Route::$routed) $href = '%s?q=%s';
+            else $href = "doc.php?cts=%s&amp;q=%s";
+            echo '<h4 class="doc">'
+             . '<a href="' . sprintf($href, $doc['identifier'], $q) . '">'
+             . Verbatim::bibl($opus, $doc)
+             . "</a>"
+             . "</h4>\n";
+
+
             $lastDoc = $tok['doc'];
+
+
+
             $html = Xml::detag($doc['html']);
-            echo "<h4>" . Verbatim::bibl($doc, $q) . "</h4>";
         }
         $start = $tok['offset'] - 50;
         if ($start < 0) $start = 0;
@@ -71,7 +89,9 @@ else {
 
 }
 ?>
-        </main>
+                </div>
+            </div>
+        </div>
     </body>
 </html>
 

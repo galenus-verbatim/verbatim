@@ -49,7 +49,6 @@ while ($opus = $qOpus->fetch(PDO::FETCH_ASSOC)) {
     . "</a></div>\n";
 }
 ?>
-            </div>
         </div>
     </body>
 </html>

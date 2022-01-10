@@ -32,7 +32,7 @@ class Verbatim
     static public function opus($opus)
     {
         $line = '';
-        $line .= $opus['author']; // TODO author
+        $line .= $opus['author'];
         $line .= ', <em>' . $opus['title'] . '</em>';
         $line .= ' (';
         $line .= $opus['editor'];
@@ -53,14 +53,11 @@ class Verbatim
     }
 
 
-    static public function bibl($opus, $doc, $q)
+    static public function bibl($opus, $doc)
     {
-        if (Route::$routed) $href = '%s?q=%s';
-        else $href = "doc.php?cts=%s&amp;q=%s";
         // parts
         $line = '';
-        $line .= '<a href="' . sprintf($href, $doc['identifier'], $q) . '">';
-        $line .= 'Galien'; // TODO author
+        $line .= $opus['author'];
         $line .= ', <em>' . $opus['title'] . '</em>';
         if (isset($doc['book']) && isset($doc['chapter'])) {
             $line .= ', ' . $doc['book'] . '.' . $doc['chapter'] . '';
@@ -81,7 +78,6 @@ class Verbatim
             $line .= $doc['pagefrom'];
         }
         $line .= ')';
-        $line .= '</a>';
         return $line;
     }
 }

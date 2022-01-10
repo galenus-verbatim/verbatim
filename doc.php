@@ -68,8 +68,14 @@ else {
 
 
         echo preg_replace(
-            '@<li>(\s*.*?href="'. $doc['identifier'] .'")@',
-            '<li class="selected">$1',
+            array(
+                '@<li>(\s*.*?href="'. $doc['identifier'] .'")@',
+                '@href="[^"]+@',
+            ),
+            array(
+                '<li class="selected">$1',
+                '$0?q=' . $q,
+            ),
             $opus['toc']
         );
     }
