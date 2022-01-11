@@ -23,6 +23,84 @@ body {
     padding: 0;
 }
 
+*,
+::after,
+::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+
+
+/* Global layout */
+
+html,
+body {
+    height: 100%;
+    position: relative;
+}
+
+#header {
+    background-color: var(--bg2);
+    color: var(--text2);
+}
+
+#footer {
+    background-color: var(--bg2);
+    color: var(--text2);
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+}
+
+#header div,
+#footer div {
+    padding: 1rem;
+}
+
+#page {
+    position: relative;
+    margin: 2rem 2rem;
+}
+
+#body {
+    position: relative;
+    display: flex;
+}
+
+#aside {
+    background-color: var(--bg3);
+    color: var(--text3);
+    padding: 1rem 0 1rem 1rem;
+}
+
+#main {
+    background-color: var(--bg);
+    color: var(--text);
+    position: relative;
+}
+
+#main > header {
+    padding: 1rem;
+    background-color: var(--link);
+    color: var(--bg);
+    position: relative;
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+#main > header h1 {
+    margin: 0;
+}
+
+main article {
+    padding: 1rem;
+}
+
+
+/** simple tags */
 
 a {
     color: var(--link);
@@ -86,12 +164,9 @@ div.lg div.l {
 
 
 
+
 /* doc.php */
 
-#page {
-    margin: 2rem 2rem;
-    position: relative;
-}
 
 nav ul {
     margin: 0;

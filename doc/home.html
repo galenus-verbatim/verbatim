@@ -6,25 +6,37 @@
         <link rel="stylesheet" href="../theme/verbatim.css"/>
         <style>
 /**
-home page layout, use flexbox 
+home page layout, use flexbox
 https://css-tricks.com/snippets/css/a-guide-to-flexbox/
 */
         </style>
     </head>
     <body>
         <header id="header">
-Une tête     
+            <div>
+Une tête
+            </div>
         </header>
-        <div class="container">
-            <aside id="aside">
-Un flanc
-            </aside>
-            <main>
-                <h1>Je suis un monopode</h1>
-            </main>
+        <div class="container" id="page">
+            <div id="body">
+                <aside id="aside">
+                    Un flanc
+                </aside>
+                <main id="main">
+                    <header>
+                        <h1>Je suis un monopode</h1>
+                    </header>
+                    <article>
+                        <p>asymétrique</p>
+                    </article>
+                </main>
+
+            </div>
         </div>
         <footer id="footer">
-Un pied  
+            <div>
+Un pied
+            </div>
         </footer>
     </body>
 </html>
