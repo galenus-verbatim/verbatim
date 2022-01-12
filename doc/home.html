@@ -5,53 +5,10 @@
         <title>doc</title>
         <link rel="stylesheet" href="../theme/verbatim.css"/>
         <style>
-        .navigation {
-        display:flex;
-        flex-flow:row wrap;
-        fustify-content: flex-end;
-        list-style: none;
-        margin: 0;
-        background: black;
-        }
-        .navigationa {
-         text-decoration: none;
-         display: block;
-         padding: 1em;
-         color: white;
-        }
-        .navigation a:hover{
-         background: ##696969;
-        }
-        
-        @media all and (max-width: 800px) {
-  .navigation {
-    justify-content: space-around;
-  }
-}
-
-@media all and (max-width: 600px) {
-  .navigation {
-    flex-flow: column wrap;
-    padding: 0;
-  }
-  .navigation a { 
-    text-align: center; 
-    padding: 10px;
-    border-top: 1px solid rgba(255, 255, 255,0.3); 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
-  }
-  .navigation li:last-of-type a {
-    border-bottom: none;
-  }
-}
-/**
-home page layout, use flexbox
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-*/
+    /**home page layout, use flexbox https://css-tricks.com/snippets/css/a-guide-to-flexbox/*/
         </style>
     </head>
     <body>
-            
                 <header id=" page-header">
                     <a href="."><h1>Galenus Verbatim</h1><img src=""  width="x" height="x"> <h1>Γαληνὸς κατὰ λέξιν</h1></a>
                     <h2>Naviger dans le texte de Galien de Pergame, éd. Kühn (1821-1833) & al.</h2>
@@ -59,7 +16,7 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             <ul class="navigation">
                 <li><h3><a href="https://galenus-verbatim.huma-num.fr/a-propos-avertissement//">Á propos/avertissement</a></h3></li> 
                 <li><h3><a href="">Listes des traités Pseudo-galéniques</a></h3></li> 
-                <li><h3><a href>Vers le Disctionaire de la médecine selon Galiien de Pergame</a></h3></li>
+                <li><h3><a href="">Vers le Disctionaire de la médecine selon Galiien de Pergame</a></h3></li>
             </ul>
         
         
@@ -67,6 +24,14 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
             <div id="body">
                 <aside id="aside">
                    <h4>Ouvrir un traité</h4>
+                    /**structure menu et option de recherche>
+                  <h5>Gallien<h5>
+                      <ol class="treaty">
+                          <li><a href="*">texte 1</a></li>
+                          <li><a href="*">texte 2</a></li>
+                          <li><a href="*">texte 3</a></li>
+                          <li><a href="*">texte 4</a></li>
+                          <li>...</li>
                 </aside>
                 <main id="main>
                     <article>
