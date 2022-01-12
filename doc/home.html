@@ -5,13 +5,6 @@
         <title>doc</title>
         <link rel="stylesheet" href="../theme/verbatim.css"/>
         <style>
-/**
-home page layout, use flexbox
-https://css-tricks.com/snippets/css/a-guide-to-flexbox/
-*/
-        </style>
-    </head>
-    <style>
         .navigation {
         display:flex;
         flex-flow:row wrap;
@@ -29,7 +22,34 @@ https://css-tricks.com/snippets/css/a-guide-to-flexbox/
         .navigation a:hover{
          background: ##696969;
         }
-    <style>
+        
+        @media all and (max-width: 800px) {
+  .navigation {
+    justify-content: space-around;
+  }
+}
+
+@media all and (max-width: 600px) {
+  .navigation {
+    flex-flow: column wrap;
+    padding: 0;
+  }
+  .navigation a { 
+    text-align: center; 
+    padding: 10px;
+    border-top: 1px solid rgba(255, 255, 255,0.3); 
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1); 
+  }
+  .navigation li:last-of-type a {
+    border-bottom: none;
+  }
+}
+/**
+home page layout, use flexbox
+https://css-tricks.com/snippets/css/a-guide-to-flexbox/
+*/
+        </style>
+    </head>
     <body>
             
                 <header id=" page-header">
