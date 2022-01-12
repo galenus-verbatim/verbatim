@@ -17,8 +17,13 @@ class Verbatim
 {
     static $pars;
     static $pdo;
+    static $bibNorm;
     static public function init()
     {
+        if (file_exists($file = __DIR__ . '/BibNorm.php')) {
+            include_once($file);
+            self::$bibNorm = true;
+        }
         self::$pars = include(__DIR__ . "/pars.php");
         $dsn = "sqlite:" . self::$pars['corpus.db'];
         self::$pdo = new PDO($dsn, null, null, array(
@@ -31,22 +36,22 @@ class Verbatim
 
     static public function opus($opus)
     {
+        if (self::$bibNorm) { // some local rewriting
+            BibNorm::opus($opus);
+        }
         $line = '';
-        $line .= $opus['author'];
-        $line .= ', <em>' . $opus['title'] . '</em>';
+        $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
+        $line .= ', <em class="capitulum">' . $opus['titulus'] . '</em>';
         $line .= ' (';
-        $line .= $opus['editor'];
-        if (isset($opus['volume']) && $opus['volume']) {
-            $line .= ' ' . $opus['volume'] . '.';
+        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span>';
+        if (isset($opus['volumen']) && $opus['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</volumen>';
         }
-        else {
-            $line .= ' ';
+        if (isset($opus['pagad']) && $opus['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $opus['pagde'] . '-' . $opus['pagad'] . '</span>';
         }
-        if (isset($opus['pageto']) && $opus['pageto']) {
-            $line .= $opus['pagefrom'] . '-' . $opus['pageto'];
-        }
-        else if (isset($opus['pagefrom']) && $opus['pagefrom']){
-            $line .= $opus['pagefrom'];
+        else if (isset($opus['pagde']) && $opus['pagde']){
+            $line .= ', <span class="pagina">p. ' . $opus['pagde'] . '</span>';
         }
         $line .= ')';
         return $line;
@@ -55,27 +60,34 @@ class Verbatim
 
     static public function bibl($opus, $doc)
     {
+        if (self::$bibNorm) { // some local rewriting
+            BibNorm::opus($opus);
+            BibNorm::doc($doc);
+        }
         // parts
         $line = '';
-        $line .= $opus['author'];
-        $line .= ', <em>' . $opus['title'] . '</em>';
-        if (isset($doc['book']) && isset($doc['chapter'])) {
-            $line .= ', ' . $doc['book'] . '.' . $doc['chapter'] . '';
+        $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
+        $line .= ', <em class="capitulum">' . $opus['titulus'] . '</em>';
+        if (isset($doc['liber']) && isset($doc['capitulum'])) {
+            $line .= ', ' . $doc['liber'] . '.' . $doc['capitulum'] . '';
         }
-        else if (isset($doc['chapter'])) {
-            $line .= ', ' . $doc['chapter'] . '';
+        else if (isset($doc['capitulum'])) {
+            $line .= ', ' . $doc['capitulum'] . '';
         }
         $line .= ' (';
-        $line .= $opus['editor'] . ' ';
-        // TODO, something here for opus on more than one volume
-        if (isset($opus['volume']) && $opus['volume']) {
-            $line .= $opus['volume'] . '.';
+        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span> ';
+        // if opus on more than one volume
+        if (isset($doc['volumen']) && $doc['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>' . '.';
         }
-        if (isset($doc['pageto']) && $doc['pageto']) {
-            $line .= $doc['pagefrom'] . '-' . $doc['pageto'];
+        else if (isset($opus['volumen']) && $opus['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</span>' . '.';
         }
-        else {
-            $line .= $doc['pagefrom'];
+        if (isset($doc['pagad']) && $doc['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+        }
+        else if (isset($doc['pagde']) && $doc['pagde']) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
         }
         $line .= ')';
         return $line;

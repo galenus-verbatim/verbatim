@@ -64,7 +64,7 @@ else {
             if (Route::$routed) $href = '%s?q=%s';
             else $href = "doc.php?cts=%s&amp;q=%s";
             echo '<h4 class="doc">'
-             . '<a href="' . sprintf($href, $doc['identifier'], $q) . '">'
+             . '<a href="' . sprintf($href, $doc['clavis'], $q) . '">'
              . Verbatim::bibl($opus, $doc)
              . "</a>"
              . "</h4>\n";
@@ -76,14 +76,14 @@ else {
 
             $html = Xml::detag($doc['html']);
         }
-        $start = $tok['offset'] - 50;
+        $start = $tok['charde'] - 50;
         if ($start < 0) $start = 0;
         echo "<div><span class=\"kwicl\">";
-        echo mb_substr($html, $start, $tok['offset'] - $start);
+        echo mb_substr($html, $start, $tok['charde'] - $start);
         echo "</span>";
-        echo "<mark>" . mb_substr($html, $tok['offset'], $tok['length']) . "</mark>";
+        echo "<mark>" . mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']) . "</mark>";
         $len = 50;
-        echo mb_substr($html, $tok['offset']+$tok['length'], $len);
+        echo mb_substr($html, $tok['charad'], $len);
         echo "</div>\n";
     }
 

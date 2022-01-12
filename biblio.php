@@ -20,6 +20,7 @@ include(__DIR__ . "/verbatim.php");
         </header>
         <div id="page" class="container">
             <div class="doc">
+                <p> </p>
 
 <?php
 
@@ -41,14 +42,14 @@ while ($opus = $qOpus->fetch(PDO::FETCH_ASSOC)) {
     $qDoc->execute(array($opus['id']));
     $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
 
-    if(!$doc['identifier']) echo "<h1>".$opus['identifier']."</h1>";
-
     echo '<div class="opus"><a href="'
-    . $doc['identifier'] . '">'
+    . $doc['clavis'] . '">'
     . Verbatim::opus($opus)
     . "</a></div>\n";
 }
 ?>
+                <p> </p>
+            </div>
         </div>
     </body>
 </html>

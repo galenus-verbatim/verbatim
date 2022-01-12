@@ -32,7 +32,7 @@ else $href = "doc.php?cts=%s&amp;q=%s";
         <div class="container" id="page">
 <?php
 // get document
-$sql = "SELECT * FROM doc WHERE identifier = ?";
+$sql = "SELECT * FROM doc WHERE clavis = ?";
 $qDoc = Verbatim::$pdo->prepare($sql);
 $qDoc->execute(array($cts));
 $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
@@ -69,7 +69,7 @@ else {
 
         echo preg_replace(
             array(
-                '@<li>(\s*.*?href="'. $doc['identifier'] .'")@',
+                '@<li>(\s*.*?href="'. $doc['clavis'] .'")@',
                 '@href="[^"]+@',
             ),
             array(
@@ -106,11 +106,11 @@ echo '
         $qTok->execute(array($formId));
         $start = 0;
         while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
-            echo mb_substr($html, $start, $tok['offset'] - $start);
+            echo mb_substr($html, $start, $tok['charde'] - $start);
             echo "<mark>";
-            echo mb_substr($html, $tok['offset'], $tok['length']);
+            echo mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']);
             echo "</mark>";
-            $start = $tok['offset'] + $tok['length'];
+            $start = $tok['charad'];
         }
         echo mb_substr($html, $start, mb_strlen($html) - $start);
     }

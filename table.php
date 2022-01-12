@@ -23,6 +23,10 @@ else $href = "conc.php?q=";
         <header>
             <?php include(__DIR__ . "/tabs.php"); ?>
         </header>
+        <div id="page" class="container">
+            <div class="doc">
+                <p> </p>
+
         <main>
             <table>
                 <thead>
@@ -51,9 +55,9 @@ while ($freq = $qFreqs->fetch(PDO::FETCH_ASSOC)) {
     $qForm->execute(array($orthId));
     $forms = $qForm->fetch(PDO::FETCH_ASSOC);
     echo "\n<tr>"
-    . "\n  <td><a href=\"" . $href . $forms['orth'] . "\">" .  $forms['orth'] . "</a></td>"
+    . "\n  <td class=\"orth\"><a href=\"" . $href . $forms['orth'] . "\">" .  $forms['orth'] . "</a></td>"
     . "\n  <td class=\"nb\">" . number_format($count, 0, ',', ' ') . "</td>"
-    . "\n  <td><a href=\"" . $href . $forms['lem'] . "\">" . $forms['lem'] . "</a></td>"
+    . "\n  <td class=\"lem\"><a href=\"" . $href . $forms['lem'] . "\">" . $forms['lem'] . "</a></td>"
     . "\n</tr>";
 }
 
@@ -62,6 +66,9 @@ while ($freq = $qFreqs->fetch(PDO::FETCH_ASSOC)) {
                 </tbody>
             </table>
         </main>
+                <p> </p>
+            </div>
+        </div>
     </body>
 </html>
 
