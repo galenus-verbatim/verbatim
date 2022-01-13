@@ -2,5 +2,6 @@
 
 # binary files that git must not modified
 *.db binary
+*.pdf binary
 *.png binary
 *.jpg binary

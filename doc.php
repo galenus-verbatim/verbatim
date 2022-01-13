@@ -64,7 +64,7 @@ else {
     echo '
             <div class="reader">
                 <div class="toc">';
-    if (isset($opus['toc']) && $opus['toc']) {
+    if (isset($opus['nav']) && $opus['nav']) {
 
 
         echo preg_replace(
@@ -76,7 +76,7 @@ else {
                 '<li class="selected">$1',
                 '$0?q=' . $q,
             ),
-            $opus['toc']
+            $opus['nav']
         );
     }
     echo '

@@ -34,14 +34,14 @@ class Verbatim
         self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
     }
 
-    static public function opus($opus)
+    static public function opus(&$opus)
     {
         if (self::$bibNorm) { // some local rewriting
             BibNorm::opus($opus);
         }
         $line = '';
         $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
-        $line .= ', <em class="capitulum">' . $opus['titulus'] . '</em>';
+        $line .= ', <em class="titulus">' . $opus['titulus'] . '</em>';
         $line .= ' (';
         $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span>';
         if (isset($opus['volumen']) && $opus['volumen']) {
@@ -57,8 +57,18 @@ class Verbatim
         return $line;
     }
 
+    static public function num(&$doc)
+    {
+        $num = array();
+        foreach (array('liber', 'capitulum', 'sectio') as $clavis) {
+            if (!isset($doc[$clavis])) continue;
+            if (!$doc[$clavis]) continue;
+            $num[] = $doc[$clavis];
+        }
+        return implode('.', $num);
+    }
 
-    static public function bibl($opus, $doc)
+    static public function bibl(&$opus, &$doc)
     {
         if (self::$bibNorm) { // some local rewriting
             BibNorm::opus($opus);
@@ -67,23 +77,23 @@ class Verbatim
         // parts
         $line = '';
         $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
-        $line .= ', <em class="capitulum">' . $opus['titulus'] . '</em>';
-        if (isset($doc['liber']) && isset($doc['capitulum'])) {
-            $line .= ', ' . $doc['liber'] . '.' . $doc['capitulum'] . '';
-        }
-        else if (isset($doc['capitulum'])) {
-            $line .= ', ' . $doc['capitulum'] . '';
-        }
+        $line .= ', <em class="titulus">' . $opus['titulus'] . '</em>';
+        $num = self::num($doc);
+        if ($num) $line .= ', ' . $num;
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span> ';
+        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span>';
         // if opus on more than one volume
         if (isset($doc['volumen']) && $doc['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>' . '.';
+            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
         }
         else if (isset($opus['volumen']) && $opus['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</span>' . '.';
+            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</span>';
         }
-        if (isset($doc['pagad']) && $doc['pagad']) {
+        // a bug, but could be found
+        if (isset($doc['pagad']) && $doc['pagad'] && (isset($doc['pagde']) || !$doc['pagde'])) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagad'] . '</span>';
+        }
+        else if (isset($doc['pagad']) && $doc['pagad']) {
             $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
         }
         else if (isset($doc['pagde']) && $doc['pagde']) {
