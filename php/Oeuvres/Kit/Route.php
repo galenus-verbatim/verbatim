@@ -18,6 +18,12 @@ Route::init();
 class Route {
     /** root directory of the app = directory of index.php */
     static $php_dir;
+    /** Default php template */
+    static $template;
+    /** An html file to include as main */
+    static $main_inc;
+    /** A file to include */
+    static $main_contents;
     /** Path relative to the root app */
     static $url_request;
     /** Split of url parts */
@@ -39,73 +45,121 @@ class Route {
         self::$url_request = $url_request;
         self::$url_parts = explode('/', ltrim($url_request, '/'));
     }
-    public static function get($route, $php, $re=null)
+    public static function get($route, $php, $pars=null)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-            self::route($route, $php, $re);
+            self::route($route, $php, $pars);
         }
     }
-    public static function post($route, $php, $re=null)
+    public static function post($route, $php, $pars=null)
     {
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-            self::route($route, $php, $re);
+            self::route($route, $php, $pars);
         }
     }
 
-    public static function route($route, $php, $re=null)
+    /**
+     * Populate a page with content
+     */
+    public static function main()
+    {
+        echo Route::$main_contents;
+        if (function_exists('main')) {
+            call_user_func('main');
+        }
+        // a content to include here 
+        else if (Route::$main_inc) {
+            include_once(Route::$main_inc);
+        }
+    }
+
+    public static function title()
+    {
+        if (function_exists('title')) {
+            call_user_func('title');
+        }
+    }
+
+
+    public static function route($route, $file, $pars=null)
     {
         // the catchall
         if ($route == "/404") {
-            self::$routed = true;
-            include_once(self::$php_dir . "$php");
-            exit();
+            http_response_code(404);
         }
-        // simple path
-        if ($route == self::$url_request) {
-            self::$routed = true;
-            include_once(self::$php_dir . "$php");
-            exit();
-        }
-        // special case, a route with a variable and no prefix, needs a regex
-        $match = false;
 
-        if (!$re);
-        else if(!preg_match($re, self::$url_request)) {
-            return;
-        }
+        // check route as a regex
         else {
-            $match = true;
-        }
-
-
-
-        // route may contain variables
-
-
-        $route_parts = explode('/', ltrim($route, '/'));
-        if (count($route_parts) != count(self::$url_parts)) {
-            return;
-        }
-        for ($i = 0; $i < count($route_parts); $i++) {
-            $rp = $route_parts[$i];
-            if (preg_match("/^[$]/", $rp)) {
-                $var = ltrim($rp, '$');
-                if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                    // test if already exists ?
-                    $_POST[$var] = self::$url_parts[$i];
-                }
-                else {
-                    $_GET[$var] = self::$url_parts[$i];
-                }
-                $_REQUEST[$var] = self::$url_parts[$i];
-            }
-            else if ($route_parts[$i] != self::$url_parts[$i]) {
+            $route_parts = explode('/', ltrim($route, '/'));
+            // too long url
+            if (count($route_parts) != count(self::$url_parts)) {
                 return;
             }
+            // test if path is matching
+            for ($i = 0; $i < count($route_parts); $i++) {
+                $search = '/^'.$route_parts[$i].'$/';
+                if(!preg_match($search, self::$url_parts[$i])) {
+                    return;
+                }
+            }
+        }
+        // rewrite file destination according to $route url
+        preg_match('@'.$route.'@', self::$url_request, $route_match);
+        $file = self::replace($file, $route_match);
+        $file = self::$php_dir . $file;
+        // file not found, let chain continue
+        if (!file_exists($file)) {
+            return;
+        }
+        // modyfy parameters according to route
+        if ($pars != null) {
+            foreach($pars as $key => $value) {
+                $pars[$key] = self::replace($value, $route_match);
+            }
+            $_REQUEST = array_merge($_REQUEST, $pars);
+        }
+
+        $ext = pathinfo($file, PATHINFO_EXTENSION);
+        // html to include in template
+        if ($ext == 'html' || $ext == 'htm') {
+            self::$main_inc = $file;
+        }
+        // supposed to be php 
+        else {
+            ob_start();
+            include_once($file);
+            // capture un
+            self::$main_contents = ob_get_contents();
+            ob_end_clean();
         }
         self::$routed = true;
-        include_once(self::$php_dir . "$php");
+        include_once(Route::$template);
         exit();
+    }
+
+    /**
+     * Replace $n by $values[$n]
+     */
+    static public function replace($pattern, $values)
+    {
+        if (!$values && !count($values)) {
+            return $pattern;
+        }
+        $ret = preg_replace_callback(
+            '@\$(\d+)@',
+            function ($var_match) use ($values) {
+                $n = $var_match[1];
+                if (!isset($values[$n])) {
+                    return $var_match[0];
+                }
+                // ensure no slash, to dangerous
+                $filename = $values[$n]; 
+                $filename = preg_replace('@\.\.|/|\\\\@', '', $filename);
+                return $filename;
+            },
+            $pattern
+        );
+        return $ret;
     }
 
 }

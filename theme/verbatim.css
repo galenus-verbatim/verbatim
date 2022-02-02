@@ -33,7 +33,6 @@ body {
 }
 
 
-
 /* Global layout */
 
 html,
@@ -82,7 +81,7 @@ body {
     position: relative;
 }
 
-#main > header {
+#main>header {
     padding: 1rem;
     background-color: var(--link);
     color: var(--bg);
@@ -91,7 +90,7 @@ body {
     position: sticky;
 }
 
-#main > header h1 {
+#main>header h1 {
     margin: 0;
 }
 
@@ -162,27 +161,29 @@ div.lg div.l {
     margin: 0;
 }
 
+
 /* biblio */
 
 span.editor {
     color: var(--link);
 }
 
-/* doc.php */
 
+/* doc.php */
 
 nav ul {
     margin: 0;
     padding: 0;
     list-style: none;
 }
+
 nav ul ul {
-    margin-left: 1rem ;
+    margin-left: 1rem;
 }
+
 nav a {
     text-decoration: none;
 }
-
 
 span.pb[data-page]::before {
     color: var(--textlo);
@@ -197,9 +198,8 @@ wbr.milestone[data-n]::after {
     margin: 1em;
 }
 
-
 span.lb::before {
-    white-space:pre;
+    white-space: pre;
     content: '\A';
 }
 
@@ -213,7 +213,6 @@ span.lb[data-line]::after {
     width: 2rem;
     color: var(--textlo);
 }
-
 
 div.reader {
     position: relative;
@@ -240,6 +239,7 @@ div.toc li.selected {
     background-color: var(--bg);
     color: var(--text);
 }
+
 li.selected a {
     color: inherit;
 }
@@ -247,7 +247,6 @@ li.selected a {
 li.selected a:hover {
     color: var(--link);
 }
-
 
 div.doc {
     width: 47rem;
@@ -260,7 +259,9 @@ div.doc div.text {
     padding: 1rem;
 }
 
+
 /* generated title */
+
 h1.title {
     background-color: var(--link);
     color: var(--bg);
@@ -287,20 +288,23 @@ div.reader div.prev,
 div.reader div.next {
     width: 5rem;
 }
+
 div.reader div.prev a,
-div.reader div.next a{
+div.reader div.next a {
     display: table-cell;
-    vertical-align:middle;
+    vertical-align: middle;
     font-size: 10rem;
     text-decoration: none;
-    color:#ccc;
+    color: #ccc;
     height: 100%;
     position: fixed;
 }
+
 div.reader div.prev a:hover,
 div.reader div.next a:hover {
     background-color: #fff;
 }
+
 
 /** biblio */
 
@@ -315,14 +319,17 @@ div.opus {
     color: inherit;
     font-weight: normal;
 }
+
 div.opus a:hover {
     display: block;
     background-color: var(--bghi);
     color: var(--texthi);
 }
+
 div.opus a:hover * {
     color: inherit;
 }
+
 
 /** Concordance */
 
@@ -334,6 +341,7 @@ h4.doc {
     margin: 0.5rem 0;
     font-weight: normal;
 }
+
 h4.doc a {
     display: block;
     padding: 0 1rem;
@@ -342,21 +350,25 @@ h4.doc a {
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
+
 h4.doc a * {
     color: inherit;
 }
-
 
 h4.doc a:hover {
     border-bottom: 1px solid;
 }
 
-
 .doc a:hover {
     color: var(--text);
 }
 
+
 /** table of words */
+
+table.freqs {
+    background-color: var(--bg);
+}
 
 td.orth a,
 td.lem a {
@@ -364,6 +376,7 @@ td.lem a {
     text-decoration: none;
     padding: 0 1rem;
 }
+
 td.orth a:hover,
 td.lem a:hover {
     color: var(--bg);
