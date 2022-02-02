@@ -1,8 +1,8 @@
 <?php
 
 /**
- *  * Part of Teinte https://github.com/oeuvres/teinte
- * BSD-3-Clause https://opensource.org/licenses/BSD-3-Clause
+ * Part of Teinte https://github.com/oeuvres/teinte
+ * MIT License https://opensource.org/licenses/mit-license.php
  * Copyright (c) 2020 frederic.Glorieux@fictif.org
  * Copyright (c) 2013 Frederic.Glorieux@fictif.org & LABEX OBVIL
  * Copyright (c) 2012 Frederic.Glorieux@fictif.org

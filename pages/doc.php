@@ -6,6 +6,8 @@
  */
 include(dirname(__DIR__) . "/verbatim.php");
 
+use Oeuvres\Kit\{I18n};
+
 function main() {
     $q = null;
     if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
@@ -18,7 +20,7 @@ function main() {
     $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
     if (!$doc) {
         http_response_code(404);
-        echo "<p>Pas de document trouvé pour l’identifiant cts : \"$cts\"</p>\n";
+        echo I18n::_('doc.notfound', $cts);
     }
     else {
         $sql = "SELECT * FROM opus WHERE id = ?";

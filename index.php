@@ -1,17 +1,18 @@
 <?php
+/**
+ * Edit this file to control your app
+ */
 declare(strict_types=1);
 
 require_once(__DIR__ . "/php/autoload.php");
 
-use Oeuvres\Kit\Route;
+use Oeuvres\Kit\{Route,I18n};
 
-// set template
+// Register messages for the app
+I18n::load(require_once(__DIR__ .'/fr.php'));
+// register the template in which include content
 Route::$template = __DIR__ . '/template.php';
-/*
-Route::get('/conc', 'pages/conc.php');
-Route::get('/table', 'pages/table.php');
-Route::get('/biblio', 'pages/biblio.php');
-*/
+// test routes
 Route::get('/', 'pages/welcome.html');
 Route::get('/(tlg.*)', 'pages/doc.php', array('cts' => '$1')); // a tlg content
 Route::get('/(.*)', 'pages/$1.php'); // try if a php content is available

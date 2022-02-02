@@ -6,15 +6,17 @@
  */
 include(dirname(__DIR__) . "/verbatim.php");
 
+use Oeuvres\Kit\{I18n};
+
 function main() {
     $href = 'conc?q=';
     echo '
     <table class="freqs">
         <thead>
             <tr>
-                <th>Forme</th>
-                <th class="nb">Occurrences</th>
-                <th>Lemme</th>
+                <th>' . I18n::_('Form') . '</th>
+                <th class="nb">' . I18n::_('Occs') . '</th>
+                <th>' . I18n::_('Lem') . '</th>
             </tr>
         </thead>
         <tbody>';

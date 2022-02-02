@@ -6,16 +6,23 @@
  */
 include(dirname(__DIR__) . "/verbatim.php");
 
-use Oeuvres\Kit\{Route, Xml};
+use Oeuvres\Kit\{Route, I18n, Xml};
 
 
 
 function main()
 {
-    $q = null;
-    if (isset($_REQUEST['q'])) $q = trim($_REQUEST['q']);
+    $q = "";
+    if (isset($_REQUEST['q'])) {
+        $q = filter_var(trim($_REQUEST['q']), FILTER_SANITIZE_STRING);
+    }
+    echo '
+    <form action="conc">
+        <input name="q" value="'.$q.'" />
+        <button type="submit">▶</button>
+    </form>';
     if (!$q) {
-        echo "Pas de mot cherché, pas de documents trouvés.";
+        echo I18n::_('conc.noq');
         return;
     }
 
@@ -26,7 +33,7 @@ function main()
         if (count($res)) break;
     }
     if (!count($res)) {
-        echo "$q, mots introuvables.";
+        echo I18n::_('conc.nowords', $q);
         return;
     }
     echo '<div class="conc">'."\n";

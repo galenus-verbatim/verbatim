@@ -13,6 +13,8 @@ declare(strict_types=1);
 
 namespace Oeuvres\Kit;
 
+use Oeuvres\Kit\{I18n};
+
 Route::init();
 
 class Route {
@@ -61,7 +63,7 @@ class Route {
     /**
      * Populate a page with content
      */
-    public static function main()
+    public static function main(): void
     {
         echo Route::$main_contents;
         if (function_exists('main')) {
@@ -73,10 +75,16 @@ class Route {
         }
     }
 
-    public static function title()
+    public static function title($title=null): string
     {
         if (function_exists('title')) {
-            call_user_func('title');
+            return call_user_func('title');
+        }
+        else if ($title) {
+            return $title;
+        }
+        else {
+            return I18n::_('app');
         }
     }
 
