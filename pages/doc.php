@@ -44,8 +44,8 @@ function main() {
         */
 
         echo '
-                <div class="reader">
-                    <div class="toc">';
+<div class="reader">
+    <div class="toc">';
         if (isset($opus['nav']) && $opus['nav']) {
 
 
@@ -62,10 +62,10 @@ function main() {
             );
         }
         echo '
-                    </div>';
+    </div>';
 
     echo '
-                    <div class="doc">';
+    <div class="doc">';
         echo '<h1 class="title">' . Verbatim::bibl($opus, $doc, $q) . "</h1>\n";
         echo '
                         <div class="text">';
@@ -101,10 +101,8 @@ function main() {
         }
     }
     echo '
-                        </div>
-                    </div>
-                </div>
-    ';
+    </div>
+</div>';
 }
 ?>
 

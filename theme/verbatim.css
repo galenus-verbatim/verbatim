@@ -3,16 +3,93 @@
     --text: #333;
     --bghi: #e09143;
     --texthi: #fff;
-    --bglo: #ead1b9;
+    --bglo: rgb(236, 214, 190);
+    --bgloa: rgba(236, 214, 190, 0.85);
     --textlo: #666;
     --textinv: #000;
     --link: #e09143;
-    --bg2: #454e5c;
-    --text2: #fff;
+    /*
+    --bg2: rgb(69, 78, 92);
+    --bg2a: rgba(69, 78, 92, 0.8);
+    */
+    --bg2: rgba(71, 50, 29, 0.8);
+    --bg2a: rgba(71, 50, 29, 0.8);
+    --text2: rgb(236, 214, 190);
     --text2hi: #fff;
     --text2inv: #fff;
     --bg3: #f0f0f0;
     --text3: #666;
+}
+
+html,
+body {
+    height: 100%
+}
+
+
+/* layout 
+#all
+    #header
+    #content
+    #footer
+
+*/
+
+#all {
+    min-height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#content {
+    flex-grow: 4;
+    position: relative;
+    padding: 2rem 2rem 5rem 2rem;
+}
+
+@media (min-width: 1500px) {
+    body {
+        font-size: 21px;
+    }
+    .container {
+        max-width: 1400px;
+    }
+}
+
+@media (min-width: 1200px) {
+    body {
+        font-size: 18px;
+    }
+    .container {
+        max-width: 1100px;
+    }
+}
+
+@media (min-width: 992px) {
+    body {
+        font-size: 16px;
+    }
+    .container {
+        max-width: 900px;
+    }
+}
+
+#content .container {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+main article {
+    background-color: var(--bg);
+    width: 100%;
+}
+
+#footer {
+    width: 100%;
+    background-color: var(--bg2);
+    color: var(--text2);
 }
 
 body {
@@ -41,22 +118,43 @@ body {
     position: relative;
 }
 
+
+/* */
+
+div.banner {
+    position: relative;
+    color: var(--bg2);
+}
+
+div.banner img.banner {
+    display: block;
+    width: 100%;
+}
+
+div.banner .title {
+    font-size: 4vw;
+    position: absolute;
+    font-weight: bold;
+    top: 14px;
+    left: 14px;
+    color: var(--bg2lo);
+    text-shadow: 0px 0px 1em var(--bglo);
+}
+
+div.banner .moto {
+    font-size: 1.5vw;
+    position: absolute;
+    bottom: 1vw;
+    right: 1vw;
+    color: var(--bg2);
+    padding: 0.5ex 1em;
+    background-color: var(--bgloa);
+    box-shadow: 0px 0px 0.5ex var(--bglo);
+}
+
 #header {
     background-color: var(--bg2);
     color: var(--text2);
-}
-
-#footer {
-    background-color: var(--bg2);
-    color: var(--text2);
-    position: absolute;
-    width: 100%;
-    bottom: 0;
-}
-
-#header div,
-#footer div {
-    padding: 1rem;
 }
 
 #page {
@@ -107,25 +205,42 @@ a {
 
 nav.tabs {
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-around;
+    padding: 0.5rem 2rem 0 2rem;
 }
 
 nav.tabs a,
 nav.tabs {
-    background-color: var(--bg2);
     color: var(--text2);
 }
 
-nav.tabs a {
+nav.tabs a.tab {
+    display: block;
     text-decoration: none;
-    padding: 5px 0.5rem;
+    padding: 0.2rem 0.5rem 0.7rem 0.5rem;
+    font-variant: small-caps;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
 }
 
-nav.tabs a.selected,
-nav.tabs a:hover {
-    background-color: var(--bg2);
-    color: var(--text2hi);
+nav.tabs a.tab.selected,
+nav.tabs a.tab:hover {
+    background-color: var(--bglo);
+    color: var(--bg2);
     text-decoration: none;
+}
+
+#logos {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+}
+
+#logos>* {
+    display: block;
+    width: 100%;
+    padding: 1rem;
 }
 
 .kwict {
@@ -214,15 +329,10 @@ span.lb[data-line]::after {
     color: var(--textlo);
 }
 
-div.reader {
-    position: relative;
-    display: flex;
-}
-
-div.reader div.toc {
+div.toc {
     background-color: var(--bg3);
     color: var(--text3);
-    padding: 1rem 0 1rem 1rem;
+    padding: 1rem 0 10vh 1rem;
 }
 
 div.toc a {
@@ -253,9 +363,11 @@ div.doc {
     background-color: var(--bg);
     color: var(--text);
     position: relative;
+    padding: 0 0 10vh 0;
 }
 
-div.doc div.text {
+div.text {
+    background-color: var(--bg);
     padding: 1rem;
 }
 
@@ -282,6 +394,11 @@ h1.title * {
 h1 a {
     color: inherit;
     text-decoration: none;
+}
+
+div.reader {
+    position: relative;
+    display: flex;
 }
 
 div.reader div.prev,

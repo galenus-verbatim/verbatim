@@ -8,6 +8,7 @@ include(dirname(__DIR__) . "/verbatim.php");
 
 function main()
 {
+    echo '<div class="text">'."\n";
     $sql = "SELECT * FROM opus";
     $qOpus = Verbatim::$pdo->prepare($sql);
     $qOpus->execute(array());
@@ -22,5 +23,5 @@ function main()
         . Verbatim::opus($opus)
         . "</a></div>\n";
     }
-    
+    echo '</div>'."\n";
 }

@@ -19,7 +19,11 @@ Route::init();
 
 class Route {
     /** root directory of the app = directory of index.php */
-    static $php_dir;
+    private static $app_dir;
+    /** home href for routing */
+    private static $home;
+    /** Href to app resources */
+    private static $app_href;
     /** Default php template */
     static $template;
     /** An html file to include as main */
@@ -35,17 +39,24 @@ class Route {
 
     public static function init()
     {
-        // get the caller file to resolve links
-        self::$php_dir = dirname($_SERVER['SCRIPT_FILENAME']) . DIRECTORY_SEPARATOR ;
+        self::$app_dir = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR ;
+
         $url_request = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
         $url_request = strtok($url_request, '?'); // old
-        # maybe not robust, get rel path from caller routes script
+        // maybe not robust, this should interpret path relative to the webapp
+        // domain.com/subdir/verbatim/path/perso -> /path/perso
         $url_prefix = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
         if (strpos($url_request, $url_prefix) !== FALSE) {
             $url_request = substr($url_request, strlen($url_prefix));
         }
         self::$url_request = $url_request;
         self::$url_parts = explode('/', ltrim($url_request, '/'));
+        self::$home = str_repeat('../', count(self::$url_parts) - 1);
+        // get relative path from index.php caller to the root of app to calculate href for res
+        self::$app_href = self::$home . File::relpath(
+            dirname($_SERVER['SCRIPT_FILENAME']), 
+            self::$app_dir
+        );
     }
     public static function get($route, $php, $pars=null)
     {
@@ -75,6 +86,9 @@ class Route {
         }
     }
 
+    /**
+     * Display a <title> for the page 
+     */
     public static function title($title=null): string
     {
         if (function_exists('title')) {
@@ -88,14 +102,15 @@ class Route {
         }
     }
 
-
+    /**
+     * Try a route
+     */
     public static function route($route, $file, $pars=null)
     {
         // the catchall
         if ($route == "/404") {
             http_response_code(404);
         }
-
         // check route as a regex
         else {
             $route_parts = explode('/', ltrim($route, '/'));
@@ -114,7 +129,9 @@ class Route {
         // rewrite file destination according to $route url
         preg_match('@'.$route.'@', self::$url_request, $route_match);
         $file = self::replace($file, $route_match);
-        $file = self::$php_dir . $file;
+        if (!File::isabs($file)) {
+            $file = self::$app_dir . $file;
+        }
         // file not found, let chain continue
         if (!file_exists($file)) {
             return;
@@ -143,6 +160,21 @@ class Route {
         self::$routed = true;
         include_once(Route::$template);
         exit();
+    }
+
+    /**
+     * Return app_href, optional, if the index.php is outside app_dir
+     */
+    static public function app_href(): string
+    {
+        return self::$app_href;
+    }
+    /**
+     * Set app_href prefix, optional, if the index.php is outside app_dir
+     */
+    static public function home(): string
+    {
+        return self::$home;
     }
 
     /**
