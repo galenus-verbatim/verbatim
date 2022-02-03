@@ -46,7 +46,7 @@ class Route {
         // maybe not robust, this should interpret path relative to the webapp
         // domain.com/subdir/verbatim/path/perso -> /path/perso
         $url_prefix = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        if (strpos($url_request, $url_prefix) !== FALSE) {
+        if ($url_prefix && strpos($url_request, $url_prefix) !== FALSE) {
             $url_request = substr($url_request, strlen($url_prefix));
         }
         self::$url_request = $url_request;
