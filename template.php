@@ -30,13 +30,13 @@ $page = Route::$url_parts[0];
             <a class="tab<?=($page == 'biblio')?' selected':''?>" 
                 href="<?= Route::home() ?>biblio" 
                 >Table des <br/> traités</a>
+            <?= Verbatim::qform() ?>
             <a class="tab<?=($page == 'table')?' selected':''?>" 
                 href="<?= Route::home() ?>table"
                 >Table <br/>fréquentielle</a>
             <a  class="tab<?=($page == 'about')?' selected':''?>" 
                 href="<?= Route::home() ?>about"
                 >À propos /<br/>Crédits</a>
-            <?= Verbatim::qform() ?>
         </nav>
     </header>
     <div id="content">
