@@ -4,12 +4,12 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-include(dirname(__DIR__) . "/verbatim.php");
+require_once(dirname(__DIR__) . "/verbatim.php");
 
 use Oeuvres\Kit\{I18n};
 
 function main() {
-    $href = 'conc?q=';
+    $href = 'conc?q=%s&amp;f=%s';
     echo '
     <table class="freqs">
         <thead>
@@ -35,10 +35,16 @@ function main() {
         $count = $freq['count'];
         $qForm->execute(array($orthId));
         $forms = $qForm->fetch(PDO::FETCH_ASSOC);
+        $forms['orth'] = htmlspecialchars($forms['orth']);
+        $forms['lem'] = htmlspecialchars($forms['lem']);
         echo "\n<tr>"
-        . "\n  <td class=\"orth\"><a href=\"" . $href . $forms['orth'] . "\">" .  $forms['orth'] . "</a></td>"
+        . "\n  <td class=\"orth\"><a href=\"" 
+        . sprintf($href, $forms['orth'], 'orth') 
+        . "\">" .  $forms['orth'] . "</a></td>"
         . "\n  <td class=\"nb\">" . number_format($count, 0, ',', ' ') . "</td>"
-        . "\n  <td class=\"lem\"><a href=\"" . $href . $forms['lem'] . "\">" . $forms['lem'] . "</a></td>"
+        . "\n  <td class=\"lem\"><a href=\"" 
+        . sprintf($href, $forms['lem'], 'lem') 
+        . "\">" . $forms['lem'] . "</a></td>"
         . "\n</tr>";
     }
     echo '

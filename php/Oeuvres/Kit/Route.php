@@ -25,7 +25,7 @@ class Route {
     /** Href to app resources */
     private static $app_href;
     /** Default php template */
-    static $template;
+    private static $template;
     /** An html file to include as main */
     static $main_inc;
     /** A file to include */
@@ -103,6 +103,27 @@ class Route {
     }
 
     /**
+     * Check if a route match url
+     */
+    public static function match($route)
+    {
+        $route_parts = explode('/', ltrim($route, '/'));
+        // too long url
+        if (count($route_parts) != count(self::$url_parts)) {
+            return false;
+        }
+        // test if path is matching
+        for ($i = 0; $i < count($route_parts); $i++) {
+            // escape ^and $ ?
+            $search = '/^'.$route_parts[$i].'$/';
+            if(!preg_match($search, self::$url_parts[$i])) {
+                return false;
+            }
+        }
+        return true;
+    }
+
+    /**
      * Try a route
      */
     public static function route($route, $file, $pars=null)
@@ -112,19 +133,8 @@ class Route {
             http_response_code(404);
         }
         // check route as a regex
-        else {
-            $route_parts = explode('/', ltrim($route, '/'));
-            // too long url
-            if (count($route_parts) != count(self::$url_parts)) {
-                return;
-            }
-            // test if path is matching
-            for ($i = 0; $i < count($route_parts); $i++) {
-                $search = '/^'.$route_parts[$i].'$/';
-                if(!preg_match($search, self::$url_parts[$i])) {
-                    return;
-                }
-            }
+        else if (!self::match($route)) {
+            return false;
         }
         // rewrite file destination according to $route url
         preg_match('@'.$route.'@', self::$url_request, $route_match);
@@ -162,6 +172,13 @@ class Route {
         exit();
     }
 
+    /**
+     * Set template
+     */
+    Static public function template(string $template): void
+    {
+        self::$template = $template;
+    }
     /**
      * Return app_href, optional, if the index.php is outside app_dir
      */

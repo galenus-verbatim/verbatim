@@ -1,14 +1,10 @@
 <?php
 declare(strict_types=1);
 
-require_once(__DIR__ . "/php/autoload.php");
+require_once(__DIR__ . "/Verbatim.php");
 
 use Oeuvres\Kit\{Route, I18n};
 
-$q = "";
-if (isset($_REQUEST['q'])) {
-    $q = filter_var(trim($_REQUEST['q']), FILTER_SANITIZE_STRING);
-}
 
 $page = Route::$url_parts[0];
 
@@ -34,15 +30,13 @@ $page = Route::$url_parts[0];
             <a class="tab<?=($page == 'biblio')?' selected':''?>" 
                 href="<?= Route::home() ?>biblio" 
                 >Table des <br/> traités</a>
-            <a class="tab<?=($page == 'conc')?' selected':''?>" 
-                href="<?= Route::home() ?>conc<?= (isset($q) && $q)?"?q=$q":'' ?>" 
-                >Chercher <br/>un mot</a>
             <a class="tab<?=($page == 'table')?' selected':''?>" 
                 href="<?= Route::home() ?>table"
                 >Table <br/>fréquentielle</a>
             <a  class="tab<?=($page == 'about')?' selected':''?>" 
                 href="<?= Route::home() ?>about"
                 >À propos /<br/>Crédits</a>
+            <?= Verbatim::qform() ?>
         </nav>
     </header>
     <div id="content">

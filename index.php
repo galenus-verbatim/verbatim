@@ -1,20 +1,34 @@
 <?php
 /**
- * Edit this file to control your app
+ * Edit this file to control your app of 
+ * cts greek texts publication
  */
 declare(strict_types=1);
 
-require_once(__DIR__ . "/php/autoload.php");
+// Change this path if your site is outside verbatim
+$verbadir = __DIR__ . "/";
+
+// load the master class of the app
+require_once($verbadir . "Verbatim.php");
+// connect to a database prepared with verbapie
+// https://github.com/galenus-verbatim/verbapie
+Verbatim::connect($verbadir . 'corpus.db');
 
 use Oeuvres\Kit\{Route,I18n};
 
 // Register messages for the app
-I18n::load(require_once(__DIR__ .'/fr.php'));
+I18n::load(require_once($verbadir .'fr.php'));
 // register the template in which include content
-Route::$template = __DIR__ . '/template.php';
-// test routes
-Route::get('/', 'pages/welcome.html');
-Route::get('/(tlg.*)', 'pages/doc.php', array('cts' => '$1')); // a tlg content
-Route::get('/(.*)', 'pages/$1.php'); // try if a php content is available
-Route::get('/(.*)', 'pages/$1.html'); // try if an html content is available
-Route::route('/404','pages/404.html'); // catch all
+Route::template($verbadir . 'template.php');
+// welcome page
+Route::get('/', $verbadir . 'pages/welcome.html');
+// a tlg content, array to pass params extracted from url path
+Route::get('/(tlg.*)', $verbadir . 'pages/doc.php', array('cts' => '$1'));
+// try if a php content is available
+Route::get('/(.*)', $verbadir . 'pages/$1.php'); 
+ // try if an html content is available
+Route::get('/(.*)', $verbadir . 'pages/$1.html');
+// catch all
+Route::route('/404', $verbadir . 'pages/404.html');
+// No Route has worked
+echo "Bad routage, 404.";

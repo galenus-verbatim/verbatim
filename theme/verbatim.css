@@ -27,6 +27,19 @@ body {
 }
 
 
+/* default sizing */
+
+input,
+button,
+table,
+td,
+code,
+dd {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+
 /* layout 
 #all
     #header
@@ -116,6 +129,10 @@ html,
 body {
     height: 100%;
     position: relative;
+}
+
+body {
+    overflow-y: scroll;
 }
 
 
@@ -231,6 +248,31 @@ nav.tabs a.tab:hover {
     text-decoration: none;
 }
 
+nav.tabs form.selected {
+    background-color: var(--bglo);
+    color: var(--bg2);
+}
+
+form.qform {
+    padding: 0 1ex;
+}
+
+form.qform div {
+    white-space: nowrap;
+    text-align: center;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+form.qform input.q {
+    width: 25ex;
+    border: none;
+    padding: 4px 1ex 3px 1ex;
+}
+
 #logos {
     display: flex;
     justify-content: space-around;
@@ -331,7 +373,7 @@ span.lb[data-line]::after {
 
 div.toc {
     background-color: var(--bg3);
-    color: var(--text3);
+    color: var(--bg2);
     padding: 1rem 0 10vh 1rem;
 }
 
@@ -375,8 +417,8 @@ div.text {
 /* generated title */
 
 h1.title {
-    background-color: var(--link);
-    color: var(--bg);
+    background-color: var(--bg2);
+    color: var(--text2);
     margin: 0;
     padding: 0.5rem 2rem;
     text-align: center;
@@ -462,8 +504,8 @@ h4.doc {
 h4.doc a {
     display: block;
     padding: 0 1rem;
-    background-color: var(--bghi);
-    color: var(--texthi);
+    background-color: var(--bg2);
+    color: var(--text2);
     text-decoration: none;
     border-bottom: 1px solid transparent;
 }
@@ -477,7 +519,7 @@ h4.doc a:hover {
 }
 
 .doc a:hover {
-    color: var(--text);
+    color: var(--text2hi);
 }
 
 

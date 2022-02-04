@@ -4,36 +4,27 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-include(dirname(__DIR__) . "/verbatim.php");
+require_once(dirname(__DIR__) . "/verbatim.php");
 
-use Oeuvres\Kit\{Route, I18n, Xml};
+use Oeuvres\Kit\{Route, I18n, Web, Xml};
 
 
 
 function main()
 {
-    $q = "";
-    if (isset($_REQUEST['q'])) {
-        $q = filter_var(trim($_REQUEST['q']), FILTER_SANITIZE_STRING);
-    }
-    echo '
-    <form action="conc">
-        <input name="q" value="'.$q.'" />
-        <button type="submit">▶</button>
-    </form>';
+    $q = Web::par('q');
+    // sanitize for display
+    $qprint = htmlspecialchars($q);
     if (!$q) {
         echo I18n::_('conc.noq');
         return;
     }
-
-    foreach(array('lem', 'orth') as $field) {
-        $qForm = Verbatim::$pdo->prepare("SELECT id FROM $field WHERE form = ?");
-        $qForm->execute(array($q));
-        $res = $qForm->fetchAll();
-        if (count($res)) break;
-    }
+    $field = Web::par('f', 'lem', '/lem|orth/');
+    $qForm = Verbatim::$pdo->prepare("SELECT id FROM $field WHERE form = ?");
+    $qForm->execute(array($q));
+    $res = $qForm->fetchAll();
     if (!count($res)) {
-        echo I18n::_('conc.nowords', $q);
+        echo I18n::_('conc.nowords', $qprint);
         return;
     }
     echo '<div class="conc">'."\n";
@@ -55,16 +46,12 @@ function main()
             if (Route::$routed) $href = '%s?q=%s';
             else $href = "doc.php?cts=%s&amp;q=%s";
             echo '<h4 class="doc">'
-            . '<a href="' . sprintf($href, $doc['clavis'], $q) . '">'
-            . Verbatim::bibl($opus, $doc)
-            . "</a>"
-            . "</h4>\n";
-
-
+                . '<a href="' . sprintf($href, $doc['clavis'], $qprint) . '">'
+                . Verbatim::bibl($opus, $doc)
+                . "</a>"
+                . "</h4>\n"
+            ;
             $lastDoc = $tok['doc'];
-
-
-
             $html = Xml::detag($doc['html']);
         }
         $start = $tok['charde'] - 50;

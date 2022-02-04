@@ -13,8 +13,7 @@ declare(strict_types=1);
 
 namespace Oeuvres\Kit;
 
-use Psr\Log\LoggerInterface;
-use Psr\Log\NullLogger;
+use Psr\Log\{LoggerInterface, NullLogger};
 
 mb_internal_encoding("UTF-8");
 I18n::init();
@@ -58,6 +57,27 @@ class I18n {
         }
         // call sprintf 
         return forward_static_call_array( 'sprintf', $args);
+    }
+
+    /**
+     * Format a stack trace, returned as an array of strings 
+     */
+    public static function trace(): array 
+    {
+        $trace = debug_backtrace();
+        $ret = array();
+        for ($i = 0, $count = count($trace); $i < $count; $i++) {
+            $ret[] = $trace[$i]['file'] 
+                . '#' 
+                . $trace[$i]['line'] 
+                . ' ' 
+                . $trace[$i]['function']
+                . '('
+                . implode(', ', $trace[$i]['args'])
+                . ')'
+            ;
+        }
+        return $ret;
     }
 
     /**

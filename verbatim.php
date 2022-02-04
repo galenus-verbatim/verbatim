@@ -5,33 +5,62 @@
  * MIT License https://opensource.org/licenses/mit-license.php
  */
 
-mb_internal_encoding("UTF-8");
 
 include_once(__DIR__ . '/php/autoload.php');
 
-use Oeuvres\Kit\Route;
-
+use Oeuvres\Kit\{I18n, Radio, Route, Web};
 
 Verbatim::init();
 class Verbatim
 {
-    static $pars;
     static $pdo;
     static $bibNorm;
+    /**
+     * Init static fields
+     */
     static public function init()
     {
+        mb_internal_encoding("UTF-8");
         if (file_exists($file = __DIR__ . '/BibNorm.php')) {
             include_once($file);
             self::$bibNorm = true;
         }
-        self::$pars = include(__DIR__ . "/pars.php");
-        $dsn = "sqlite:" . self::$pars['corpus.db'];
+    }
+
+    /**
+     * Database should be connected if sommething is desired to be displayed
+     */
+    static public function connect($sqlite)
+    {
+        if (!file_exists($sqlite)) {
+            echo "<p>Database ".$sqlite." not found</p>";
+            exit();
+        }
+        $dsn = "sqlite:" . $sqlite;
         self::$pdo = new PDO($dsn, null, null, array(
             PDO::ATTR_PERSISTENT => true
         ));
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         self::$pdo->exec("PRAGMA temp_store = 2;");
         self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
+    }
+
+    public static function qform($route='conc')
+    {
+        $selected = Route::match($route)?' selected':'';
+        $q = Web::par('q');
+        $radio = new Radio('f');
+        $radio->add('lem', I18n::_('Lem'));
+        $radio->add('orth', I18n::_('Form'));
+        echo '
+<form action="' . Route::home() . $route . '" class="qform' . $selected . '">
+    <div class="radios">' . $radio->html() . '    </div>
+    <div  class="input">
+        <input name="q" class="q" value="' . htmlspecialchars($q) . '" />
+        <button type="submit">▶</button>
+    </div>
+</form>
+';    
     }
 
     static public function opus(&$opus)

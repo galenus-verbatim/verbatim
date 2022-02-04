@@ -4,7 +4,7 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-include(dirname(__DIR__) . "/verbatim.php");
+require_once(dirname(__DIR__) . "/verbatim.php");
 
 function main()
 {

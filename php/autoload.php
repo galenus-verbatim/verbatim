@@ -6,5 +6,7 @@ spl_autoload_register(function ($class) {
         include_once $file;
         return true;
     }
-    else throw new Exception("Impossible to load " . $file);
+    else {
+        throw new Exception("Class file not found " . $file);
+    }
 });
