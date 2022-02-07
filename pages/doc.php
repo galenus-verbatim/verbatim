@@ -23,10 +23,10 @@ function main() {
         echo I18n::_('doc.notfound', $cts);
     }
     else {
-        $sql = "SELECT * FROM opus WHERE id = ?";
-        $qOpus = Verbatim::$pdo->prepare($sql);
-        $qOpus->execute(array($doc['opus']));
-        $opus = $qOpus->fetch(PDO::FETCH_ASSOC);
+        $sql = "SELECT * FROM edition WHERE id = ?";
+        $qEdition = Verbatim::$pdo->prepare($sql);
+        $qEdition->execute(array($doc['edition']));
+        $edition = $qEdition->fetch(PDO::FETCH_ASSOC);
 
         /*
         if (isset($doc['prev']) && $doc['prev']) {
@@ -46,7 +46,7 @@ function main() {
         echo '
 <div class="reader">
     <div class="toc">';
-        if (isset($opus['nav']) && $opus['nav']) {
+        if (isset($edition['nav']) && $edition['nav']) {
 
 
             echo preg_replace(
@@ -58,7 +58,7 @@ function main() {
                     '<li class="selected">$1',
                     '$0?q=' . $q,
                 ),
-                $opus['nav']
+                $edition['nav']
             );
         }
         echo '
@@ -66,7 +66,7 @@ function main() {
 
     echo '
     <div class="doc">';
-        echo '<h1 class="title">' . Verbatim::bibl($opus, $doc, $q) . "</h1>\n";
+        echo '<h1 class="title">' . Verbatim::bibl($edition, $doc, $q) . "</h1>\n";
         echo '
                         <div class="text">';
 

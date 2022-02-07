@@ -63,24 +63,24 @@ class Verbatim
 ';    
     }
 
-    static public function opus(&$opus)
+    static public function edition(&$edition)
     {
         if (self::$bibNorm) { // some local rewriting
-            BibNorm::opus($opus);
+            BibNorm::edition($edition);
         }
         $line = '';
-        $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $opus['titulus'] . '</em>';
+        $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';
+        $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span>';
-        if (isset($opus['volumen']) && $opus['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</volumen>';
+        $line .= 'ed. <span class="editor">' . $edition['editor'] . '</span>';
+        if (isset($edition['volumen']) && $edition['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</volumen>';
         }
-        if (isset($opus['pagad']) && $opus['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $opus['pagde'] . '-' . $opus['pagad'] . '</span>';
+        if (isset($edition['pagad']) && $edition['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $edition['pagde'] . '-' . $edition['pagad'] . '</span>';
         }
-        else if (isset($opus['pagde']) && $opus['pagde']){
-            $line .= ', <span class="pagina">p. ' . $opus['pagde'] . '</span>';
+        else if (isset($edition['pagde']) && $edition['pagde']){
+            $line .= ', <span class="pagina">p. ' . $edition['pagde'] . '</span>';
         }
         $line .= ')';
         return $line;
@@ -97,26 +97,26 @@ class Verbatim
         return implode('.', $num);
     }
 
-    static public function bibl(&$opus, &$doc)
+    static public function bibl(&$edition, &$doc)
     {
         if (self::$bibNorm) { // some local rewriting
-            BibNorm::opus($opus);
+            BibNorm::edition($edition);
             BibNorm::doc($doc);
         }
         // parts
         $line = '';
-        $line .= '<span class="auctor">' . $opus['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $opus['titulus'] . '</em>';
+        $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';
+        $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
         $num = self::num($doc);
         if ($num) $line .= ', ' . $num;
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $opus['editor'] . '</span>';
-        // if opus on more than one volume
+        $line .= 'ed. <span class="editor">' . $edition['editor'] . '</span>';
+        // if edition on more than one volume
         if (isset($doc['volumen']) && $doc['volumen']) {
             $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
         }
-        else if (isset($opus['volumen']) && $opus['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $opus['volumen'] . '</span>';
+        else if (isset($edition['volumen']) && $edition['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</span>';
         }
         // a bug, but could be found
         if (isset($doc['pagad']) && $doc['pagad'] && (isset($doc['pagde']) || !$doc['pagde'])) {

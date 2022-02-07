@@ -467,11 +467,11 @@ div.reader div.next a:hover {
 
 /** biblio */
 
-div.opus {
+div.edition {
     color: var(--text);
 }
 
-.opus a {
+.edition a {
     display: block;
     text-decoration: none;
     padding: 0.1rem 1rem;
@@ -479,13 +479,13 @@ div.opus {
     font-weight: normal;
 }
 
-div.opus a:hover {
+div.edition a:hover {
     display: block;
     background-color: var(--bghi);
     color: var(--texthi);
 }
 
-div.opus a:hover * {
+div.edition a:hover * {
     color: inherit;
 }
 
@@ -494,6 +494,10 @@ div.opus a:hover * {
 
 div.conc {
     background-color: var(--bg);
+}
+
+div.conc header {
+    padding: 1rem;
 }
 
 h4.doc {

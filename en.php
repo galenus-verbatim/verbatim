@@ -18,5 +18,9 @@ return array(
     'Lem' => 'Lemme',
     'conc.noq' => 'Pas de mot cherché, pas de documents trouvés.',
     'conc.nowords' => '%s : mots introuvables.',
+    'conc.lem' => '%s occurences trouvées pour le lemme : « %s »',
+    'conc.lems' => '%s occurences trouvées pour les lemmes : « %s »',
+    'conc.orth' => '%s occurences trouvées pour la forme : « %s »',
+    'conc.orths' => '%s occurences trouvées pour les formes : « %s »',
     'doc.notfound' => '<p>Pas de document trouvé pour l’identifiant cts : "%s"</p>'."\n",
 );

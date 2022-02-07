@@ -19,35 +19,67 @@ function main()
         echo I18n::_('conc.noq');
         return;
     }
+    // transliterate latin letters
+
+    $trans = include(__DIR__ . '/lat_grc.php');
+    $q = strtr($q, $trans);
+    $words = preg_split("@[\s,]+@", trim($q));
+    $in  = str_repeat('?,', count($words) - 1) . '?';
+
     $field = Web::par('f', 'lem', '/lem|orth/');
-    $qForm = Verbatim::$pdo->prepare("SELECT id FROM $field WHERE form = ?");
-    $qForm->execute(array($q));
-    $res = $qForm->fetchAll();
-    if (!count($res)) {
+
+
+    $forms = array();
+    foreach(array(
+        "SELECT id, form FROM $field WHERE form IN ($in)",
+        "SELECT id, form FROM $field WHERE deform IN ($in)",
+    ) as $sql) {
+        $qForm = Verbatim::$pdo->prepare($sql);
+        $qForm->execute($words);
+        while ($row = $qForm->fetch(PDO::FETCH_NUM)) {
+            $forms[$row[0]] = $row[1];
+        }
+    }
+    $formids = array_keys($forms);
+
+    if (!count($formids)) {
         echo I18n::_('conc.nowords', $qprint);
         return;
     }
     echo '<div class="conc">'."\n";
 
     $qDoc =  Verbatim::$pdo->prepare("SELECT * FROM doc WHERE id = ?");
-    $qOpus = Verbatim::$pdo->prepare("SELECT * FROM opus WHERE id = ?");
+    $qEdition = Verbatim::$pdo->prepare("SELECT * FROM edition WHERE id = ?");
 
-    $formId = $res[0][0];
-    $qTok =  Verbatim::$pdo->prepare("SELECT * FROM tok WHERE $field = ? LIMIT 10000");
-    $qTok->execute(array($formId));
+    $in  = str_repeat('?,', count($formids) - 1) . '?';
+    $sql = "SELECT COUNT(*) FROM tok WHERE $field IN ($in)";
+    $qCount =  Verbatim::$pdo->prepare($sql);
+    $qCount->execute($formids);
+    list($count) = $qCount->fetch();
+    $mess = 'conc.lem';
+    if ($field == 'orth') $mess = 'conc.orth';
+    if (count($forms) > 1 ) $mess .= 's';
+    echo "<header>\n";
+    echo '<div class="occs">' . I18n::_($mess, $count, implode(', ', $forms)) . '</div>' . "\n";
+    echo "</header>\n";
+
+
+    $sql = "SELECT * FROM tok WHERE $field IN ($in) ORDER BY id ";
+    $qTok =  Verbatim::$pdo->prepare($sql);
+    $qTok->execute($formids);
     $lastDoc = -1;
     while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
         if ($tok['doc'] != $lastDoc) {
             $qDoc->execute(array($tok['doc']));
             $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
 
-            $qOpus->execute(array($doc['opus']));
-            $opus = $qOpus->fetch(PDO::FETCH_ASSOC);
+            $qEdition->execute(array($doc['edition']));
+            $edition = $qEdition->fetch(PDO::FETCH_ASSOC);
             if (Route::$routed) $href = '%s?q=%s';
             else $href = "doc.php?cts=%s&amp;q=%s";
             echo '<h4 class="doc">'
                 . '<a href="' . sprintf($href, $doc['clavis'], $qprint) . '">'
-                . Verbatim::bibl($opus, $doc)
+                . Verbatim::bibl($edition, $doc)
                 . "</a>"
                 . "</h4>\n"
             ;

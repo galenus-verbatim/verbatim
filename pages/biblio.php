@@ -9,18 +9,18 @@ require_once(dirname(__DIR__) . "/Verbatim.php");
 function main()
 {
     echo '<div class="text">'."\n";
-    $sql = "SELECT * FROM opus";
-    $qOpus = Verbatim::$pdo->prepare($sql);
-    $qOpus->execute(array());
-    $sql = "SELECT * FROM doc WHERE opus = ? LIMIT 1";
+    $sql = "SELECT * FROM edition";
+    $qEdition = Verbatim::$pdo->prepare($sql);
+    $qEdition->execute(array());
+    $sql = "SELECT * FROM doc WHERE edition = ? LIMIT 1";
     $qDoc = Verbatim::$pdo->prepare($sql);
-    while ($opus = $qOpus->fetch(PDO::FETCH_ASSOC)) {
-        $qDoc->execute(array($opus['id']));
+    while ($edition = $qEdition->fetch(PDO::FETCH_ASSOC)) {
+        $qDoc->execute(array($edition['id']));
         $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
     
-        echo '<div class="opus"><a href="'
+        echo '<div class="edition"><a href="'
         . $doc['clavis'] . '">'
-        . Verbatim::opus($opus)
+        . Verbatim::edition($edition)
         . "</a></div>\n";
     }
     echo '</div>'."\n";

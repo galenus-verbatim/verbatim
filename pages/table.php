@@ -24,6 +24,7 @@ function main() {
     $qFreqs = Verbatim::$pdo->prepare($sql);
     $qForm = Verbatim::$pdo->prepare("
         SELECT orth.form AS orth, lem.form AS lem
+            , orth.deform AS deorth, lem.deform AS delem 
         FROM orth, lem
         WHERE orth.id = ? AND orth.lem = lem.id
     ");
@@ -35,16 +36,28 @@ function main() {
         $count = $freq['count'];
         $qForm->execute(array($orthId));
         $forms = $qForm->fetch(PDO::FETCH_ASSOC);
+        // bug not found
+        if (!isset($forms['orth'])) {
+            continue;
+        }
         $forms['orth'] = htmlspecialchars($forms['orth']);
         $forms['lem'] = htmlspecialchars($forms['lem']);
         echo "\n<tr>"
-        . "\n  <td class=\"orth\"><a href=\"" 
+        . "\n  <td class=\"orth\">"
+        . "<a href=\"" 
         . sprintf($href, $forms['orth'], 'orth') 
-        . "\">" .  $forms['orth'] . "</a></td>"
+        . "\">" .  $forms['orth'] 
+        // . "   " . $forms['deorth']
+        . "</a>"
+        . "</td>"
         . "\n  <td class=\"nb\">" . number_format($count, 0, ',', ' ') . "</td>"
-        . "\n  <td class=\"lem\"><a href=\"" 
+        . "\n  <td class=\"lem\">"
+        . "<a href=\"" 
         . sprintf($href, $forms['lem'], 'lem') 
-        . "\">" . $forms['lem'] . "</a></td>"
+        . "\">" . $forms['lem'] 
+        // . "  " . $forms['delem']
+        . "</a>"
+        . "</td>"
         . "\n</tr>";
     }
     echo '
