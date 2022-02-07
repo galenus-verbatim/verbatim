@@ -19,27 +19,8 @@ function main()
         echo I18n::_('conc.noq');
         return;
     }
-    // transliterate latin letters
-
-    $trans = include(__DIR__ . '/lat_grc.php');
-    $q = strtr($q, $trans);
-    $words = preg_split("@[\s,]+@", trim($q));
-    $in  = str_repeat('?,', count($words) - 1) . '?';
-
     $field = Web::par('f', 'lem', '/lem|orth/');
-
-
-    $forms = array();
-    foreach(array(
-        "SELECT id, form FROM $field WHERE form IN ($in)",
-        "SELECT id, form FROM $field WHERE deform IN ($in)",
-    ) as $sql) {
-        $qForm = Verbatim::$pdo->prepare($sql);
-        $qForm->execute($words);
-        while ($row = $qForm->fetch(PDO::FETCH_NUM)) {
-            $forms[$row[0]] = $row[1];
-        }
-    }
+    $forms = Verbatim::forms($q, $field);
     $formids = array_keys($forms);
 
     if (!count($formids)) {

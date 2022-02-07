@@ -387,21 +387,21 @@ div.toc a:hover {
     color: var(--text);
 }
 
-div.toc li.selected {
+div.toc a.selected {
     background-color: var(--bg);
     color: var(--text);
 }
 
-li.selected a {
-    color: inherit;
-}
-
-li.selected a:hover {
+div.toc a.selected:hover {
     color: var(--link);
 }
 
+div.toc a small {
+    color: var(--text);
+}
+
 div.doc {
-    width: 47rem;
+    width: 40em;
     background-color: var(--bg);
     color: var(--text);
     position: relative;

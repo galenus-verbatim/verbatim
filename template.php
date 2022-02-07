@@ -7,6 +7,10 @@ use Oeuvres\Kit\{Route, I18n};
 
 
 $page = Route::$url_parts[0];
+$start = 'tlg';
+if (@substr_compare($page, $start, 0, strlen($start))==0) {
+    $page = 'tlg';
+}
 
 ?><!doctype html>
 <html>
@@ -30,7 +34,16 @@ $page = Route::$url_parts[0];
             <a class="tab<?=($page == 'biblio')?' selected':''?>" 
                 href="<?= Route::home() ?>biblio" 
                 >Table des <br/> traités</a>
-            <?= Verbatim::qform() ?>
+            <?php 
+            if ($page == 'tlg') {
+                // if doc visible, add a buttoon search in doc search in doc
+                Verbatim::qform(true);
+            }
+            else {
+                Verbatim::qform();
+            }
+            
+            ?>
             <a class="tab<?=($page == 'table')?' selected':''?>" 
                 href="<?= Route::home() ?>table"
                 >Table <br/>fréquentielle</a>

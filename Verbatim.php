@@ -15,6 +15,7 @@ class Verbatim
 {
     static $pdo;
     static $bibNorm;
+    static $lat_grc;
     /**
      * Init static fields
      */
@@ -25,6 +26,7 @@ class Verbatim
             include_once($file);
             self::$bibNorm = true;
         }
+        self::$lat_grc = include(__DIR__ . '/pages/lat_grc.php');
     }
 
     /**
@@ -45,7 +47,31 @@ class Verbatim
         self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
     }
 
-    public static function qform($route='conc')
+    /**
+     * $q = "kai"
+     */
+    public static function forms(string $q, string $field)
+    {
+        // transliterate latin letters
+        $q = strtr($q, self::$lat_grc);
+        $words = preg_split("@[\s,]+@", trim($q));
+        $in  = str_repeat('?,', count($words) - 1) . '?';
+        
+        $forms = array();
+        foreach(array(
+            "SELECT id, form, cat FROM $field WHERE form IN ($in)",
+            "SELECT id, form, cat FROM $field WHERE deform IN ($in)",
+        ) as $sql) {
+            $qForm = Verbatim::$pdo->prepare($sql);
+            $qForm->execute($words);
+            while ($row = $qForm->fetch(PDO::FETCH_NUM)) {
+                $forms[$row[0]] = $row[1] .' ' . I18n::_('pos.' . $row[2]) ;
+            }
+        }
+        return $forms;
+    }
+
+    public static function qform($down=false, $route='conc')
     {
         $selected = Route::match($route)?' selected':'';
         $q = Web::par('q');
@@ -55,7 +81,12 @@ class Verbatim
         echo '
 <form action="' . Route::home() . $route . '" class="qform' . $selected . '">
     <div class="radios">' . $radio->html() . '    </div>
-    <div  class="input">
+    <div  class="input">';
+        if ($down) {
+            echo '
+        <button type="submit" title="' . I18n::_('search.indoc') . '" onclick="this.form.action=\'\'">▼</button>';
+        }
+        echo'
         <input name="q" class="q" value="' . htmlspecialchars($q) . '" />
         <button type="submit">▶</button>
     </div>
