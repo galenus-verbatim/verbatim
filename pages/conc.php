@@ -41,7 +41,7 @@ function main()
     if ($field == 'orth') $mess = 'conc.orth';
     if (count($forms) > 1 ) $mess .= 's';
     echo "<header>\n";
-    echo '<div class="occs">' . I18n::_($mess, $count, implode(', ', $forms)) . '</div>' . "\n";
+    echo '<div class="occs">' . I18n::_('conc.search', $count, $q) . '</div>' . "\n";
     echo "</header>\n";
 
     // order by needed, natural order is by the form search
