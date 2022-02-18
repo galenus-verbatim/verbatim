@@ -56,17 +56,17 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
     </div>
     <footer id="footer">
         <nav id="logos">
-            <a href="https://www.iufrance.fr/" title="Institut universitaire de France"><img alt="Institut Universitaire de France" src="<?= Route::home() ?>theme/logo_IUF.png"/></a>
+            <a href="https://www.iufrance.fr/" title="Institut universitaire de France"><img alt="Institut Universitaire de France" src="<?=  Route::app_href() ?>theme/logo_IUF.png"/></a>
 
-            <a href="http://www.orient-mediterranee.com/spip.php?rubrique314" title="UMR 8167 Orient et Méditerranée"><img alt="UMR 8167 Orient et Méditerranée" src="<?= Route::home() ?>theme/logo_UMR8167.png"/></a>
+            <a href="http://www.orient-mediterranee.com/spip.php?rubrique314" title="UMR 8167 Orient et Méditerranée"><img alt="UMR 8167 Orient et Méditerranée" src="<?=  Route::app_href() ?>theme/logo_UMR8167.png"/></a>
 
-            <a href="https://lettres.sorbonne-universite.fr/faculte-des-lettres/ufr/lettres/grec/" title="Faculté des Lettres de Sorbonne Université"><img alt="Faculté des Lettres de Sorbonne Université" src="<?= Route::home() ?>theme/logo_sorbonne-lettres.png"/></a>
+            <a href="https://lettres.sorbonne-universite.fr/faculte-des-lettres/ufr/lettres/grec/" title="Faculté des Lettres de Sorbonne Université"><img alt="Faculté des Lettres de Sorbonne Université" src="<?=  Route::app_href() ?>theme/logo_sorbonne-lettres.png"/></a>
 
 
 
-            <a href="https://humanites-biomedicales.sorbonne-universite.fr/" title="Initiative humanités biomédicales de l’Alliance Sorbonne Université"><img alt="Initiative humanités biomédicales de l’Alliance Sorbonne Université" src="<?= Route::home() ?>theme/logo_humabiomed.png"/></a>
+            <a href="https://humanites-biomedicales.sorbonne-universite.fr/" title="Initiative humanités biomédicales de l’Alliance Sorbonne Université"><img alt="Initiative humanités biomédicales de l’Alliance Sorbonne Université" src="<?=  Route::app_href() ?>theme/logo_humabiomed.png"/></a>
 
-            <a href="#" onmouseover="this.href='ma'+'i'+'lto:'+'etymologika' + '\u0040gm' + 'ail.com';"><img style="opacity: 0.7;" src="<?= Route::home() ?>theme/enveloppe.png"/></a>
+            <a href="#" onmouseover="this.href='ma'+'i'+'lto:'+'etymologika' + '\u0040gm' + 'ail.com';"><img style="opacity: 0.7;" src="<?=  Route::app_href() ?>theme/enveloppe.png"/></a>
         </nav>
     </footer>
 </div>
