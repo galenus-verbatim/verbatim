@@ -25,7 +25,7 @@ return array(
     'pos.-' => '?',
     'search.indoc' => 'Rechercher dans ce document',
     'conc.noq' => 'Pas de mot cherché, pas de documents trouvés. Pour obtenir un résultat, entrez un mot ou un lemme soit en caractères grecs (les accents, esprits et iotas souscrits ne sont pas pris en compte), soit en caractères latins (en suivant les conventions du Beta code : z = ζ, h = η, q = θ, c = ξ, f = φ, x = χ, y = ψ, w = ω).',
-    'conc.nowords' => '%s : mots introuvables. Pour obtenir un résultat, entrez un mot ou un lemme soit en caractères grecs (les accents, esprits et iotas souscrits ne sont pas pris en compte), soit en caractères latins (en suivant les conventions du Beta code : z = ζ, h = η, q = θ, c = ξ, f = φ, x = χ, y = ψ, w = ω).',
+    'conc.nowords' => '%s : mot introuvable. Pour obtenir un résultat, entrez un mot ou un lemme soit en caractères grecs (les accents, esprits et iotas souscrits ne sont pas pris en compte), soit en caractères latins (en suivant les conventions du Beta code : z = ζ, h = η, q = θ, c = ξ, f = φ, x = χ, y = ψ, w = ω).',
     'conc.search' => '%s occurences trouvées pour la requête : « %s »',
     'conc.lem' => '%s occurences trouvées pour le lemme : « %s »',
     'conc.lems' => '%s occurences trouvées pour les lemmes : « %s »',
