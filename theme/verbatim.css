@@ -8,12 +8,12 @@
     --textlo: #666;
     --textinv: #000;
     --link: #e09143;
+    --bg2: rgb(102, 102, 102);
+    --bg2a: rgba(102, 102, 102, 0.8);
     /*
-    --bg2: rgb(69, 78, 92);
-    --bg2a: rgba(69, 78, 92, 0.8);
-    */
     --bg2: rgba(71, 50, 29, 0.8);
     --bg2a: rgba(71, 50, 29, 0.8);
+    */
     --text2: rgb(236, 214, 190);
     --text2hi: #fff;
     --text2inv: #fff;
@@ -148,18 +148,31 @@ div.banner img.banner {
     width: 100%;
 }
 
-div.banner .title {
-    font-size: 4vw;
+div.banner .titles {
     position: absolute;
     font-weight: bold;
     top: 14px;
     left: 14px;
+}
+
+div.banner .title {
+    font-size: 4vw;
     color: var(--bg2lo);
     text-shadow: 0px 0px 1em var(--bglo);
 }
 
+div.banner .titlesub {
+    font-size: 2.5vw;
+    float: right;
+    margin-left: 2vw;
+    background-color: var(--bgloa);
+    box-shadow: 0px 0px 0.5ex var(--bglo);
+    color: var(--link);
+}
+
 div.banner .moto {
-    font-size: 1.5vw;
+    font-size: 1.8vw;
+    font-weight: bold;
     position: absolute;
     bottom: 1vw;
     right: 1vw;
@@ -210,7 +223,7 @@ div.banner .moto {
 }
 
 main article {
-    padding: 1rem;
+    padding: 3vw;
 }
 
 
@@ -218,6 +231,11 @@ main article {
 
 a {
     color: var(--link);
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
 }
 
 nav.tabs {
@@ -281,8 +299,18 @@ form.qform input.q {
 
 #logos>* {
     display: block;
+    text-align: center;
     width: 100%;
     padding: 1rem;
+}
+
+#logos>* img {
+    display: inline-block;
+    height: 80px;
+}
+
+#logos>*:hover {
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
 .kwict {
@@ -544,4 +572,126 @@ td.orth a:hover,
 td.lem a:hover {
     color: var(--bg);
     background-color: var(--link);
+}
+
+
+/** Static texts */
+
+article.text {
+    max-width: 80ex;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+article.text p {
+    text-align: justify;
+}
+
+section.footnotes {
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+hr.footnotes {
+    width: 15%;
+    text-align: left;
+    text-align: -moz-left;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.noteref,
+.pb,
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.note:target::after {
+    display: inline-block;
+    content: "☞";
+    font-size: 16px;
+    position: absolute;
+    top: 0;
+    left: -16px;
+}
+
+.note:target {
+    background-color: #FFFFEE;
+}
+
+.note {
+    line-height: 1.25;
+    font-size: 90%;
+    margin: 1px 0 1rem 0;
+    clear: both;
+}
+
+.note blockquote {
+    margin: 0.5rem 0rem 0.5rem 2rem;
+}
+
+.note p {
+    margin: 0;
+    line-height: inherit;
+    text-indent: 1rem;
+    text-indent: 1rem;
+}
+
+.note p.noindent,
+.note p.autofirst {
+    text-indent: 0;
+}
+
+p.note {
+    text-indent: 0;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.notes-abc,
+.notes-123,
+.notes-misc {
+    margin-top: 0.5rem;
+}
+
+.note-page {
+    font-size: 0.8rem;
+}
+
+.note-margin-left {
+    float: left;
+    margin-left: -2rem;
+    margin-right: 0.5rem;
+}
+
+a.noteref {
+    font-size: 60%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+    top: -0.4em;
+}
+
+a.noteref sup {
+    font-size: 100%;
+}
+
+a.noteref,
+a.noteback {
+    font-family: sans-serif;
+    text-decoration: none;
+    border-bottom: none;
+    font-style: normal;
+    font-variant: normal;
+    padding-right: .1em;
+    /* note sep */
+}
+
+a.noteback {
+    font-size: 85%;
 }

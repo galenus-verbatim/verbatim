@@ -23,17 +23,16 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
 <div id="all">
     <header id="header">
         <div class="banner">
-            <div class="title">Galenus verbatim</div>
+            <div class="titles">
+                <div class="title">Galenus verbatim</div>
+                <div class="titlesub">Γαληνὸς κατὰ λέξιν</div>
+            </div>
             <div class="moto">Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.</div>
             <img class="banner" src="<?= Route::app_href() ?>theme/galenus-verbatim.jpg" />
         </div>
         <nav class="tabs">
-            <a class="tab <?=(!$page)?' selected':'' ?>" 
-                href="<?= Route::home() ?>." 
-                >Accueil /<br/>Accès rapide</a>
-            <a class="tab<?=($page == 'biblio')?' selected':''?>" 
-                href="<?= Route::home() ?>biblio" 
-                >Table des <br/> traités</a>
+            <?= Verbatim::tab('', 'Accueil /<br/>Accès rapide') ?>
+            <?= Verbatim::tab('traites', 'Table des <br/> traités') ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc
@@ -44,12 +43,8 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
             }
             
             ?>
-            <a class="tab<?=($page == 'table')?' selected':''?>" 
-                href="<?= Route::home() ?>table"
-                >Table <br/>fréquentielle</a>
-            <a  class="tab<?=($page == 'about')?' selected':''?>" 
-                href="<?= Route::home() ?>about"
-                >À propos /<br/>Crédits</a>
+            <?= Verbatim::tab('table', 'Table <br/>fréquentielle') ?>
+            <?= Verbatim::tab('apropos', 'À propos /<br/>Crédits') ?>
         </nav>
     </header>
     <div id="content">
@@ -61,8 +56,17 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
     </div>
     <footer id="footer">
         <nav id="logos">
-            <a href="https://github.com/hipster-philology/nlp-pie-taggers">Textes grecs lemmatisés avec<br/> <em>Pie Extended</em> de Thibault Clérice</a>
-            <a>Verbapie</a>
+            <a href="https://www.iufrance.fr/" title="Institut universitaire de France"><img alt="Institut Universitaire de France" src="<?= Route::home() ?>theme/logo_IUF.png"/></a>
+
+            <a href="http://www.orient-mediterranee.com/spip.php?rubrique314" title="UMR 8167 Orient et Méditerranée"><img alt="UMR 8167 Orient et Méditerranée" src="<?= Route::home() ?>theme/logo_UMR8167.png"/></a>
+
+            <a href="https://lettres.sorbonne-universite.fr/faculte-des-lettres/ufr/lettres/grec/" title="Faculté des Lettres de Sorbonne Université"><img alt="Faculté des Lettres de Sorbonne Université" src="<?= Route::home() ?>theme/logo_sorbonne-lettres.png"/></a>
+
+
+
+            <a href="https://humanites-biomedicales.sorbonne-universite.fr/" title="Initiative humanités biomédicales de l’Alliance Sorbonne Université"><img alt="Initiative humanités biomédicales de l’Alliance Sorbonne Université" src="<?= Route::home() ?>theme/logo_humabiomed.png"/></a>
+
+            <a href="#" onmouseover="this.href='ma'+'i'+'lto:'+'etymologika' + '\u0040gm' + 'ail.com';"><img style="opacity: 0.7;" src="<?= Route::home() ?>theme/enveloppe.png"/></a>
         </nav>
     </footer>
 </div>

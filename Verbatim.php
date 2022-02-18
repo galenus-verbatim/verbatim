@@ -71,6 +71,21 @@ class Verbatim
         return $forms;
     }
 
+    public static function tab($href, $text)
+    {
+        $page = Route::$url_parts[0];
+        $selected = '';
+        if ($page == $href) {
+            $selected = " selected";
+        }
+        if(!$href) {
+            $href = '.';
+        }
+        return '<a class="tab'. $selected . '"'
+        . ' href="'. Route::home(). $href . '"' 
+        . '>' . $text . '</a>';
+    }
+
     public static function qform($down=false, $route='conc')
     {
         $selected = Route::match($route)?' selected':'';

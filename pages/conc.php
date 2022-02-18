@@ -44,8 +44,8 @@ function main()
     echo '<div class="occs">' . I18n::_($mess, $count, implode(', ', $forms)) . '</div>' . "\n";
     echo "</header>\n";
 
-
-    $sql = "SELECT * FROM tok WHERE $field IN ($in) ORDER BY id ";
+    // order by needed, natural order is by the form search
+    $sql = "SELECT * FROM tok WHERE $field IN ($in) ORDER BY id LIMIT 2000";
     $qTok =  Verbatim::$pdo->prepare($sql);
     $qTok->execute($formids);
     $lastDoc = -1;
