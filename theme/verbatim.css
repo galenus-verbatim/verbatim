@@ -395,20 +395,37 @@ span.lb[data-line]::after {
     color: var(--textlo);
 }
 
+nav.toc,
 div.toc {
     background-color: var(--bg3);
     color: var(--bg2);
     padding: 1rem 0 10vh 1rem;
 }
 
-div.toc a {
+nav>a,
+div.toc>a {
     display: block;
-    padding: 0.1rem 1rem;
+    text-align: left;
+    text-decoration: none;
+    color: var(--bg2);
+    font-size: 80%;
 }
 
+div.toc a {
+    padding: 0.1rem 1rem 0.1rem 0;
+}
+
+nav.bibl>a {
+    padding: 0.1rem 0.1rem 0.1rem 0.5rem;
+    text-indent: -1.5rem;
+    padding-left: 2rem;
+}
+
+nav>a:hover,
 div.toc a:hover {
     background-color: var(--bg);
     color: var(--text);
+    text-decoration: none;
 }
 
 div.toc a.selected {
@@ -440,9 +457,10 @@ div.text {
 
 /* generated title */
 
-h1.title {
+#navs nav>h2,
+div.doc>h1 {
     background-color: var(--bg2);
-    color: var(--text2);
+    color: var(--bg);
     margin: 0;
     padding: 0.5rem 2rem;
     text-align: center;
@@ -491,10 +509,6 @@ div.reader div.next a:hover {
 
 /** biblio */
 
-div.edition {
-    color: var(--text);
-}
-
 .edition a {
     display: block;
     text-decoration: none;
@@ -504,7 +518,6 @@ div.edition {
 }
 
 div.edition a:hover {
-    display: block;
     background-color: var(--bghi);
     color: var(--texthi);
 }
@@ -690,4 +703,106 @@ a.noteback {
 
 a.noteback {
     font-size: 85%;
+}
+
+
+/** biblio */
+
+section.opus {
+    margin: 0;
+    padding: 2rem 0 0 0;
+    color: var(--bg2);
+}
+
+section.opus h1 {
+    margin: 0;
+}
+
+section.opus p {
+    margin: 0;
+    text-indent: 0;
+}
+
+section.opus>.note {
+    margin: 0.5rem 0 0 0;
+}
+
+section.opus .edition {
+    margin: 0.5rem 0 0 2rem;
+}
+
+section.opus div.titlesh section.opus div.title {
+    font-style: italic;
+}
+
+.AbbrEnCGT::before {
+    content: '(CGT) ';
+}
+
+.surname {
+    /* font-variant: small-caps; */
+}
+
+.editors .surname {
+    color: var(--text);
+    font-weight: bold;
+}
+
+a.external {
+    text-indent: 0;
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: top 50% right 0;
+    padding-right: 1em;
+    background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%23666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+}
+
+a.external:hover {
+    text-decoration: none;
+    color: var(--link);
+    background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%23e09143" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+}
+
+h1 a.fichtner {
+    font-size: 80%;
+}
+
+a.opus {
+    display: inline;
+    padding: 0;
+    color: var(--link);
+}
+
+#traites {
+    position: relative;
+    display: flex;
+    padding: 0;
+}
+
+#traites #navs {
+    order: -1;
+    flex-shrink: 0;
+    width: 25vw;
+    height: 100vh;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    overflow-y: scroll;
+    background-color: var(--bg3);
+    color: var(--bg2);
+    padding: 0 0 10vh 0;
+}
+
+#navs select {
+    font-family: inherit;
+    font-size: inherit;
+    top: 0;
+    width: 100%;
+    position: sticky;
+    margin-bottom: 2rem;
+}
+
+#biblio {
+    padding: 2rem;
 }

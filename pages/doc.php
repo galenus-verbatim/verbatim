@@ -11,10 +11,16 @@ use Oeuvres\Kit\{I18n,Web};
 function main() {
     $q = Web::par('q');
     $cts = Web::par('cts');
-    // get document
-    $sql = "SELECT * FROM doc WHERE clavis = ?";
-    $qDoc = Verbatim::$pdo->prepare($sql);
-    $qDoc->execute(array($cts));
+    if (strpos($cts, '_') === false) { // cover
+        $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
+        $qDoc = Verbatim::$pdo->prepare($sql);
+        $qDoc->execute(array($cts . '%'));
+    }
+    else { // should be a document
+        $sql = "SELECT * FROM doc WHERE clavis = ?";
+        $qDoc = Verbatim::$pdo->prepare($sql);
+        $qDoc->execute(array($cts));
+    }
     $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
     if (!$doc) {
         http_response_code(404);
@@ -56,7 +62,13 @@ function main() {
     }
     // no word searched
     else if (!count($formids)) {
-        echo $edition['nav'];
+        $html = $edition['nav'];
+        $html = preg_replace(
+            '@ href="' . $cts . '"@',
+            '$1 class="selected"',
+            $html
+        );
+        echo $html;
     }
     // calculate occurrences by chapter
     else {
