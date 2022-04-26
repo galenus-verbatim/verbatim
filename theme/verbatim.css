@@ -64,7 +64,7 @@ dd {
 
 @media (min-width: 992px) {
     body {
-        font-size: 16px;
+        font-size: 14px;
     }
     .container {
         max-width: 900px;
@@ -73,7 +73,7 @@ dd {
 
 @media (min-width: 1200px) {
     body {
-        font-size: 18px;
+        font-size: 16px;
     }
     .container {
         max-width: 1100px;
@@ -82,16 +82,29 @@ dd {
 
 @media (min-width: 1500px) {
     body {
-        font-size: 21px;
+        font-size: 18px;
     }
     .container {
         max-width: 1400px;
     }
 }
 
+
+/* centering content for default */
+
 #content .container {
     margin-left: auto;
     margin-right: auto;
+}
+
+
+/* align left the reader to sho page */
+
+.tlg #content .container {
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+    max-width: 100%;
 }
 
 main article {
@@ -220,6 +233,10 @@ div.banner .moto {
 
 main article {
     padding: 3vw;
+}
+
+.tlg main article {
+    padding: 0;
 }
 
 
@@ -395,11 +412,18 @@ span.lb[data-line]::after {
     color: var(--textlo);
 }
 
+span.ed1page,
+span.ed2page {
+    float: right;
+    display: block;
+}
+
 nav.toc,
 div.toc {
     background-color: var(--bg3);
     color: var(--bg2);
-    padding: 1rem 0 10vh 1rem;
+    padding: 1em 0 10vh 1em;
+    font-size: 85%;
 }
 
 nav>a,
@@ -408,11 +432,11 @@ div.toc>a {
     text-align: left;
     text-decoration: none;
     color: var(--bg2);
-    font-size: 80%;
 }
 
 div.toc a {
-    padding: 0.1rem 1rem 0.1rem 0;
+    padding: 0.1rem 0.2rem 0.1rem 0;
+    display: block;
 }
 
 nav.bibl>a {
@@ -451,7 +475,7 @@ div.doc {
 
 div.text {
     background-color: var(--bg);
-    padding: 1rem;
+    padding: 5rem 0.1em 5rem 1em;
 }
 
 
@@ -483,6 +507,30 @@ h1 a {
 div.reader {
     position: relative;
     display: flex;
+}
+
+.reader .toc {
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    overflow: auto;
+    min-width: 20ex;
+}
+
+.reader .doc {
+    flex-shrink: 0;
+}
+
+.reader #viewer {
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    min-width: 40vw;
+}
+
+.reader #viewer img {
+    width: 100%;
 }
 
 div.reader div.prev,
@@ -559,9 +607,12 @@ h4.doc a:hover {
     border-bottom: 1px solid;
 }
 
+
+/* white ?
 .doc a:hover {
     color: var(--text2hi);
 }
+*/
 
 
 /** table of words */

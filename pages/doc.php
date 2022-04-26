@@ -137,6 +137,10 @@ echo '
     echo '
     </div>
 </div>';
+echo '
+    <div id="viewer">
+        <img id="image"/>
+    </div>';
 }
 ?>
 
