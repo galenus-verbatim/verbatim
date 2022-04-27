@@ -17,8 +17,8 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
     <head>
         <meta charset="utf-8"/>
         <title><?= Route::title('Verbatim') ?></title>
-        <link rel="stylesheet" href="<?= Route::app_href() ?>theme/verbatim.css"/>
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
+        <link rel="stylesheet" href="<?= Route::app_href() ?>theme/verbatim.css"/>
     </head>
     <body class="<?=$body_class?>">
 <div id="all">
@@ -87,7 +87,7 @@ while ($body_class == 'tlg') {
     break;
 }
 ?>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.js"></script>
+        <script src="<?= Route::app_href() ?>vendor/viewer.js"></script>
         <script src="<?= Route::app_href() ?>theme/galenus.js"></script>
     </body>
 </html>

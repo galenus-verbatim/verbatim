@@ -8,6 +8,7 @@
     --textlo: #666;
     --textinv: #000;
     --link: #e09143;
+    --link2: rgba(224, 145, 67, 0.5);
     --bg2: rgb(102, 102, 102);
     --bg2a: rgba(102, 102, 102, 0.8);
     /*
@@ -383,23 +384,75 @@ nav a {
     text-decoration: none;
 }
 
+.ed1page,
+.ed2page,
+.noteref,
+.pb,
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+
+/*
 span.pb[data-page]::before {
     color: var(--textlo);
     content: " [p." attr(data-page) "]";
     display: block;
     text-align: right;
 }
+*/
 
-wbr.milestone[data-n]::after {
-    content: " (" attr(data-n) ") ";
-    display: inline;
-    margin: 1em;
+span.pageview {
+    color: var(--link);
+    cursor: pointer;
+    padding: 0 1em;
+    text-indent: 0;
+    font-size: 85%;
+    clear: both;
+    float: right;
+    display: block;
+}
+
+span.pageview.selected,
+span.pageview:hover {
+    background-color: var(--bg2);
+    color: var(--text2hi);
+}
+
+span.ed1page,
+span.ed2page {
+    padding-left: 0.5ex;
+    margin: 0 2px;
+    background-color: var(--link2);
+}
+
+span.ed1page:hover,
+span.ed2page:hover {
+    background-color: var(--bg2);
+}
+
+span.pb[data-page]::before {
+    display: block;
+    content: ' ';
 }
 
 span.lb::before {
     white-space: pre;
     content: '\A';
 }
+
+
+/*
+span.pb[data-line]::before {
+    display: block;
+    content: ' ';
+}
+*/
 
 span.pb[data-line]::after,
 span.lb[data-line]::after {
@@ -410,12 +463,6 @@ span.lb[data-line]::after {
     content: attr(data-line) " ";
     width: 2rem;
     color: var(--textlo);
-}
-
-span.ed1page,
-span.ed2page {
-    float: right;
-    display: block;
 }
 
 nav.toc,
@@ -475,7 +522,7 @@ div.doc {
 
 div.text {
     background-color: var(--bg);
-    padding: 5rem 0.1em 5rem 1em;
+    padding: 5rem 0 5rem 1em;
 }
 
 
@@ -487,7 +534,7 @@ div.doc>h1 {
     color: var(--bg);
     margin: 0;
     padding: 0.5rem 2rem;
-    text-align: center;
+    text-align: cente r;
     font-size: 115%;
     font-weight: 500;
     position: -webkit-sticky;
@@ -522,15 +569,30 @@ div.reader {
     flex-shrink: 0;
 }
 
-.reader #viewer {
+.reader #pagimage {
     position: sticky;
     top: 0;
+    width: 100%;
+    max-width: none;
     height: 100vh;
-    min-width: 40vw;
 }
 
-.reader #viewer img {
-    width: 100%;
+#viewcont>img {
+    width: 50px;
+}
+
+.viewer-move {
+    display: block !important;
+    width: auto !important;
+}
+
+.viewer-backdrop {
+    background-color: var(--bg2);
+    /* background-color: rgba(0, 0, 0, 50%); */
+}
+
+.viewer-fixed {
+    background-color: transparent;
 }
 
 div.reader div.prev,
@@ -658,17 +720,6 @@ hr.footnotes {
     text-align: -moz-left;
     margin-right: auto;
     margin-left: 0;
-}
-
-.noteref,
-.pb,
-.noselect {
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -khtml-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
 }
 
 .note:target::after {
@@ -810,7 +861,7 @@ a.external {
 }
 
 a.external:hover {
-    text-decoration: none;
+    /* text-decoration: none; */
     color: var(--link);
     background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%23e09143" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }

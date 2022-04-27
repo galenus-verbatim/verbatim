@@ -138,8 +138,10 @@ echo '
     </div>
 </div>';
 echo '
-    <div id="viewer">
-        <img id="image"/>
+    <div id="pagimage">
+        <div id="viewcont">
+            <img id="image"/>
+        </div>
     </div>';
 }
 ?>
