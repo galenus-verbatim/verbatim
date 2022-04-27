@@ -21,6 +21,9 @@ const viewer = new Viewer(pagimage, {
         flipHorizontal: 0,
         flipVertical: 0,
     },
+    title: function(image) {
+        return image.alt;
+    },
     viewed() {
         // viewer.zoomTo(1);
     },
@@ -75,7 +78,7 @@ const viewer = new Viewer(pagimage, {
                 this.classList.add("selected");
                 viewer.spanLast = this;
                 image.src = url;
-                if (dat.title) image.alt = dat.title.replace('%%', pno);
+                if (dat.title) image.alt = text + ' source : ' + dat.title.replace('%%', pno);
                 viewer.update();
                 viewer.resize();
             }
