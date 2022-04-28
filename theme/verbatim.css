@@ -9,6 +9,7 @@
     --textinv: #000;
     --link: #e09143;
     --link2: rgba(224, 145, 67, 0.5);
+    --link3: #9c652e;
     --bg2: rgb(102, 102, 102);
     --bg2a: rgba(102, 102, 102, 0.8);
     /*
@@ -40,6 +41,53 @@ dd {
     font-family: inherit;
 }
 
+select::-ms-expand {
+    display: none;
+}
+
+select {
+    /* A reset of styles, including removing the default dropdown arrow */
+    /* appearance: none; */
+    /* Additional resets for further consistency */
+    background-color: transparent;
+    margin: 0;
+    font-family: inherit;
+    font-size: inherit;
+    cursor: inherit;
+    line-height: inherit;
+    border: 2px solid var(--link);
+    border-radius: 0.25em;
+    padding: 0.25em 0.5em;
+    font-size: 1.25rem;
+    cursor: pointer;
+    line-height: 1.1;
+    background-color: #fff;
+    background-image: linear-gradient(to top, #f9f9f9, #fff 33%);
+}
+
+
+/* full redesign */
+
+label.radio {
+    cursor: pointer;
+}
+
+input[type=radio] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+}
+
+
+/*
+input[type=radio] {
+    accent-color: var(--link);
+}
+*/
+
 
 /* layout 
 #all
@@ -60,7 +108,7 @@ dd {
 #content {
     flex-grow: 4;
     position: relative;
-    padding: 2rem 2rem 5rem 2rem;
+    padding: 0 0 5rem 0;
 }
 
 @media (min-width: 992px) {
@@ -96,6 +144,7 @@ dd {
 #content .container {
     margin-left: auto;
     margin-right: auto;
+    position: relative;
 }
 
 
@@ -109,7 +158,6 @@ dd {
 }
 
 main article {
-    background-color: var(--bg);
     width: 100%;
 }
 
@@ -252,7 +300,22 @@ a:hover {
     text-decoration: underline;
 }
 
+#tabs {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    font-size: 16px;
+    height: 60px;
+}
+
+#tabsep {
+    border-color: transparent;
+    margin: 1em 0 1em 0;
+}
+
 nav.tabs {
+    background-color: var(--bg2);
+    color: var(--text2);
     display: flex;
     justify-content: space-around;
     padding: 0.5rem 2rem 0 2rem;
@@ -261,6 +324,15 @@ nav.tabs {
 nav.tabs a,
 nav.tabs {
     color: var(--text2);
+}
+
+input[type=radio] {
+    border: 2px solid var(--text2);
+}
+
+input[type=radio]:checked {
+    border-color: var(--bg);
+    background-color: var(--link);
 }
 
 nav.tabs a.tab {
@@ -278,6 +350,14 @@ nav.tabs a.tab:hover {
     background-color: var(--bglo);
     color: var(--bg2);
     text-decoration: none;
+}
+
+nav.tabs form.selected input[type=radio] {
+    border-color: var(--bg2);
+}
+
+nav.tabs form.selected input[type=radio]:checked {
+    border-color: var(--bg2);
 }
 
 nav.tabs form.selected {
@@ -336,6 +416,11 @@ form.qform input.q {
     display: inline-block;
     text-align: right;
     padding-right: 0.5em;
+}
+
+mark {
+    background-color: var(--bglo);
+    color: var(--text);
 }
 
 td.nb {
@@ -535,11 +620,11 @@ div.doc>h1 {
     margin: 0;
     padding: 0.5rem 2rem;
     text-align: cente r;
-    font-size: 115%;
+    font-size: 85%;
     font-weight: 500;
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 60px;
 }
 
 h1.title * {
@@ -559,8 +644,8 @@ div.reader {
 .reader .toc {
     position: -webkit-sticky;
     position: sticky;
-    top: 0;
-    height: 100vh;
+    top: 60px;
+    height: calc(100vh - 60px);
     overflow: auto;
     min-width: 20ex;
 }
@@ -570,11 +655,12 @@ div.reader {
 }
 
 .reader #pagimage {
+    position: -webkit-sticky;
     position: sticky;
-    top: 0;
+    top: 60px;
+    height: calc(100vh - 60px);
     width: 100%;
     max-width: none;
-    height: 100vh;
 }
 
 #viewcont>img {
@@ -593,6 +679,14 @@ div.reader {
 
 .viewer-fixed {
     background-color: transparent;
+}
+
+.viewer-title a {
+    color: var(--link) !important;
+}
+
+.viewer-title a::after {
+    background-color: transparent !important;
 }
 
 div.reader div.prev,
@@ -655,10 +749,8 @@ h4.doc {
 h4.doc a {
     display: block;
     padding: 0 1rem;
-    background-color: var(--bg2);
-    color: var(--bg);
     text-decoration: none;
-    border-bottom: 1px solid transparent;
+    border-bottom: 1px solid var(--link);
 }
 
 h4.doc a * {
@@ -666,7 +758,8 @@ h4.doc a * {
 }
 
 h4.doc a:hover {
-    border-bottom: 1px solid;
+    background-color: var(--link);
+    color: var(--bg);
 }
 
 
@@ -703,6 +796,7 @@ article.text {
     max-width: 80ex;
     margin-left: auto;
     margin-right: auto;
+    background-color: var(--bg);
 }
 
 article.text p {
@@ -851,19 +945,20 @@ section.opus div.titlesh section.opus div.title {
 }
 
 a.external {
+    color: var(--link3);
     text-indent: 0;
-    display: inline-block;
-    background-repeat: no-repeat;
-    background-size: 1em;
-    background-position: top 50% right 0;
-    padding-right: 1em;
-    background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%23666" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
 
-a.external:hover {
-    /* text-decoration: none; */
-    color: var(--link);
-    background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%23e09143" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
+a.external:hover::after {
+    content: ' ';
+    display: inline-block;
+    position: absolute;
+    background-color: var(--bg);
+    background-repeat: no-repeat;
+    background-size: 1em;
+    background-position: top 20% left 0;
+    padding-right: 1.2ex;
+    background-image: url('data:image/svg+xml;utf-8,<svg width="24" height="24" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17 13.5v6H5v-12h6m3-3h6v6m0-6-9 9" class="icon_svg-stroke" stroke="%239c652e" stroke-width="1.5" fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round"></path></svg>');
 }
 
 h1 a.fichtner {
@@ -886,9 +981,9 @@ a.opus {
     order: -1;
     flex-shrink: 0;
     width: 25vw;
-    height: 100vh;
     position: sticky;
-    top: 0;
+    top: 80px;
+    height: calc(100vh - 80px);
     bottom: 0;
     overflow-y: scroll;
     background-color: var(--bg3);
@@ -907,4 +1002,5 @@ a.opus {
 
 #biblio {
     padding: 2rem;
+    background-color: var(--bg);
 }

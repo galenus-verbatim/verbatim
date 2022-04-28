@@ -31,7 +31,9 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
             <div class="moto">Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.</div>
             <img class="banner" src="<?= Route::app_href() ?>theme/galenus-verbatim.jpg" />
         </div>
-        <nav class="tabs">
+    </header>
+    <div id="content">
+        <nav id="tabs" class="tabs">
             <?= Verbatim::tab('', 'Accueil /<br/>Accès rapide') ?>
             <?= Verbatim::tab('traites', 'Table des <br/> traités') ?>
             <?php 
@@ -47,8 +49,7 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
             <?= Verbatim::tab('table', 'Table <br/>fréquentielle') ?>
             <?= Verbatim::tab('apropos', 'À propos /<br/>Crédits') ?>
         </nav>
-    </header>
-    <div id="content">
+        <hr id="tabsep"/>
         <div class="container">
             <main>
                 <?php Route::main(); ?>

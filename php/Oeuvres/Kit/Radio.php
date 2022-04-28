@@ -58,17 +58,20 @@ class Radio
             $this->default = $values[0];
         }
         $check = Web::par($this->name, $this->default, $pattern);
+        $n = 0;
         $html = '';
         foreach($this->buts as $value => $label) {
+            $id = $this->name . $n;
+            $n++;
             $checked = '';
             if ($value == $check) $checked = ' checked="checked"';
             $html .= '
-        <label>
-            <input onchange="this.form.submit()" type="radio" name="' . $this->name 
+    <span class="radio">
+        <input onchange="this.form.submit()" type="radio" id="' . $id . '" name="' . $this->name 
             . '" value="' . $value . '"' 
             . $checked . '/>
-            ' . $label . '
-        </label>
+        <label class="radio" for="' . $id . '">' . $label . '</label>
+    </span>
 ';
         }
         return $html;
