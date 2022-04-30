@@ -25,7 +25,7 @@
 
 html,
 body {
-    height: 100%
+    min-height: 100vh;
 }
 
 
@@ -482,16 +482,6 @@ nav a {
     user-select: none;
 }
 
-
-/*
-span.pb[data-page]::before {
-    color: var(--textlo);
-    content: " [p." attr(data-page) "]";
-    display: block;
-    text-align: right;
-}
-*/
-
 span.pageview {
     color: var(--link);
     cursor: pointer;
@@ -512,8 +502,14 @@ span.pageview:hover {
 span.ed1page,
 span.ed2page {
     padding-left: 0.5ex;
-    margin: 0 2px;
     background-color: var(--link2);
+}
+
+span.ed1page.page1,
+span.ed2page.page1 {
+    /* no index for first page */
+    padding-left: 0;
+    background-color: transparent;
 }
 
 span.ed1page:hover,
@@ -531,6 +527,10 @@ span.lb::before {
     content: '\A';
 }
 
+div.l>span.lb:first-child::before {
+    content: '';
+}
+
 
 /*
 span.pb[data-line]::before {
@@ -539,7 +539,6 @@ span.pb[data-line]::before {
 }
 */
 
-span.pb[data-line]::after,
 span.lb[data-line]::after {
     text-indent: 0;
     font-size: 0.7rem;
@@ -547,7 +546,17 @@ span.lb[data-line]::after {
     display: inline-block;
     content: attr(data-line) " ";
     width: 2rem;
+    margin-right: 2px;
     color: var(--textlo);
+}
+
+span.lb[data-line]:target::after {
+    background-color: var(--link);
+    color: #000;
+}
+
+html {
+    scroll-padding-top: 120px;
 }
 
 nav.toc,
@@ -619,13 +628,16 @@ div.doc>h1 {
     color: var(--bg);
     margin: 0;
     padding: 0.5rem 2rem;
-    text-align: cente r;
+    text-align: center;
     font-size: 85%;
     font-weight: 500;
     position: -webkit-sticky;
     position: sticky;
     top: 60px;
 }
+
+
+/** for anchor links */
 
 h1.title * {
     color: inherit;
@@ -682,7 +694,7 @@ div.reader {
 }
 
 .viewer-title a {
-    color: var(--link) !important;
+    color: var(--bg) !important;
 }
 
 .viewer-title a::after {
@@ -931,8 +943,8 @@ section.opus div.titlesh section.opus div.title {
     font-style: italic;
 }
 
-.AbbrEnCGT::before {
-    content: '(CGT) ';
+.AbbrEnCFT::before {
+    content: '(CFT) ';
 }
 
 .surname {

@@ -26,8 +26,10 @@ Route::get('/', $verbadir . 'pages/welcome.html');
 Route::get('/(tlg.*)', $verbadir . 'pages/doc.php', array('cts' => '$1'));
 // try if a php content is available
 Route::get('/(.*)', $verbadir . 'pages/$1.php'); 
- // try if an html content is available
+// try if an html content is available
 Route::get('/(.*)', $verbadir . 'pages/$1.html');
+// try a redirection to a Kühn reference
+Route::get('/(.*)', $verbadir . 'pages/kuhn.php', array('kuhn' => '$1'));
 // catch all
 Route::route('/404', $verbadir . 'pages/404.html');
 // No Route has worked
