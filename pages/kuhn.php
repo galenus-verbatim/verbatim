@@ -25,6 +25,8 @@ function roman2int($str){
 }
 
 $kuhn = trim(Web::par('kuhn'));
+// XVIII A, 18 a
+$kuhn = preg_replace("@^(18|XVIII) +([aAbB])@", "$1$2", $kuhn);
 
 list($volumen, $pagina, $linea) = array_merge(preg_split("@[\., ]+@", $kuhn), array(null, null, null));
 // volume
@@ -50,12 +52,12 @@ $linea = intval($linea);
 $pagina = intval($pagina);
 // just volume
 if ($volumen && $pagina) {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY pagad;";
+    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY pagde;";
     $qClav = Verbatim::$pdo->prepare($sql);
     $qClav->execute(array($volumen, $pagina, $pagina));
 }
 else {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY pagad;";
+    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY pagde LIMIT 1;";
     $qClav = Verbatim::$pdo->prepare($sql);
     $qClav->execute(array($volumen));
 }
@@ -92,6 +94,7 @@ else { // data error
     $clavis = $res[0]['clavis'];
 }
 if ($linea) $clavis .= '#p' . $pagina . "." . $linea;
+else if ($pagina) $clavis .= '#p' . $pagina;
 echo $clavis;
 header("Location: $clavis");
 exit();

@@ -31,9 +31,9 @@ const viewer = new Viewer(pagimage, {
 (function() {
     let first = true;
     // const ed1 set, use data 
-    wear(".pb", ed);
-    wear(".ed1page", ed1);
-    wear(".ed2page", ed2);
+    wear(".pb", kuhn);
+    wear(".ed1page", bale);
+    wear(".ed2page", chartier);
 
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {
@@ -43,30 +43,33 @@ const viewer = new Viewer(pagimage, {
 
             var span = document.createElement("span");
             span.className = "pageview";
-
             let p = els[i].dataset.n;
+
+
             if (!p) p = els[i].dataset.page;
             let url;
-            // specific Kühn
-            const pos = p.indexOf(".");
+            // has been seen, but no more used
+            // const pos = p.indexOf(".");
             let pno;
             let text = '[';
             if (els[i].classList.contains('page1') || els[i].classList.contains('pbde')) {
                 text += '…';
             }
-            if (pos !== -1) {
-                text += p + ' ' + dat['name'];
-                // pad page number for biusante 
-                pno = pad(parseInt(p.substring(pos + 1)) + parseInt(dat['p1']), 4);
-                const volsearch = 'x' + pad(parseInt(dat['vol']), 2);
-                const volreplace = 'x' + pad(p.substring(0, pos), 2);
-                url = dat['url'].replace('%%', pno).replace(volsearch, volreplace);
-            } else {
-                text += dat['vol'] + '.' + p + ' ' + dat['name'];
-                // pad page number for biusante 
-                pno = pad(parseInt(p) + parseInt(dat['p1']), 4);
-                url = dat['url'].replace('%%', pno);
+            let pdiff = dat['pdiff'];
+            if (dat['pholes']) {
+                for (const prop in dat['pholes']) {
+                    if (p >= prop) {
+                        pdiff = dat['pholes'][prop];
+                    } else {
+                        break;
+                    }
+                }
             }
+
+            text += dat['vol'] + '.' + p + ' ' + dat['abbr'];
+            // pad page number for biusante 
+            pno = pad(parseInt(p) + parseInt(pdiff), 4);
+            url = dat['url'].replace('%%', pno);
             text += ']';
             span.innerText = text;
             // els[i].parentNode.insertBefore(span, els[i].nextSibling);

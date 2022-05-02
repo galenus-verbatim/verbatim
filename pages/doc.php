@@ -137,12 +137,55 @@ echo '
     echo '
     </div>
 </div>';
-echo '
+    echo '
     <div id="pagimage">
         <div id="viewcont">
             <img id="image"/>
         </div>
     </div>';
+    
+    // add some javascript info for page resolution
+    $file = dirname(__DIR__) . '/theme/vols.json';
+    while (file_exists($file)) {
+        $json = file_get_contents($file);
+        $vols = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+        
+        $vars = array();
+        $vars['kuhn'] = $vols['kuhn'][$doc['volumen']];
+        $vars['kuhn']['vol'] = $doc['volumen'];
+        $vars['kuhn']['abbr'] = 'K';
+
+        list($book) = explode('_', $doc['clavis']);
+        $info = $vols[$book];
+        $chartier = null;
+        $bale = null;
+        if ($info) {
+            if (isset($info['chartier'])) {
+                $chartier = $vols['chartier'][$info['chartier']];
+            }
+            if (isset($info['bale'])) {
+                $bale = $vols['bale'][$info['bale']];
+            }
+        }
+        if ($chartier) {
+            $chartier['abbr'] = 'Chart.';
+            $chartier['vol'] = $info['chartier'];
+            $vars['chartier'] = $chartier;
+        }
+        if ($bale) {
+            $bale['abbr'] = 'Bas.';
+            $bale['vol'] = $info['bale'];
+            $vars['bale'] = $bale;
+        }
+
+        echo "<script>\n";
+        foreach ($vars as $name => $dat) {
+            echo 'const ' . $name .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
+        }
+        echo "</script>\n";
+        break;
+    }
+
 }
 ?>
 

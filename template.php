@@ -34,8 +34,12 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
     </header>
     <div id="content">
         <nav id="tabs" class="tabs">
-            <?= Verbatim::tab('', 'Accueil /<br/>Accès rapide') ?>
-            <?= Verbatim::tab('traites', 'Table des <br/> traités') ?>
+            <form action="" onsubmit="this.action = this.kuhn.value;">
+                <label for="kuhn">Accès rapide</label>
+                <input title="Référérence Kuhn brève, ex: 18a.26.4" id="kuhn" name="kuhn"/>
+            </form>
+            <?= Verbatim::tab('', 'Accueil') ?>
+            <?= Verbatim::tab('opera', 'Table des <br/> traités') ?>
             <?php 
             if ($page == 'tlg') {
                 // if doc visible, add a buttoon search in doc search in doc
@@ -53,6 +57,7 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
         <div class="container">
             <main>
                 <?php Route::main(); ?>
+            
             </main>
         </div>
     </div>
@@ -72,22 +77,6 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
         </nav>
     </footer>
 </div>
-<?php
-// set variables for bâle / chartier links
-while ($body_class == 'tlg') {
-    $json = file_get_contents(__DIR__ . '/theme/pages.json');
-    $bale_chartier = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
-    list($book) = explode('_', $page);
-    $eds = $bale_chartier[$book];
-    if (!$eds) break;
-    echo "<script>\n";
-    foreach ($eds as $key => $dat) {
-        echo 'const ' . $key .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
-    }
-    echo "</script>\n";
-    break;
-}
-?>
         <script src="<?= Route::app_href() ?>vendor/viewer.js"></script>
         <script src="<?= Route::app_href() ?>theme/galenus.js"></script>
     </body>

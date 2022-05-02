@@ -3,21 +3,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -26,21 +26,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -49,21 +49,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -72,21 +72,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -95,21 +95,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -118,21 +118,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -141,21 +141,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "3",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -164,21 +164,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "3",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -187,21 +187,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -210,21 +210,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -233,21 +233,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -256,21 +256,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -279,21 +279,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -302,21 +302,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -325,21 +325,21 @@
         "ed": {
             "name": "K",
             "vol": "2",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -348,21 +348,21 @@
         "ed": {
             "name": "K",
             "vol": "3",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -371,21 +371,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -394,21 +394,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -417,21 +417,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "3",
-            "p1": 8,
+            "pdiff": 8,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -440,21 +440,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -463,21 +463,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -486,21 +486,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -509,21 +509,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -532,21 +532,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -555,21 +555,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 2,
+            "pdiff": 2,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -578,21 +578,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 2,
+            "pdiff": 2,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -601,21 +601,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "3",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -624,21 +624,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -647,21 +647,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -670,21 +670,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -693,21 +693,21 @@
         "ed": {
             "name": "K",
             "vol": "5",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -716,21 +716,21 @@
         "ed": {
             "name": "K",
             "vol": "6",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -739,21 +739,21 @@
         "ed": {
             "name": "K",
             "vol": "6",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -762,21 +762,21 @@
         "ed": {
             "name": "K",
             "vol": "6",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -785,21 +785,21 @@
         "ed": {
             "name": "K",
             "vol": "6",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -808,21 +808,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -831,21 +831,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -854,21 +854,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -877,21 +877,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -900,21 +900,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -923,21 +923,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -946,21 +946,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -969,7 +969,7 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -978,21 +978,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1001,21 +1001,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1024,21 +1024,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1047,21 +1047,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1070,21 +1070,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1093,21 +1093,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1116,21 +1116,21 @@
         "ed": {
             "name": "K",
             "vol": "7",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1139,21 +1139,21 @@
         "ed": {
             "name": "K",
             "vol": "8",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1162,21 +1162,21 @@
         "ed": {
             "name": "K",
             "vol": "8",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1185,21 +1185,21 @@
         "ed": {
             "name": "K",
             "vol": "8",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "7",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x07:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x07&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1208,21 +1208,21 @@
         "ed": {
             "name": "K",
             "vol": "8",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1231,21 +1231,21 @@
         "ed": {
             "name": "K",
             "vol": "9",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1254,21 +1254,21 @@
         "ed": {
             "name": "K",
             "vol": "9",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1277,14 +1277,14 @@
         "ed": {
             "name": "K",
             "vol": "9",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1293,21 +1293,21 @@
         "ed": {
             "name": "K",
             "vol": "9",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1316,21 +1316,21 @@
         "ed": {
             "name": "K",
             "vol": "9",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1339,21 +1339,21 @@
         "ed": {
             "name": "K",
             "vol": "10",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1362,21 +1362,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1385,21 +1385,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1408,21 +1408,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1431,21 +1431,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1454,21 +1454,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1477,21 +1477,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1500,21 +1500,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1523,21 +1523,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1546,21 +1546,21 @@
         "ed": {
             "name": "K",
             "vol": "11",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1569,21 +1569,21 @@
         "ed": {
             "name": "K",
             "vol": "12",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1592,21 +1592,21 @@
         "ed": {
             "name": "K",
             "vol": "13",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1615,21 +1615,21 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1638,21 +1638,21 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "2",
-            "p1": 1,
+            "pdiff": 1,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "4",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1661,21 +1661,21 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1684,21 +1684,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1707,21 +1707,21 @@
         "ed": {
             "name": "K",
             "vol": "15",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x15:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x15&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "3",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1730,21 +1730,21 @@
         "ed": {
             "name": "K",
             "vol": "15",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x15:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x15&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1753,21 +1753,21 @@
         "ed": {
             "name": "K",
             "vol": "15",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x15:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x15&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "11",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x11:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x11&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1776,7 +1776,7 @@
         "ed": {
             "name": "K",
             "vol": "16",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x16:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x16&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1785,21 +1785,21 @@
         "ed": {
             "name": "K",
             "vol": "18a",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18a:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "9",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x09:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x09&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1808,21 +1808,21 @@
         "ed": {
             "name": "K",
             "vol": "18a",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18a:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1831,21 +1831,21 @@
         "ed": {
             "name": "K",
             "vol": "18a",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18a:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1854,21 +1854,21 @@
         "ed": {
             "name": "K",
             "vol": "18a",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18a:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1877,21 +1877,21 @@
         "ed": {
             "name": "K",
             "vol": "18b",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18b:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18b&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "8",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x08:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x08&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1900,21 +1900,21 @@
         "ed": {
             "name": "K",
             "vol": "18b",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18b:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18b&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1923,21 +1923,21 @@
         "ed": {
             "name": "K",
             "vol": "18b",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18b:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18b&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "5",
-            "p1": 9,
+            "pdiff": 9,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1946,7 +1946,7 @@
         "ed": {
             "name": "K",
             "vol": "18b",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18b:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18b&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1955,21 +1955,21 @@
         "ed": {
             "name": "K",
             "vol": "4",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 21,
+            "pdiff": 21,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "5",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x05:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x05&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -1978,21 +1978,21 @@
         "ed": {
             "name": "K",
             "vol": "1",
-            "p1": 265,
+            "pdiff": 265,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "1",
-            "p1": 17,
+            "pdiff": 17,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x01:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x01&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2001,21 +2001,21 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "13",
-            "p1": 6,
+            "pdiff": 6,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x13:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x13&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2024,21 +2024,21 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2047,14 +2047,14 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "10",
-            "p1": 4,
+            "pdiff": 4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x10:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x10&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2063,7 +2063,7 @@
         "ed": {
             "name": "K",
             "vol": "14",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x14:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x14&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
@@ -2071,14 +2071,14 @@
         "ed1": {
             "name": "Bas.",
             "vol": "4",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x04&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "2",
-            "p1": 5,
+            "pdiff": 5,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x02:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x02&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2087,14 +2087,14 @@
         "ed": {
             "name": "K",
             "vol": "18a",
-            "p1": 68,
+            "pdiff": 68,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x18a:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x18a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "12",
-            "p1": -4,
+            "pdiff": -4,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x12:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x12&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }
@@ -2103,21 +2103,21 @@
         "ed": {
             "name": "K",
             "vol": "6",
-            "p1": 3,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed1": {
             "name": "Bas.",
             "vol": "3",
-            "p1": 7,
+            "pdiff": 7,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x03:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00039x03&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "ed2": {
             "name": "Chart.",
             "vol": "6",
-            "p1": 2,
+            "pdiff": 2,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00013x06:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?00013x06&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         }

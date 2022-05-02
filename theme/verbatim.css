@@ -77,8 +77,8 @@ input[type=radio] {
     -moz-appearance: none;
     appearance: none;
     border-radius: 50%;
-    width: 16px;
-    height: 16px;
+    width: 0.7em;
+    height: 0.7em;
 }
 
 
@@ -306,6 +306,13 @@ a:hover {
     z-index: 2;
     font-size: 16px;
     height: 60px;
+    font-variant: small-caps;
+    font-weight: bold;
+}
+
+#tabs form {
+    text-align: center;
+    padding: 0 1ex;
 }
 
 #tabsep {
@@ -339,9 +346,7 @@ nav.tabs a.tab {
     display: block;
     text-decoration: none;
     padding: 0.2rem 0.5rem 0.7rem 0.5rem;
-    font-variant: small-caps;
     text-align: center;
-    font-weight: bold;
     width: 100%;
 }
 
@@ -365,10 +370,6 @@ nav.tabs form.selected {
     color: var(--bg2);
 }
 
-form.qform {
-    padding: 0 1ex;
-}
-
 form.qform div {
     white-space: nowrap;
     text-align: center;
@@ -379,11 +380,14 @@ input:focus {
     outline: none;
 }
 
+
+/*
 form.qform input.q {
     width: 25ex;
     border: none;
     padding: 4px 1ex 3px 1ex;
 }
+*/
 
 #logos {
     display: flex;
@@ -546,6 +550,7 @@ span.lb[data-line]::after {
     display: inline-block;
     content: attr(data-line) " ";
     width: 2rem;
+    padding-left: 1ex;
     margin-right: 2px;
     color: var(--textlo);
 }
@@ -725,6 +730,14 @@ div.reader div.next a:hover {
 
 /** biblio */
 
+header.editio {
+    padding: 0.5rem 0;
+}
+
+header.editio .opus_tituli {
+    margin-left: 2em;
+}
+
 .edition a {
     display: block;
     text-decoration: none;
@@ -848,7 +861,7 @@ hr.footnotes {
     clear: both;
 }
 
-.note blockquote {
+blockquote {
     margin: 0.5rem 0rem 0.5rem 2rem;
 }
 
@@ -943,8 +956,8 @@ section.opus div.titlesh section.opus div.title {
     font-style: italic;
 }
 
-.AbbrEnCFT::before {
-    content: '(CFT) ';
+.AbbrEnCGT::before {
+    content: '(CGT) ';
 }
 
 .surname {
