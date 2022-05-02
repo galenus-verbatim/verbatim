@@ -149,7 +149,7 @@ class Route {
         // modyfy parameters according to route
         if ($pars != null) {
             foreach($pars as $key => $value) {
-                $pars[$key] = self::replace($value, $route_match);
+                $pars[$key] = urldecode(self::replace($value, $route_match));
             }
             $_REQUEST = array_merge($_REQUEST, $pars);
             $_GET = array_merge($_GET, $pars);

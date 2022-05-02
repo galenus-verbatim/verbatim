@@ -7,9 +7,9 @@ use Oeuvres\Kit\{Route, I18n};
 
 
 $page = Route::$url_parts[0];
-$start = 'tlg';
-if (@substr_compare($page, $start, 0, strlen($start))==0) {
-    $page = 'tlg';
+$body_class = $page;
+if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
+    $body_class = 'tlg';
 }
 
 ?><!doctype html>
@@ -17,9 +17,10 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
     <head>
         <meta charset="utf-8"/>
         <title><?= Route::title('Verbatim') ?></title>
+        <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="<?= Route::app_href() ?>theme/verbatim.css"/>
     </head>
-    <body class="<?=$page?>">
+    <body class="<?=$body_class?>">
 <div id="all">
     <header id="header">
         <div class="banner">
@@ -30,7 +31,9 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
             <div class="moto">Naviguer dans le texte de Galien de Pergame, éd. Kühn (1821–1833) &amp; al.</div>
             <img class="banner" src="<?= Route::app_href() ?>theme/galenus-verbatim.jpg" />
         </div>
-        <nav class="tabs">
+    </header>
+    <div id="content">
+        <nav id="tabs" class="tabs">
             <?= Verbatim::tab('', 'Accueil /<br/>Accès rapide') ?>
             <?= Verbatim::tab('traites', 'Table des <br/> traités') ?>
             <?php 
@@ -46,8 +49,7 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
             <?= Verbatim::tab('table', 'Table <br/>fréquentielle') ?>
             <?= Verbatim::tab('apropos', 'À propos /<br/>Crédits') ?>
         </nav>
-    </header>
-    <div id="content">
+        <hr id="tabsep"/>
         <div class="container">
             <main>
                 <?php Route::main(); ?>
@@ -70,5 +72,23 @@ if (@substr_compare($page, $start, 0, strlen($start))==0) {
         </nav>
     </footer>
 </div>
+<?php
+// set variables for bâle / chartier links
+while ($body_class == 'tlg') {
+    $json = file_get_contents(__DIR__ . '/theme/pages.json');
+    $bale_chartier = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
+    list($book) = explode('_', $page);
+    $eds = $bale_chartier[$book];
+    if (!$eds) break;
+    echo "<script>\n";
+    foreach ($eds as $key => $dat) {
+        echo 'const ' . $key .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
+    }
+    echo "</script>\n";
+    break;
+}
+?>
+        <script src="<?= Route::app_href() ?>vendor/viewer.js"></script>
+        <script src="<?= Route::app_href() ?>theme/galenus.js"></script>
     </body>
 </html>

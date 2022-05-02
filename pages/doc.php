@@ -95,7 +95,7 @@ function main() {
                 $ret .= '>';
                 $ret .= $matches[2];
                 if ($count) {
-                    $ret .= ' <small>(' . $count . ' o.)</small>';
+                    $ret .= ' <small>(' . $count . ' occ.)</small>';
                 }
                 $ret .= '</a>';
                 return $ret;
@@ -137,6 +137,12 @@ echo '
     echo '
     </div>
 </div>';
+echo '
+    <div id="pagimage">
+        <div id="viewcont">
+            <img id="image"/>
+        </div>
+    </div>';
 }
 ?>
 

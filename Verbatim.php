@@ -165,10 +165,7 @@ class Verbatim
             $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</span>';
         }
         // a bug, but could be found
-        if (isset($doc['pagad']) && $doc['pagad'] && (isset($doc['pagde']) || !$doc['pagde'])) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagad'] . '</span>';
-        }
-        else if (isset($doc['pagad']) && $doc['pagad']) {
+       if (isset($doc['pagad']) && $doc['pagad']) {
             $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
         }
         else if (isset($doc['pagde']) && $doc['pagde']) {
