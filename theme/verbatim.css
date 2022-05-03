@@ -612,7 +612,7 @@ div.toc a.selected:hover {
     color: var(--link);
 }
 
-div.toc a small {
+a small {
     color: var(--text);
 }
 
