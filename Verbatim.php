@@ -14,7 +14,6 @@ Verbatim::init();
 class Verbatim
 {
     static $pdo;
-    static $bibNorm;
     static $lat_grc;
     /**
      * Init static fields
@@ -22,10 +21,6 @@ class Verbatim
     static public function init()
     {
         mb_internal_encoding("UTF-8");
-        if (file_exists($file = __DIR__ . '/BibNorm.php')) {
-            include_once($file);
-            self::$bibNorm = true;
-        }
         self::$lat_grc = include(__DIR__ . '/pages/lat_grc.php');
     }
 
@@ -111,9 +106,6 @@ class Verbatim
 
     static public function edition(&$edition)
     {
-        if (self::$bibNorm) { // some local rewriting
-            BibNorm::edition($edition);
-        }
         $line = '';
         $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';
         $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
@@ -145,10 +137,6 @@ class Verbatim
 
     static public function bibl(&$edition, &$doc)
     {
-        if (self::$bibNorm) { // some local rewriting
-            BibNorm::edition($edition);
-            BibNorm::doc($doc);
-        }
         // parts
         $line = '';
         $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';

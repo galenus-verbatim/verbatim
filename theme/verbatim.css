@@ -68,6 +68,11 @@ select {
 
 /* full redesign */
 
+::placeholder {
+    color: var(--textlo);
+    font-style: italic;
+}
+
 label.radio {
     cursor: pointer;
 }

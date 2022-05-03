@@ -64,6 +64,16 @@ class Web
     }
 
     /**
+     * Get absolute URL
+     */
+    public static function url()
+    {
+        $url = (isset($_SERVER['HTTPS']) && $_SERVER['HTTPS'] === 'on' ? "https" : "http");
+        $url .= "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        return $url;
+    }
+
+    /**
      * Give pathinfo with priority order of different values.
      * The possible variables are not equally robust
      *
