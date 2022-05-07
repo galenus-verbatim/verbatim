@@ -22,10 +22,17 @@ class Verbatim
     {
         mb_internal_encoding("UTF-8");
         self::$lat_grc = include(__DIR__ . '/pages/lat_grc.php');
+        // test needed extension
+        foreach (array('intl', 'pdo_sqlite') as $ext) {
+            if (!extension_loaded($ext)) {
+                $mess = "<h1>Installation problem, check your php.ini, needed extension: " . $ext . "</h1>";
+                throw new Exception($mess);
+            }
+        }
     }
 
     /**
-     * Database should be connected if sommething is desired to be displayed
+     * Database should be connected if something is desired to be displayed
      */
     static public function connect($sqlite)
     {
@@ -47,20 +54,34 @@ class Verbatim
      */
     public static function forms(string $q, string $field)
     {
-        // transliterate latin letters
-        $q = strtr($q, self::$lat_grc);
-        $words = preg_split("@[\s,]+@", trim($q));
-        $in  = str_repeat('?,', count($words) - 1) . '?';
-        
+        $limit = 100; // search more than 100 words ?
+        $qform = Verbatim::$pdo->prepare("SELECT id, form, cat FROM $field WHERE form LIKE ?");
+        $qdeform = Verbatim::$pdo->prepare("SELECT id, form, cat FROM $field WHERE deform LIKE ?");
         $forms = array();
-        foreach(array(
-            "SELECT id, form, cat FROM $field WHERE form IN ($in)",
-            "SELECT id, form, cat FROM $field WHERE deform IN ($in)",
-        ) as $sql) {
-            $qForm = Verbatim::$pdo->prepare($sql);
-            $qForm->execute($words);
-            while ($row = $qForm->fetch(PDO::FETCH_NUM)) {
+        $words = preg_split("@[\s,]+@", trim($q));
+        for ($i = 0; $i < count($words); $i++) {
+            $w = $words[$i];
+            $w = Normalizer::normalize($w, Normalizer::FORM_KD);
+            if ($field == 'lem' && $w == 'NUM');
+            // maybe latin letters to translitterate
+            else $w = strtr($q, self::$lat_grc);
+
+
+
+
+            $qform->execute(array($w));
+            // rowcount do not work
+            while ($row = $qform->fetch(PDO::FETCH_NUM)) {
                 $forms[$row[0]] = $row[1] .' ' . I18n::_('pos.' . $row[2]) ;
+                if (--$limit <= 0) return $forms;
+            }
+            // nothing found in form, try deform (without accents)
+            if (!$row) {
+                $qdeform->execute(array($w));
+                while ($row = $qdeform->fetch(PDO::FETCH_NUM)) {
+                    $forms[$row[0]] = $row[1] .' ' . I18n::_('pos.' . $row[2]) ;
+                    if (--$limit <= 0) return $forms;
+                }
             }
         }
         return $forms;
@@ -90,7 +111,7 @@ class Verbatim
         $radio->add('orth', I18n::_('Form'));
         echo '
 <form action="' . Route::home() . $route . '" class="qform' . $selected . '">
-    <div class="radios">' . $radio->html() . '    </div>
+    <div class="radios">' . $radio . '    </div>
     <div  class="input">';
         if ($down) {
             echo '

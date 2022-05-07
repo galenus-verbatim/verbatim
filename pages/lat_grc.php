@@ -57,5 +57,6 @@ return array(
     "y" => "ψ",
     "Y" => "Ψ",
     "Z" => "Ζ",
-    "z" => "ζ"
+    "z" => "ζ",
+    "*" => "%", // joker for sqlite queries
 );

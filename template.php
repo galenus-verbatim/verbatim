@@ -50,7 +50,7 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
             }
             
             ?>
-            <?= Verbatim::tab('table', 'Table <br/>fréquentielle') ?>
+            <?= Verbatim::tab('verba', 'Table <br/>fréquentielle') ?>
             <?= Verbatim::tab('apropos', 'À propos /<br/>Crédits') ?>
         </nav>
         <hr id="tabsep"/>

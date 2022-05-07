@@ -11,6 +11,7 @@ return array(
     'Form' => 'Forme',
     'Occs' => 'Occurrences',
     'Lem' => 'Lemme',
+    'nostop' => 'Sans “mots vides”',
     'pos.l' => 'art.',
     'pos.n' => 'nom',
     'pos.a' => 'adj.',

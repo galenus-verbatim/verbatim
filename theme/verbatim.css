@@ -432,11 +432,6 @@ mark {
     color: var(--text);
 }
 
-td.nb {
-    text-align: right;
-    padding-right: 1rem;
-}
-
 p {
     text-indent: 2rem;
     margin: 0;
@@ -806,11 +801,24 @@ table.freqs {
     background-color: var(--bg);
 }
 
+td.clavis {
+    white-space: nowrap;
+}
+
+td.no,
+td.nb {
+    text-align: right;
+    font-size: 85%;
+    color: var(--textlo);
+    padding-right: 3px;
+}
+
+td.clavis a,
 td.orth a,
 td.lem a {
     display: block;
     text-decoration: none;
-    padding: 0 1rem;
+    padding: 0 0.5rem;
 }
 
 td.orth a:hover,

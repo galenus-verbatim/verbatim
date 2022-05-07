@@ -3,37 +3,39 @@
  */
 const image = document.getElementById('image');
 const pagimage = document.getElementById('viewcont');
-const viewer = new Viewer(pagimage, {
-    transition: false,
-    inline: true,
-    navbar: 0,
-    // minWidth: '100%', 
-    toolbar: {
-        zoomIn: 4,
-        zoomOut: 4,
-        oneToOne: 4,
-        reset: 4,
-        prev: 0,
-        play: 0,
-        next: 0,
-        rotateLeft: 0,
-        rotateRight: 0,
-        flipHorizontal: 0,
-        flipVertical: 0,
-    },
-    title: function(image) {
-        return image.alt;
-    },
-    viewed() {
-        // viewer.zoomTo(1);
-    },
-});
+if (pagimage) {
+    const viewer = new Viewer(pagimage, {
+        transition: false,
+        inline: true,
+        navbar: 0,
+        // minWidth: '100%', 
+        toolbar: {
+            zoomIn: 4,
+            zoomOut: 4,
+            oneToOne: 4,
+            reset: 4,
+            prev: 0,
+            play: 0,
+            next: 0,
+            rotateLeft: 0,
+            rotateRight: 0,
+            flipHorizontal: 0,
+            flipVertical: 0,
+        },
+        title: function(image) {
+            return image.alt;
+        },
+        viewed() {
+            // viewer.zoomTo(1);
+        },
+    });
+}
 (function() {
     let first = true;
     // const ed1 set, use data 
-    wear(".pb", kuhn);
-    wear(".ed1page", bale);
-    wear(".ed2page", chartier);
+    if (typeof kuhn !== 'undefined') wear(".pb", kuhn);
+    if (typeof bale !== 'undefined') wear(".ed1page", bale);
+    if (typeof chartier !== 'undefined') wear(".ed2page", chartier);
 
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {
