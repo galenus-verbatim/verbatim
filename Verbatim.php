@@ -61,7 +61,7 @@ class Verbatim
         $words = preg_split("@[\s,]+@", trim($q));
         for ($i = 0; $i < count($words); $i++) {
             $w = $words[$i];
-            $w = Normalizer::normalize($w, Normalizer::FORM_KD);
+            $w = Normalizer::normalize($w, Normalizer::FORM_KC);
             if ($field == 'lem' && $w == 'NUM');
             // maybe latin letters to translitterate
             else $w = strtr($q, self::$lat_grc);
