@@ -86,6 +86,51 @@ input[type=radio] {
     height: 0.7em;
 }
 
+button {
+    font-family: inherit;
+    /* For all browsers */
+    font-size: 100%;
+    /* For all browsers */
+    line-height: 1.15;
+    /* For all browsers */
+    margin: 0;
+    /* Firefox and Safari have margin */
+    overflow: visible;
+    /* Edge hides overflow */
+    text-transform: none;
+    /* Firefox inherits text-transform */
+    -webkit-appearance: button;
+    /* Safari otherwise prevents some styles */
+}
+
+button::-moz-focus-inner {
+    border-style: none;
+    padding: 0;
+}
+
+button:-moz-focusring {
+    outline: none;
+}
+
+button,
+.button {
+    border: 2px solid var(--bglo);
+    border-radius: 0.25em;
+    background: var(--bg2);
+    color: var(--bglo);
+    line-height: 1;
+    white-space: nowrap;
+    text-decoration: none;
+    padding: 0.2em 0.5em;
+    cursor: pointer;
+}
+
+button:hover,
+.button:hover {
+    border-color: var(--bg);
+    color: var(--link);
+}
+
 
 /*
 input[type=radio] {
@@ -285,12 +330,12 @@ div.banner .moto {
     margin: 0;
 }
 
-main article {
-    padding: 3vw;
+.tlg article {
+    padding: 0;
 }
 
-.tlg main article {
-    padding: 0;
+main>article.text {
+    padding: 3vw;
 }
 
 
@@ -619,6 +664,15 @@ div.doc {
     padding: 0 0 10vh 0;
 }
 
+div.doc header {
+    background-color: var(--bg3);
+    padding: 1rem;
+}
+
+div.doc header section {
+    padding: 0;
+}
+
 div.text {
     background-color: var(--bg);
     padding: 5rem 0 5rem 1em;
@@ -942,14 +996,33 @@ a.noteback {
 
 /** biblio */
 
-section.opus {
+section.editio,
+section.opus,
+section.verbatim {
     margin: 0;
     padding: 2rem 0 0 0;
+}
+
+section.editio h1,
+section.opus h1,
+section.verbatim h1 {
+    margin: 0;
     color: var(--bg2);
 }
 
-section.opus h1 {
+section.verbatim h1 {
+    text-align: center;
+    padding-top: 0.5rem;
+}
+
+section.editio h4,
+section.opus h4,
+section.verbatim h4 {
     margin: 0;
+}
+
+a.title {
+    font-style: italic;
 }
 
 section.opus p {
@@ -1009,13 +1082,13 @@ a.opus {
     color: var(--link);
 }
 
-#traites {
+#opera {
     position: relative;
     display: flex;
     padding: 0;
 }
 
-#traites #navs {
+#opera #navs {
     order: -1;
     flex-shrink: 0;
     width: 25vw;

@@ -21,7 +21,7 @@ fwrite($write, '
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'); 
 
 Verbatim::connect($pars['corpus_db']);
-$sql = "SELECT clavis FROM doc ORDER BY ;";
+$sql = "SELECT clavis FROM doc ORDER BY id;";
 $q = Verbatim::$pdo->prepare($sql);
 $q->execute(array());
 while($row = $q->fetch(PDO::FETCH_ASSOC)) {

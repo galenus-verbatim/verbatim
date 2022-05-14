@@ -49,12 +49,20 @@ class Verbatim
         self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
     }
 
+    static public function deform($form)
+    {
+        $form = Normalizer::normalize($form, Normalizer::FORM_D);
+        $form = preg_replace( '@\pM@u', "", $form);
+        $form = mb_strtolower($form);
+        return $form;
+    }
+
     /**
      * $q = "kai"
      */
     public static function forms(string $q, string $field)
     {
-        $limit = 100; // search more than 100 words ?
+        $limit = 500; // search more than 100 words ?
         $qform = Verbatim::$pdo->prepare("SELECT id, form, cat FROM $field WHERE form LIKE ?");
         $qdeform = Verbatim::$pdo->prepare("SELECT id, form, cat FROM $field WHERE deform LIKE ?");
         $forms = array();
@@ -64,22 +72,19 @@ class Verbatim
             $w = Normalizer::normalize($w, Normalizer::FORM_KC);
             if ($field == 'lem' && $w == 'NUM');
             // maybe latin letters to translitterate
-            else $w = strtr($q, self::$lat_grc);
-
-
-
+            else $w = strtr($w, self::$lat_grc);
 
             $qform->execute(array($w));
             // rowcount do not work
             while ($row = $qform->fetch(PDO::FETCH_NUM)) {
-                $forms[$row[0]] = $row[1] .' ' . I18n::_('pos.' . $row[2]) ;
+                $forms[$row[0]] = $row[1]; // .' ' . I18n::_('pos.' . $row[2]) ;
                 if (--$limit <= 0) return $forms;
             }
             // nothing found in form, try deform (without accents)
             if (!$row) {
                 $qdeform->execute(array($w));
                 while ($row = $qdeform->fetch(PDO::FETCH_NUM)) {
-                    $forms[$row[0]] = $row[1] .' ' . I18n::_('pos.' . $row[2]) ;
+                    $forms[$row[0]] = $row[1]; // .' ' . I18n::_('pos.' . $row[2]) ;
                     if (--$limit <= 0) return $forms;
                 }
             }
@@ -156,6 +161,30 @@ class Verbatim
         return implode('.', $num);
     }
 
+    /**
+     * Give a displayable scope (vol., p.) for a section of an edition
+     */
+    static public function scope(&$doc)
+    {
+        $line = '';
+        if (isset($doc['volumen']) && $doc['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
+        }
+        /*
+        else if (isset($edition['volumen']) && $edition['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</span>';
+        }
+        */
+        // a bug, but could be found
+       if (isset($doc['pagad']) && $doc['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+        }
+        else if (isset($doc['pagde']) && $doc['pagde']) {
+            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
+        }
+        return $line;
+    }
+
     static public function bibl(&$edition, &$doc)
     {
         // parts
@@ -164,23 +193,8 @@ class Verbatim
         $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
         $num = self::num($doc);
         if ($num) $line .= ', ' . $num;
-        $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $edition['editor'] . '</span>';
-        // if edition on more than one volume
-        if (isset($doc['volumen']) && $doc['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
-        }
-        else if (isset($edition['volumen']) && $edition['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</span>';
-        }
-        // a bug, but could be found
-       if (isset($doc['pagad']) && $doc['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
-        }
-        else if (isset($doc['pagde']) && $doc['pagde']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
-        }
-        $line .= ')';
+        $line .= ', ed. <span class="editor">' . $edition['editor'] . '</span>';
+        $line .= self::scope($doc);
         return $line;
     }
 }

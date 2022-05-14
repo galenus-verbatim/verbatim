@@ -4,7 +4,7 @@
 const image = document.getElementById('image');
 const pagimage = document.getElementById('viewcont');
 if (pagimage) {
-    const viewer = new Viewer(pagimage, {
+    var viewer = new Viewer(pagimage, {
         transition: false,
         inline: true,
         navbar: 0,

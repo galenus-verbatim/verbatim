@@ -16,7 +16,7 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
 <html>
     <head>
         <meta charset="utf-8"/>
-        <title><?= Route::title('Verbatim') ?></title>
+        <title><?= Route::title('Galenus Verbatim') ?></title>
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="<?= Route::app_href() ?>theme/verbatim.css"/>
     </head>

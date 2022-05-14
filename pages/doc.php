@@ -8,30 +8,57 @@ require_once(dirname(__DIR__) . "/Verbatim.php");
 
 use Oeuvres\Kit\{I18n,Web};
 
+class Data {
+    /** requested cts */
+    public static $cts;
+    /** Doc record from database */
+    public static $doc;
+    /** Editio record from database */
+    public static $editio;
+    /** init param */
+    public static function init() {
+        $cts = Web::par('cts');
+        self::$cts = $cts;
+        if (strpos($cts, '_') === false) { // cover
+            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
+            $qDoc = Verbatim::$pdo->prepare($sql);
+            $qDoc->execute(array($cts . '%'));
+        }
+        else { // should be a document
+            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
+            $qDoc = Verbatim::$pdo->prepare($sql);
+            $qDoc->execute(array($cts. '%'));
+        }
+        self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
+        
+        $edclavis = strtok($cts, '_');
+        $sql = "SELECT * FROM editio WHERE clavis = ? LIMIT 1";
+        $qed = Verbatim::$pdo->prepare($sql);
+        $qed->execute(array($edclavis));
+        self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
+    }
+}
+Data::init();
+
+function title() {
+    $doc = Data::$doc;
+    $editio = Data::$editio;
+    if (!$doc || !$editio) return null;
+    $title = strip_tags(Verbatim::bibl($editio, $doc));
+    return $title;
+}
+
 function main() {
-    $q = Web::par('q');
-    $cts = Web::par('cts');
-    if (strpos($cts, '_') === false) { // cover
-        $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
-        $qDoc = Verbatim::$pdo->prepare($sql);
-        $qDoc->execute(array($cts . '%'));
-    }
-    else { // should be a document
-        $sql = "SELECT * FROM doc WHERE clavis = ?";
-        $qDoc = Verbatim::$pdo->prepare($sql);
-        $qDoc->execute(array($cts));
-    }
-    $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
+    $cts = Data::$cts;
+    $doc = Data::$doc;
+    $editio = Data::$editio;
     if (!$doc) {
         http_response_code(404);
-        echo I18n::_('doc.notfound', $cts);
+        echo I18n::_('doc.notfound', Data::$cts);
         return;
     }
+    $q = Web::par('q');
     $clavis = $doc['clavis'];
-    $sql = "SELECT * FROM edition WHERE id = ?";
-    $qEdition = Verbatim::$pdo->prepare($sql);
-    $qEdition->execute(array($doc['edition']));
-    $edition = $qEdition->fetch(PDO::FETCH_ASSOC);
 
     /*
     if (isset($doc['prev']) && $doc['prev']) {
@@ -58,11 +85,11 @@ function main() {
 <div class="reader">
 <div class="toc">';
     // no nav
-    if (!isset($edition['nav']) || ! $edition['nav']) {
+    if (!isset($editio['nav']) || ! $editio['nav']) {
     }
     // no word searched
     else if (!count($formids)) {
-        $html = $edition['nav'];
+        $html = $editio['nav'];
         $html = preg_replace(
             '@ href="' . $cts . '"@',
             '$1 class="selected"',
@@ -100,7 +127,7 @@ function main() {
                 $ret .= '</a>';
                 return $ret;
             },
-            $edition['nav']
+            $editio['nav']
         );
         echo $html;
     }
@@ -108,10 +135,13 @@ function main() {
 </div>';
 
 echo '
-<div class="doc">';
-    echo '<h1 class="title">' . Verbatim::bibl($edition, $doc, $q) . "</h1>\n";
+<div class="doc">
+    <header>
+';
+    echo preg_replace('@<span class="scope">.*?</span>@', Verbatim::scope($doc), $editio['bibl']);
     echo '
-                    <div class="text">';
+    </header>
+    <div class="text">';
 
     $html = $doc['html'];
     // if a word to find, get lem_id or orth_id
@@ -151,6 +181,12 @@ echo '
         $vols = json_decode($json, true, 512, JSON_THROW_ON_ERROR);
         
         $vars = array();
+
+        // if not in kuhn, nothing to display ?
+        if (!isset($vols['kuhn']) || !isset($vols['kuhn'][$doc['volumen']])) {
+            break;
+        }
+
         $vars['kuhn'] = $vols['kuhn'][$doc['volumen']];
         $vars['kuhn']['vol'] = $doc['volumen'];
         $vars['kuhn']['abbr'] = 'K';
@@ -183,6 +219,7 @@ echo '
             echo 'const ' . $name .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
         }
         echo "</script>\n";
+
         break;
     }
 

@@ -89,17 +89,31 @@ class Route {
     /**
      * Display a <title> for the page 
      */
-    public static function title($title=null): string
+    public static function title($default=null): string
     {
         if (function_exists('title')) {
-            return call_user_func('title');
+            $title = call_user_func('title');
+            if ($title) return $title;
         }
-        else if ($title) {
-            return $title;
+        if ($default) {
+            return $default;
         }
-        else {
-            return I18n::_('app');
+        return I18n::_('app');
+    }
+
+        /**
+     * Display a <title> for the page 
+     */
+    public static function meta($default=null): string
+    {
+        if (function_exists('meta')) {
+            $meta = call_user_func('meta');
+            if ($meta) return $meta;
         }
+        if ($default) {
+            return $default;
+        }
+        return "<title>" . I18n::_('app') . "</title>";
     }
 
     /**

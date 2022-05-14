@@ -30,7 +30,7 @@ function main()
     echo '<div class="conc">'."\n";
 
     $qDoc =  Verbatim::$pdo->prepare("SELECT * FROM doc WHERE id = ?");
-    $qEdition = Verbatim::$pdo->prepare("SELECT * FROM edition WHERE id = ?");
+    $qed = Verbatim::$pdo->prepare("SELECT * FROM editio WHERE id = ?");
 
     $in  = str_repeat('?,', count($formids) - 1) . '?';
     $sql = "SELECT COUNT(*) FROM tok WHERE $field IN ($in)";
@@ -41,7 +41,25 @@ function main()
     if ($field == 'orth') $mess = 'conc.orth';
     if (count($forms) > 1 ) $mess .= 's';
     echo "<header>\n";
-    echo '<div class="occs">' . I18n::_('conc.search', $count, $q) . '</div>' . "\n";
+    echo '<div class="occs">' . I18n::_('conc.search', $count, "<span title=" . json_encode($q) .">$q</span>");
+    $first = true;
+    echo ' (';
+    // unify words
+    $words = array_keys(array_flip($forms));
+    $words = array_combine($words, $words);
+    array_walk($words, function(&$value) {
+        $value = Verbatim::deform($value);
+        return $value;
+    });
+    asort($words);
+
+    foreach ($words as $w => $deform) {
+        if ($first) $first = false;
+        else echo ', ';
+        echo '<span title=' . json_encode($w) . '>' . $w . '</span>';
+    }
+    echo ')';
+    echo '</div>' . "\n";
     echo "</header>\n";
 
     // order by needed, natural order is by the form search
@@ -54,13 +72,13 @@ function main()
             $qDoc->execute(array($tok['doc']));
             $doc = $qDoc->fetch(PDO::FETCH_ASSOC);
 
-            $qEdition->execute(array($doc['edition']));
-            $edition = $qEdition->fetch(PDO::FETCH_ASSOC);
+            $qed->execute(array($doc['editio']));
+            $editio = $qed->fetch(PDO::FETCH_ASSOC);
             if (Route::$routed) $href = '%s?q=%s';
             else $href = "doc.php?cts=%s&amp;q=%s";
             echo '<h4 class="doc">'
                 . '<a href="' . sprintf($href, $doc['clavis'], $qprint) . '">'
-                . Verbatim::bibl($edition, $doc)
+                . Verbatim::bibl($editio, $doc)
                 . "</a>"
                 . "</h4>\n"
             ;

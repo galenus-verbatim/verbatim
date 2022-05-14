@@ -22,6 +22,8 @@ I18n::load(require_once($verbadir .'fr.php'));
 Route::template($verbadir . 'template.php');
 // welcome page
 Route::get('/', $verbadir . 'pages/welcome.html');
+// a tlg opus
+Route::get('/(tlg\d+\.tlg\d+)', $verbadir . 'pages/opus.php', array('cts' => '$1'));
 // a tlg content, array to pass params extracted from url path
 Route::get('/(tlg.*)', $verbadir . 'pages/doc.php', array('cts' => '$1'));
 // try if a php content is available
