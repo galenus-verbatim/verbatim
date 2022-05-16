@@ -227,7 +227,7 @@ class Web
         if ($par !== null) {
             return $par;
         }
-        if ($default) {
+        if ($default !== null) {
             return $default;
         }
         return null;

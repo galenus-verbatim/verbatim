@@ -60,20 +60,6 @@ function main() {
     $q = Web::par('q');
     $clavis = $doc['clavis'];
 
-    /*
-    if (isset($doc['prev']) && $doc['prev']) {
-        echo '<a href="' . sprintf($href, $doc['prev'], $q) . '">
-            <div>⟨</div>
-        <a>';
-    }
-    */
-    /*
-    if (isset($doc['next']) && $doc['next']) {
-        echo '<a href="' . sprintf($href, $doc['next'], $q) . '">
-            <div>⟩</div>
-        </a>';
-    }
-    */
     $forms = array();
     if ($q) {
         $field = Web::par('f', 'lem', '/lem|orth/');
@@ -136,9 +122,26 @@ function main() {
 
 echo '
 <div class="doc">
-    <header>
+    <header class="doc">
 ';
+    $qstring = '';
+    if ($q) $qstring = '?q=' . $q;
+
+    $key = 'ante';
+    if (isset($doc[$key]) && $doc[$key]) {
+        echo '<a class="prevnext" href="' . $doc[$key] . $qstring . '">
+            <div>⟨</div>
+        </a>';
+    }
     echo preg_replace('@<span class="scope">.*?</span>@', Verbatim::scope($doc), $editio['bibl']);
+
+    $key = 'post';
+    if (isset($doc[$key]) && $doc[$key]) {
+        echo '<a class="prevnext" href="' . $doc[$key] . $qstring . '">
+            <div>⟩</div>
+        </a>';
+    }
+
     echo '
     </header>
     <div class="text">';
@@ -166,6 +169,14 @@ echo '
     }
     echo '
     </div>
+    <footer class="doc">';
+    foreach (array('ante' => '⟨', 'post' => '⟩') as $key => $char) {
+        if (!isset($doc[$key]) || !$doc[$key]) continue;
+        echo '<a class="prevnext ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $char .'</a>';
+    }
+    
+    echo '
+    </footer>
 </div>';
     echo '
     <div id="pagimage">
@@ -216,7 +227,7 @@ echo '
 
         echo "<script>\n";
         foreach ($vars as $name => $dat) {
-            echo 'const ' . $name .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
+            echo 'const img' . $name .'='.json_encode($dat, JSON_PRETTY_PRINT|JSON_UNESCAPED_UNICODE| JSON_UNESCAPED_SLASHES).";\n";
         }
         echo "</script>\n";
 

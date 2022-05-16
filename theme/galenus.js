@@ -33,9 +33,9 @@ if (pagimage) {
 (function() {
     let first = true;
     // const ed1 set, use data 
-    if (typeof kuhn !== 'undefined') wear(".pb", kuhn);
-    if (typeof bale !== 'undefined') wear(".ed1page", bale);
-    if (typeof chartier !== 'undefined') wear(".ed2page", chartier);
+    if (typeof imgkuhn !== 'undefined') wear(".pb", imgkuhn);
+    if (typeof imgbale !== 'undefined') wear(".ed1page", imgbale);
+    if (typeof imgchartier !== 'undefined') wear(".ed2page", imgchartier);
 
     // https://www.biusante.parisdescartes.fr/iiif/2/bibnum:00039x04:0038/full/max/0/default.jpg
     function wear(css, dat) {

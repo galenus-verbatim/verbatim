@@ -52,18 +52,19 @@ $linea = intval($linea);
 $pagina = intval($pagina);
 // just volume
 if ($volumen && $pagina) {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY pagde;";
+    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? AND pagde <= ? AND pagad >= ?  ORDER BY rowid";
     $qClav = Verbatim::$pdo->prepare($sql);
     $qClav->execute(array($volumen, $pagina, $pagina));
 }
 else {
-    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY pagde LIMIT 1;";
+    $sql = "SELECT clavis, pagde, linde, pagad, linad FROM doc WHERE editor = 'Karl Gottlob Kühn' AND volumen = ? ORDER BY rowid;";
     $qClav = Verbatim::$pdo->prepare($sql);
     $qClav->execute(array($volumen));
 }
 
 $clavis;
-$res = $qClav->fetchAll();
+$res = $qClav->fetchAll(PDO::FETCH_ASSOC);
+
 if (count($res) < 1) {
     // bad attemp to find a Kuhn ref
     echo '
@@ -93,8 +94,15 @@ else if (count($res) == 2) {
 else { // data error
     $clavis = $res[0]['clavis'];
 }
-if ($linea) $clavis .= '#p' . $pagina . "." . $linea;
-else if ($pagina) $clavis .= '#p' . $pagina;
+
+if ($linea) {
+    $clavis .= '?kuhn=' . $volumen . '.' . $pagina . '.' . $linea;
+    $clavis .= '#p' . $pagina . "." . $linea;
+}
+else if ($pagina) {
+    $clavis .= '?kuhn=' . $volumen . '.' . $pagina;
+    $clavis .= '#p' . $pagina;
+}
 echo $clavis;
 header("Location: $clavis");
 exit();

@@ -3,7 +3,7 @@ declare(strict_types=1);
 
 require_once(__DIR__ . "/Verbatim.php");
 
-use Oeuvres\Kit\{Route, I18n};
+use Oeuvres\Kit\{I18n, Route, Web};
 
 
 $page = Route::$url_parts[0];
@@ -36,7 +36,8 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
         <nav id="tabs" class="tabs">
             <form action="" onsubmit="this.action = this.kuhn.value;">
                 <label for="kuhn">Accès rapide</label>
-                <input title="Référérence Kuhn brève, ex: 18a.26.4" id="kuhn" name="kuhn" placeholder="18a.553.3 ; XVIII B, 559…"/>
+                <input title="Référérence Kuhn brève, ex: 18a.26.4" id="kuhn" name="kuhn" placeholder="18a.553.3 ; XVIII B, 559…" 
+                value="<?= htmlspecialchars(Web::par('kuhn', '')) ?>"/>
             </form>
             <?= Verbatim::tab('', 'Accueil') ?>
             <?= Verbatim::tab('opera', 'Table des <br/> traités') ?>
