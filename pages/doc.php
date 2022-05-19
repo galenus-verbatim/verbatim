@@ -129,15 +129,30 @@ echo '
 
     $key = 'ante';
     if (isset($doc[$key]) && $doc[$key]) {
-        echo '<a class="prevnext" href="' . $doc[$key] . $qstring . '">
+        echo '
+        <a class="prevnext" href="' . $doc[$key] . $qstring . '">
             <div>⟨</div>
-        </a>';
+        </a>
+';
     }
-    echo preg_replace('@<span class="scope">.*?</span>@', Verbatim::scope($doc), $editio['bibl']);
+    echo preg_replace(
+        array(
+            '@<span class="scope">.*?</span>@',
+            '@<span class="editors">@',
+            '@</h1>@',
+        ),
+        array(
+            Verbatim::scope($doc),
+            ', '.Verbatim::num($doc).'$0',
+            '<div class="urn"><a class="urn" href="">urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']) . '</a></div>' . '$0',
+        ), 
+        $editio['bibl']
+    );
 
     $key = 'post';
     if (isset($doc[$key]) && $doc[$key]) {
-        echo '<a class="prevnext" href="' . $doc[$key] . $qstring . '">
+        echo '
+        <a class="prevnext" href="' . $doc[$key] . $qstring . '">
             <div>⟩</div>
         </a>';
     }

@@ -2,9 +2,9 @@
  * Do something with bâle chartier data
  */
 const image = document.getElementById('image');
-const pagimage = document.getElementById('viewcont');
-if (pagimage) {
-    var viewer = new Viewer(pagimage, {
+const div = document.getElementById('viewcont');
+if (div) {
+    var pageViewer = new Viewer(div, {
         transition: false,
         inline: true,
         navbar: 0,
@@ -26,7 +26,12 @@ if (pagimage) {
             return image.alt;
         },
         viewed() {
-            // viewer.zoomTo(1);
+            // default zoom on load, image width
+            let cwidth = div.offsetWidth;
+            let iwidth = pageViewer.imageData.naturalWidth;
+            let zoom = cwidth / iwidth;
+            pageViewer.zoomTo(zoom);
+            pageViewer.moveTo(0, 0);
         },
     });
 }
@@ -79,13 +84,13 @@ if (pagimage) {
 
 
             span.onclick = function() {
-                if (viewer.spanLast) viewer.spanLast.classList.remove("selected");
+                if (pageViewer.spanLast) pageViewer.spanLast.classList.remove("selected");
                 this.classList.add("selected");
-                viewer.spanLast = this;
+                pageViewer.spanLast = this;
                 image.src = url;
                 if (dat.title) image.alt = text + ' source : ' + dat.title.replace('%%', pno);
-                viewer.update();
-                viewer.resize();
+                pageViewer.update();
+                pageViewer.resize();
             }
             if (first) {
                 span.click();

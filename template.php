@@ -12,6 +12,8 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
     $body_class = 'tlg';
 }
 
+$cts = Web::par('kuhn', '');
+
 ?><!doctype html>
 <html>
     <head>
@@ -34,10 +36,13 @@ if (@substr_compare($page, 'tlg', 0, strlen('tlg'))==0) {
     </header>
     <div id="content">
         <nav id="tabs" class="tabs">
-            <form action="" onsubmit="this.action = this.kuhn.value;">
-                <label for="kuhn">Accès rapide</label>
-                <input title="Référérence Kuhn brève, ex: 18a.26.4" id="kuhn" name="kuhn" placeholder="18a.553.3 ; XVIII B, 559…" 
-                value="<?= htmlspecialchars(Web::par('kuhn', '')) ?>"/>
+            <form action="" onsubmit="this.action = encodeURIComponent(this.cts.value.replaceAll(':', '_'));">
+                <label for="cts">Accès rapide</label>
+                <input  id="cts" name="cts"
+                    title="urn:cts ou référérence Kühn brève (ex : 18b.26.4)" 
+                    placeholder="18a.553.3 ; urn:cts:greekLit:tlg0057…" 
+                    value="<?= htmlspecialchars($cts) ?>"
+                />
             </form>
             <?= Verbatim::tab('', 'Accueil') ?>
             <?= Verbatim::tab('opera', 'Table des <br/> traités') ?>

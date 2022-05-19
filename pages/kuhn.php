@@ -25,8 +25,9 @@ function roman2int($str){
 }
 
 $kuhn = trim(Web::par('kuhn'));
+if (!$kuhn) return;
 // XVIII A, 18 a
-$kuhn = preg_replace("@^(18|XVIII) +([aAbB])@", "$1$2", $kuhn);
+$kuhn = preg_replace("@^(18|XVIII|17|XVII) +([aAbB])@", "$1$2", $kuhn);
 
 list($volumen, $pagina, $linea) = array_merge(preg_split("@[\., ]+@", $kuhn), array(null, null, null));
 // volume
@@ -40,12 +41,10 @@ else {
 
 if (!is_numeric($volumen)) {
     $volumen = roman2int($volumen);    
-    if (!$volumen) {
-        http_response_code(404);
-        include(__DIR__.'/404.html');
-        return;
-    } 
 }
+if (!$volumen || $volumen < 1 || $volumen > 20) {
+    return;
+} 
 $volumen = $volumen . $volab;
 // securit linea
 $linea = intval($linea);
@@ -73,7 +72,7 @@ if (count($res) < 1) {
     </article>
     ';
     http_response_code(404);
-    return;
+    exit();
 }
 else if (count($res) == 1 || !$linea || !$pagina) {
     $clavis = $res[0]['clavis'];
