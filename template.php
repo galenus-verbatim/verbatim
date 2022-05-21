@@ -61,10 +61,7 @@ $cts = Web::par('kuhn', '');
         </nav>
         <hr id="tabsep"/>
         <div class="container">
-            <main>
-                <?php Route::main(); ?>
-            
-            </main>
+            <?php Route::main(); ?>
         </div>
     </div>
     <footer id="footer">

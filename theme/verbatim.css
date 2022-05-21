@@ -211,10 +211,6 @@ input[type=radio] {
     max-width: 100%;
 }
 
-main article {
-    width: 100%;
-}
-
 #footer {
     width: 100%;
     background-color: var(--bg2);
@@ -315,6 +311,11 @@ div.banner .moto {
     padding: 1rem 0 1rem 1rem;
 }
 
+
+/*
+main article {
+    width: 100%;
+}
 #main {
     background-color: var(--bg);
     color: var(--text);
@@ -339,6 +340,11 @@ div.banner .moto {
 }
 
 main>article.text {
+    padding: 3vw;
+}
+*/
+
+article.text {
     padding: 3vw;
 }
 
@@ -544,6 +550,7 @@ span.pageview {
     clear: both;
     float: right;
     display: block;
+    z-index: 10;
 }
 
 span.pageview.selected,
@@ -977,6 +984,33 @@ hr.footnotes {
 
 blockquote {
     margin: 0.5rem 0rem 0.5rem 2rem;
+}
+
+blockquote.lemma {
+    padding: 0;
+    margin: 0;
+}
+
+blockquote.lemma::before {
+    content: ' ';
+    display: block;
+    position: relative;
+    top: 2em;
+    height: 0;
+    width: 20%;
+    left: 30%;
+    border-bottom: 1px solid var(--link);
+}
+
+blockquote.lemma::after {
+    content: ' ';
+    display: block;
+    position: relative;
+    height: 0;
+    bottom: 0.5em;
+    width: 20%;
+    left: 30%;
+    border-bottom: 1px solid var(--link);
 }
 
 .note p {

@@ -34,19 +34,24 @@ class Verbatim
     /**
      * Database should be connected if something is desired to be displayed
      */
-    static public function connect($sqlite)
+    static public function connect($sqlite, $persistent=false)
     {
         if (!file_exists($sqlite)) {
             echo "<p>Database ".$sqlite." not found</p>";
             exit();
         }
         $dsn = "sqlite:" . $sqlite;
-        self::$pdo = new PDO($dsn, null, null, array(
-            PDO::ATTR_PERSISTENT => true
-        ));
+        if ($persistent) {
+            self::$pdo = new PDO($dsn, null, null, array(
+                PDO::ATTR_PERSISTENT => true
+            ));
+            self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
+        }
+        else {
+            self::$pdo = new PDO($dsn);
+        }
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         self::$pdo->exec("PRAGMA temp_store = 2;");
-        self::$pdo->exec('PRAGMA mmap_size = 1073741824;');
     }
 
     static public function deform($form)
@@ -70,10 +75,11 @@ class Verbatim
         for ($i = 0; $i < count($words); $i++) {
             $w = $words[$i];
             $w = Normalizer::normalize($w, Normalizer::FORM_KC);
+            /*
             if ($field == 'lem' && $w == 'NUM');
             // maybe latin letters to translitterate
             else $w = strtr($w, self::$lat_grc);
-
+            */
             $qform->execute(array($w));
             // rowcount do not work
             while ($row = $qform->fetch(PDO::FETCH_NUM)) {
@@ -82,6 +88,14 @@ class Verbatim
             }
             // nothing found in form, try deform (without accents)
             if (!$row) {
+                // decompose letters and accents
+                $w = Normalizer::normalize($w, Normalizer::FORM_D);
+                // strip non letter (accents)
+                $w = preg_replace("/\PL/u", '', $w);
+                // lower case folding, should regule final ς
+                $w = mb_convert_case($w, MB_CASE_FOLD, "UTF-8");
+                // translitterate possible beta code
+                $w = strtr($w, self::$lat_grc);
                 $qdeform->execute(array($w));
                 while ($row = $qdeform->fetch(PDO::FETCH_NUM)) {
                     $forms[$row[0]] = $row[1]; // .' ' . I18n::_('pos.' . $row[2]) ;

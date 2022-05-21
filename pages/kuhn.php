@@ -72,7 +72,7 @@ if (count($res) < 1) {
     </article>
     ';
     http_response_code(404);
-    exit();
+    return;
 }
 else if (count($res) == 1 || !$linea || !$pagina) {
     $clavis = $res[0]['clavis'];

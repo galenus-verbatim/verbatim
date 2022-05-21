@@ -322,17 +322,13 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
   </xsl:template>
   
   <xsl:template match="bib:authors//foaf:Person">
-    <span class="surname">
-      <xsl:value-of select="foaf:surname"/>
-    </span>
+    <xsl:value-of select="foaf:surname"/>
     <xsl:if test="foaf:surname != '' and foaf:givenName != ''">, </xsl:if>
     <xsl:value-of select="foaf:givenName"/>
   </xsl:template>
 
   <xsl:template match="bib:editors//foaf:Person">
-    <span class="surname">
-      <xsl:value-of select="foaf:surname"/>
-    </span>
+    <xsl:value-of select="foaf:surname"/>
   </xsl:template>
   
   

@@ -44,7 +44,28 @@ function title() {
     $doc = Data::$doc;
     $editio = Data::$editio;
     if (!$doc || !$editio) return null;
-    $title = strip_tags(Verbatim::bibl($editio, $doc));
+    $title = '';
+    $title .= $editio['auctor'];
+    /* galeno centric, extract field from zotero record */
+    preg_match('@<em class="title">(.*?)</em>@', $editio['bibl'], $matches);
+    if (count($matches) >= 2) {
+        $title .= '. ' .$matches[1];
+    } else {
+        $title .= '. ' .$editio['title'];
+    }
+    $num = Verbatim::num($doc);
+    if ($num) $title .= ', ' . $num;
+    /* galeno centric, extract field from zotero record */
+    preg_match('@<span class="editors">(.*?)</span>@', $editio['bibl'], $matches);
+    if (count($matches) >= 2) {
+        $title .= $matches[1];
+    } else {
+        $title .= ', ed. ' . $editio['editor'];
+    }
+    $title .= Verbatim::scope($doc);
+    $title .= '. urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']);
+    $title .= ' — Galenus verbatim';
+    $title = strip_tags($title);
     return $title;
 }
 
@@ -122,6 +143,7 @@ function main() {
 
 echo '
 <div class="doc">
+    <main>
     <header class="doc">
 ';
     $qstring = '';
@@ -192,6 +214,7 @@ echo '
     
     echo '
     </footer>
+    </main>
 </div>';
     echo '
     <div id="pagimage">
