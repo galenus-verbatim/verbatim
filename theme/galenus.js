@@ -5,25 +5,25 @@ const image = document.getElementById('image');
 const div = document.getElementById('viewcont');
 if (div) {
     var pageViewer = new Viewer(div, {
+        title: function(image) {
+            return image.alt;
+        },
         transition: false,
         inline: true,
         navbar: 0,
         // minWidth: '100%', 
         toolbar: {
-            zoomIn: 4,
-            zoomOut: 4,
-            oneToOne: 4,
-            reset: 4,
-            prev: 0,
-            play: 0,
-            next: 0,
-            rotateLeft: 0,
-            rotateRight: 0,
-            flipHorizontal: 0,
-            flipVertical: 0,
-        },
-        title: function(image) {
-            return image.alt;
+            width: function() {
+                let cwidth = div.offsetWidth;
+                let iwidth = pageViewer.imageData.naturalWidth;
+                let zoom = cwidth / iwidth;
+                pageViewer.zoomTo(zoom);
+                pageViewer.moveTo(0, pageViewer.imageData.y);
+            },
+            zoomIn: true,
+            zoomOut: true,
+            oneToOne: true,
+            reset: true,
         },
         viewed() {
             // default zoom on load, image width
@@ -34,6 +34,78 @@ if (div) {
             pageViewer.moveTo(0, 0);
         },
     });
+    // viewer override of resize
+    Viewer.prototype.resize = function() {
+        var _this3 = this;
+
+        if (!this.isShown || this.hiding) {
+            return;
+        }
+
+        if (this.fulled) {
+            this.close();
+            this.initBody();
+            this.open();
+        }
+
+        this.initContainer();
+        this.initViewer();
+        this.renderViewer();
+        this.renderList();
+
+        if (this.viewed) {
+            // do not resize image
+            /*
+            this.initImage(function() {
+                _this3.renderImage();
+            });
+            _this3.options.viewed();
+            */
+        }
+
+        if (this.played) {
+            if (this.options.fullscreen && this.fulled && !(document.fullscreenElement || document.webkitFullscreenElement || document.mozFullScreenElement || document.msFullscreenElement)) {
+                this.stop();
+                return;
+            }
+
+            forEach(this.player.getElementsByTagName('img'), function(image) {
+                addListener(image, EVENT_LOAD, _this3.loadImage.bind(_this3), {
+                    once: true
+                });
+                dispatchEvent(image, EVENT_LOAD);
+            });
+        }
+    };
+
+    Viewer.prototype.wheel = function(event) {
+        var _this4 = this;
+        if (!this.viewed) {
+            return;
+        }
+
+        event.preventDefault(); // Limit wheel speed to prevent zoom too fast
+
+        if (this.wheeling) {
+            return;
+        }
+
+        this.wheeling = true;
+        setTimeout(function() {
+            _this4.wheeling = false;
+        }, 50);
+        var ratio = Number(this.options.zoomRatio) || 0.1;
+        var delta = 1;
+
+        if (event.deltaY) {
+            delta = event.deltaY;
+        } else if (event.wheelDelta) {
+            delta = -event.wheelDelta;
+        } else if (event.detail) {
+            delta = event.detail;
+        }
+        this.move(0, -delta);
+    };
 }
 (function() {
     let first = true;

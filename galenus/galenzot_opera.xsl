@@ -39,7 +39,7 @@
           <p>Les titres et abréviations des titres en latin, ainsi que les titres grecs, sont repris à la « <a href="http://cmg.bbaw.de/epubl/online/galges.html" class="external" target="_blank" rel="noopener">Gesamtübersicht</a> » du Corpus Medicorum Graecorum de Berlin. Les titres en français sont repris à l’ouvrage de V. Boudon-Millot, <i>Galien de Pergame. Un médecin grec à Rome</i>, Paris : Les Belles Lettres, 2012, p. 351-374. Les titres et abréviations des titres en anglais sont repris au 1<sup>er</sup> volume de la collection Cambridge Galen Translations (CGT), Galen, <i>Psychological  Writings</i>, éd. P.N. Singer &amp; <i>al</i>., Cambridge : CUP, 2013, p. 429-442.</p>
         </div>
         <xsl:for-each select="/*/bib:Book[@rdf:about = $opera_ids]">
-          <xsl:sort select="dc:subject/dcterms:LCC/rdf:value" data-type="number"/>
+          <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
           <xsl:apply-templates select="." mode="opus"/>
         </xsl:for-each>
       </div>
@@ -83,7 +83,7 @@
   <xsl:template name="nav_fichtner">
     <nav id="fichtner" class="bibl">
       <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
-        <xsl:sort select="dc:subject/dcterms:LCC/rdf:value" data-type="number"/>
+        <xsl:sort select="dc:subject/dcterms:LCC/rdf:value"/>
         <a>
           <xsl:attribute name="href">
             <xsl:text>#</xsl:text>
@@ -147,24 +147,26 @@
     <nav id="AbbrLa" style="display:none" class="bibl">
       <xsl:for-each select="/*/bib:*[@rdf:about = $opera_ids]">
         <xsl:sort select="normalize-space(z:shortTitle)"/>
-        <a>
-          <xsl:attribute name="href">
-            <xsl:text>#</xsl:text>
-            <xsl:apply-templates select="." mode="id"/>
-          </xsl:attribute>
-          <xsl:attribute name="title">
-            <xsl:value-of select="normalize-space(dc:title)"/>
-          </xsl:attribute>
-          <em>
-            <xsl:value-of select="normalize-space(z:shortTitle)"/>
-          </em>
-          <xsl:text> </xsl:text>
-          <small>
-            <xsl:text>[</xsl:text>
-            <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
-            <xsl:text>]</xsl:text>
-          </small>
-        </a>
+        <xsl:if test="normalize-space(z:shortTitle) != ''">
+          <a>
+            <xsl:attribute name="href">
+              <xsl:text>#</xsl:text>
+              <xsl:apply-templates select="." mode="id"/>
+            </xsl:attribute>
+            <xsl:attribute name="title">
+              <xsl:value-of select="normalize-space(dc:title)"/>
+            </xsl:attribute>
+            <em>
+              <xsl:value-of select="normalize-space(z:shortTitle)"/>
+            </em>
+            <xsl:text> </xsl:text>
+            <small>
+              <xsl:text>[</xsl:text>
+              <xsl:value-of select="dc:subject/dcterms:LCC/rdf:value"/>
+              <xsl:text>]</xsl:text>
+            </small>
+          </a>
+        </xsl:if>
       </xsl:for-each>
     </nav>
   </xsl:template>

@@ -46,7 +46,7 @@
       <xsl:text> </xsl:text>
       <small class="fichtner">
         <xsl:text>[</xsl:text>
-        <xsl:value-of select="$fichtner_no"/>
+        <xsl:value-of select="translate($fichtner_no, 'abcdefgh', '')"/>
         <xsl:text> Ficht.]</xsl:text>
       </small>
       <xsl:text> </xsl:text>
@@ -83,7 +83,7 @@
   </xsl:template>
   
   <xsl:template name="fichtner_link">
-    <xsl:variable name="fichtner_no" select="normalize-space(dc:subject/dcterms:LCC/rdf:value)"/>
+    <xsl:variable name="fichtner_no" select="translate(normalize-space(dc:subject/dcterms:LCC/rdf:value), 'abcdefghijk', '')"/>
     <a target="_blank" rel="noopener" class="fichtner external">
       <xsl:attribute name="href">
         <xsl:text>https://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_</xsl:text>
@@ -129,9 +129,14 @@
         <xsl:text> </xsl:text>
         <xsl:call-template name="fichtner_link"/>
       </h1>
-      <div class="tituli">
+      <xsl:variable name="tituli">
         <xsl:call-template name="opus_tituli"/>
-      </div>
+      </xsl:variable>
+      <xsl:if test="$tituli != ''">
+        <div class="tituli">
+          <xsl:copy-of select="$tituli"/>
+        </div>
+      </xsl:if>
       <!-- Notes -->
       <xsl:for-each select="key('about', dcterms:isReferencedBy/@rdf:resource)">
         <xsl:variable name="title" select="normalize-space(.)"/>
@@ -150,7 +155,8 @@
         </xsl:choose>
       </xsl:for-each>
       <!-- editions -->
-      <xsl:for-each select="../bib:BookSection[dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+      <xsl:for-each select="/*/bib:*[@rdf:about = $verbatim_ids][dc:subject/dcterms:LCC/rdf:value = $fichtner_no]">
+        <xsl:sort select="dc:identifier/dcterms:URI/rdf:value"/>
         <div class="edition">
           <xsl:text>— </xsl:text>
           <xsl:apply-templates select="." mode="short"/>
@@ -161,6 +167,10 @@
   
   <!-- List alternative titles of an opus -->
   <xsl:template name="opus_tituli">
+    <div ass="urn">
+      <xsl:text>urn:cts:greekLit:</xsl:text>
+      <xsl:value-of select="substring-after(dc:identifier/dcterms:URI/rdf:value, 'tlg')"/>
+    </div>
     <xsl:variable name="short" select="z:shortTitle"/>
     <xsl:variable name="notes" select="key('about', dcterms:isReferencedBy/@rdf:resource)"/>
     <xsl:for-each select="$notes">
@@ -227,17 +237,8 @@
 
 Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:greekLit:tlg0057.tlg001.1st1K-grc2.
   -->
-  <xsl:template match="bib:BookSection" mode="short">
-    <xsl:variable name="url">
-      <xsl:for-each select="key('about', link:link/@rdf:resource)/dc:identifier">
-        <xsl:variable name="str" select="normalize-space(.)"/>
-        <xsl:choose>
-          <xsl:when test="contains($str, 'galenus-verbatim')">
-            <xsl:value-of select="$str"/>
-          </xsl:when>
-        </xsl:choose>
-      </xsl:for-each>
-    </xsl:variable>
+  <xsl:template match="bib:*" mode="short">
+    <xsl:variable name="url" select="dc:identifier/dcterms:URI/rdf:value"/>
     <xsl:for-each select="dc:title">
       <xsl:choose>
         <xsl:when test="$url != ''">
@@ -282,6 +283,11 @@ Galenus. « Protrepticus ». édité par Georg Kaibel, 1‑22, 1894. urn:cts:g
       <xsl:apply-templates select="."/>
     </xsl:for-each>
     <xsl:text>.</xsl:text>
+    <xsl:text> </xsl:text>
+    <span class="urn">
+      <xsl:text>urn:cts:greekLit:</xsl:text>
+      <xsl:value-of select="substring-after($url, 'galenus-verbatim.huma-num.fr/')"/>
+    </span>
   </xsl:template>
   
   <xsl:template name="editors">

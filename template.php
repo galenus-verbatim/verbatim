@@ -59,7 +59,6 @@ $cts = Web::par('kuhn', '');
             <?= Verbatim::tab('verba', 'Table <br/>fréquentielle') ?>
             <?= Verbatim::tab('apropos', 'À propos /<br/>Crédits') ?>
         </nav>
-        <hr id="tabsep"/>
         <div class="container">
             <?php Route::main(); ?>
         </div>

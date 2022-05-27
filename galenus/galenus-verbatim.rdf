@@ -1071,43 +1071,6 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg096">
-        <z:itemType>book</z:itemType>
-        <bib:authors>
-            <rdf:Seq>
-                <rdf:li>
-                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
-                </rdf:li>
-            </rdf:Seq>
-        </bib:authors>
-        <dcterms:isReferencedBy rdf:resource="#item_11247"/>
-        <link:link rdf:resource="#item_11248"/>
-        <dc:title>In Hippocratis De articulis commentaria</dc:title>
-        <dc:date>ca 200</dc:date>
-        <dc:subject>
-           <dcterms:LCC><rdf:value>106</rdf:value></dcterms:LCC>
-        </dc:subject>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg096</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <z:numberOfVolumes>52</z:numberOfVolumes>
-    </bib:Book>
-    <bib:Memo rdf:about="#item_11247">
-        <rdf:value>&lt;p&gt;Note: le texte imprimé par Kühn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit constitue en réalité le livre II du traité In Hippocratis De articulis commentaria&lt;/p&gt;</rdf:value>
-    </bib:Memo>
-    <z:Attachment rdf:about="#item_11248">
-        <z:itemType>attachment</z:itemType>
-        <dc:title>Fichtner Bibliographie</dc:title>
-        <dc:identifier>
-            <dcterms:URI>
-                <rdf:value>https://cmg.bbaw.de/epubl/online/Bibl/Galen-Bibliographie_106.pdf</rdf:value>
-            </dcterms:URI>
-        </dc:identifier>
-        <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
-        <z:linkMode>3</z:linkMode>
-    </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086">
         <z:itemType>book</z:itemType>
         <bib:authors>
@@ -1119,7 +1082,7 @@
         </bib:authors>
         <dcterms:isReferencedBy rdf:resource="#item_11250"/>
         <link:link rdf:resource="#item_11251"/>
-        <dc:title>In Hippocratis De natura hominis commentaria</dc:title>
+        <dc:title>In Hippocratis De natura hominis commentaria libr. III</dc:title>
         <dc:date>ca 200</dc:date>
         <dc:subject>
            <dcterms:LCC><rdf:value>091</rdf:value></dcterms:LCC>
@@ -3826,7 +3789,7 @@
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
-    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1">
+    <bib:BookSection rdf:about="#item_11438">
         <z:itemType>bookSection</z:itemType>
         <dcterms:isPartOf>
             <bib:Book>
@@ -3872,11 +3835,11 @@
         <dc:title>De Humero iis Modis Prolapso quos Hippocrates non Vidit</dc:title>
         <dc:date>1829</dc:date>
         <dc:subject>
-           <dcterms:LCC><rdf:value>106</rdf:value></dcterms:LCC>
+           <dcterms:LCC><rdf:value>105</rdf:value></dcterms:LCC>
         </dc:subject>
         <dc:identifier>
             <dcterms:URI>
-                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1</rdf:value>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg095.1st1K-grc1</rdf:value>
             </dcterms:URI>
         </dc:identifier>
         <bib:pages>346-422</bib:pages>
@@ -4120,7 +4083,9 @@
         <dcterms:isReferencedBy rdf:resource="#item_11455"/>
         <dcterms:isReferencedBy rdf:resource="#item_11456"/>
         <dcterms:isReferencedBy rdf:resource="#item_11457"/>
+        <dcterms:isReferencedBy rdf:resource="#item_12695"/>
         <link:link rdf:resource="#item_11458"/>
+        <link:link rdf:resource="#item_12692"/>
         <dc:title>In Hippocratis De articulis commentaria</dc:title>
         <dc:date>ca 200</dc:date>
         <z:shortTitle>In Hipp. De artic. comm.</z:shortTitle>
@@ -4132,7 +4097,7 @@
                 <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg095</rdf:value>
             </dcterms:URI>
         </dc:identifier>
-        <z:numberOfVolumes>256</z:numberOfVolumes>
+        <z:numberOfVolumes>308</z:numberOfVolumes>
     </bib:Book>
     <bib:Memo rdf:about="#item_11454">
         <rdf:value>1TitGrcCMG: Εἰς τὸ περὶ ἀρθρῶν βιβλίον Ἱπποκράτους ὑπομνήματα</rdf:value>
@@ -4146,6 +4111,12 @@
     <bib:Memo rdf:about="#item_11457">
        <rdf:value>4AbbrEnCGT: Hipp. Art.</rdf:value>
     </bib:Memo>
+    <bib:Memo rdf:about="#item_12695">
+        <rdf:value>&lt;div data-schema-version=&quot;8&quot;&gt;&lt;p&gt;&lt;span style=&quot;color: #000000&quot;&gt;Le texte imprimé par Kühn sous le titre De Humero iis Modis Prolapso quos Hippocrates non Vidit (n°&amp;nbsp;106) constitue en réalité le livre&amp;nbsp;II du traité In Hippocratis De articulis (n°&amp;nbsp;105) commentaria. La numérotation proposée par Fitchner est erronée, ces deux textes ont été ici regroupés en un seul (&lt;/span&gt;&lt;span style=&quot;color: #808080&quot;&gt;In Hippocratis De Articulis commentaria liber I-III.&lt;/span&gt;&lt;/p&gt;
+&lt;p&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span style=&quot;color: #808080&quot;&gt;&lt;br&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;/div&gt;</rdf:value>
+    </bib:Memo>
     <z:Attachment rdf:about="#item_11458">
         <z:itemType>attachment</z:itemType>
         <dc:title>Fichtner Bibliographie</dc:title>
@@ -4155,6 +4126,17 @@
             </dcterms:URI>
         </dc:identifier>
         <dcterms:dateSubmitted>2022-01-29 22:31:24</dcterms:dateSubmitted>
+        <z:linkMode>3</z:linkMode>
+    </z:Attachment>
+    <z:Attachment rdf:about="#item_12692">
+        <z:itemType>attachment</z:itemType>
+        <dc:title>tlg0057.tlg096.1st1K-grc1</dc:title>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <dcterms:dateSubmitted>2022-05-19 12:43:14</dcterms:dateSubmitted>
         <z:linkMode>3</z:linkMode>
     </z:Attachment>
     <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094">
@@ -4910,7 +4892,7 @@
         <dcterms:isReferencedBy rdf:resource="#item_11507"/>
         <dcterms:isReferencedBy rdf:resource="#item_11508"/>
         <link:link rdf:resource="#item_11509"/>
-        <dc:title>In Hippocratis De natura hominis commentaria</dc:title>
+        <dc:title>In Hippocratis De natura hominis commentaria libr. I-II</dc:title>
         <dc:date>ca 200</dc:date>
         <z:shortTitle>In Hipp. De nat. hom. comm.</z:shortTitle>
         <dc:subject>
@@ -21173,11 +21155,6 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
         <link:link rdf:resource="#item_12537"/>
         <link:link rdf:resource="#item_12535"/>
         <dc:subject>
-            <z:AutomaticTag>
-               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
-            </z:AutomaticTag>
-        </dc:subject>
-        <dc:subject>
            <z:AutomaticTag><rdf:value>Galenus 129-199</rdf:value></z:AutomaticTag>
         </dc:subject>
         <dc:subject>
@@ -21185,11 +21162,16 @@ Series Title: Corpus medicorum Graecorum. Supplementum orientale = Svpplementvm 
                <rdf:value>Griechische Philologie, Literatur</rdf:value>
             </z:AutomaticTag>
         </dc:subject>
+        <dc:subject>
+            <z:AutomaticTag>
+               <rdf:value>Medizin, Gesammelte Schr.</rdf:value>
+            </z:AutomaticTag>
+        </dc:subject>
         <dc:title>Über das Riechorgan</dc:title>
         <dc:date>1964</dc:date>
         <z:libraryCatalog>Library Catalog - vzopc4.gbv.de</z:libraryCatalog>
         <dc:subject>
-           <dcterms:LCC><rdf:value>68</rdf:value></dcterms:LCC>
+           <dcterms:LCC><rdf:value>068</rdf:value></dcterms:LCC>
         </dc:subject>
         <dc:description>Pages: 128
 Series Title: Corpus medicorum Graecorum. Supplementum. - Berlin : Walter de Gruyter, 1934- ; ZDB-ID: 518710-2</dc:description>
@@ -23673,6 +23655,229 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
         </dc:subject>
         <dc:description>OCLC: 830351975</dc:description>
     </bib:Book>
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091.1st1K-grc1">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Medicorum graecorum opera quae exstant [sic]</dc:title>
+                        <dc:identifier>17a-17b</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <prism:volume>17a-17b</prism:volume>
+                <dc:title>Opera omnia</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Lipsiae</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>in officina C. Cnoblochii</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kühn</foaf:surname>
+                        <foaf:givenName>Karl Gottlob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Hippocratis Epidem. VI et Galeni in illim commentairus</dc:title>
+        <dc:date>1828</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096c</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg091.1st1K-grc1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>793-1009 1-344</bib:pages>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090.1st1K-grc1">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Medicorum graecorum opera quae exstant [sic]</dc:title>
+                        <dc:identifier>17a</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <prism:volume>17a</prism:volume>
+                <dc:title>Opera omnia</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Lipsiae</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>in officina C. Cnoblochii</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kühn</foaf:surname>
+                        <foaf:givenName>Karl Gottlob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Hippocratis Epidem. III et Galeni in illim commentairus</dc:title>
+        <dc:date>1828</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096b</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg090.1st1K-grc1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>480-792</bib:pages>
+    </bib:BookSection>
+    <bib:BookSection rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089.1st1K-grc1">
+        <z:itemType>bookSection</z:itemType>
+        <dcterms:isPartOf>
+            <bib:Book>
+                <dcterms:isPartOf>
+                    <bib:Series>
+                        <dc:title>Medicorum graecorum opera quae exstant [sic]</dc:title>
+                        <dc:identifier>17a</dc:identifier>
+                    </bib:Series>
+                </dcterms:isPartOf>
+                <prism:volume>17a</prism:volume>
+                <dc:title>Opera omnia</dc:title>
+            </bib:Book>
+        </dcterms:isPartOf>
+        <dc:publisher>
+            <foaf:Organization>
+                <vcard:adr>
+                    <vcard:Address>
+                       <vcard:locality>Lipsiae</vcard:locality>
+                    </vcard:Address>
+                </vcard:adr>
+                <foaf:name>in officina C. Cnoblochii</foaf:name>
+            </foaf:Organization>
+        </dc:publisher>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <bib:editors>
+            <rdf:Seq>
+                <rdf:li>
+                    <foaf:Person>
+                        <foaf:surname>Kühn</foaf:surname>
+                        <foaf:givenName>Karl Gottlob</foaf:givenName>
+                    </foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:editors>
+        <dc:title>Hippocratis Epidem. I et Galeni in illim commentairus I</dc:title>
+        <dc:date>1828</dc:date>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096a</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg089.1st1K-grc1</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+        <bib:pages>1-302</bib:pages>
+    </bib:BookSection>
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091">
+        <z:itemType>book</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>In Hippocratis Epidemiarum VI</dc:title>
+        <dc:date>ca 200</dc:date>
+        <z:shortTitle>In Hipp. Epid. VI comm.</z:shortTitle>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096c</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg091</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+    </bib:Book>
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090">
+        <z:itemType>book</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>In Hippocratis Epidemiarum III</dc:title>
+        <dc:date>ca 200</dc:date>
+        <z:shortTitle>In Hipp. Epid. III comm.</z:shortTitle>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096b</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg090</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+    </bib:Book>
+    <bib:Book rdf:about="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089">
+        <z:itemType>book</z:itemType>
+        <bib:authors>
+            <rdf:Seq>
+                <rdf:li>
+                   <foaf:Person><foaf:surname>Galenus</foaf:surname></foaf:Person>
+                </rdf:li>
+            </rdf:Seq>
+        </bib:authors>
+        <dc:title>In Hippocratis Epidemiarum I</dc:title>
+        <dc:date>ca 200</dc:date>
+        <z:shortTitle>In Hipp. Epid. I comm.</z:shortTitle>
+        <dc:subject>
+           <dcterms:LCC><rdf:value>096a</rdf:value></dcterms:LCC>
+        </dc:subject>
+        <dc:identifier>
+            <dcterms:URI>
+                <rdf:value>https://galenus-verbatim.huma-num.fr/tlg0057.tlg089</rdf:value>
+            </dcterms:URI>
+        </dc:identifier>
+    </bib:Book>
+   <bib:Memo rdf:about="#item_12694"><z:itemType>note</z:itemType></bib:Memo>
     <z:Collection rdf:about="#collection_18">
         <dc:title>Editiones criticae</dc:title>
         <dcterms:hasPart rdf:resource="urn:isbn:978-2-251-00544-7"/>
@@ -23817,244 +24022,256 @@ Series Title: Corpus medicorum Graecorum. - Berlin :  De Gruyter, 1927- ; ZDB-ID
     </z:Collection>
     <z:Collection rdf:about="#collection_19">
         <dc:title>Editiones verbatim</dc:title>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg099.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg100.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg096.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg043.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg032.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg101.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg102.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg079.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg029.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg005.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg114.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg012.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg037.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg033.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019.opp-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg040.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg103.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg006.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg107.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg017.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg075.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg076.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg007.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg008.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg006.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg011.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg010.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg012.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg015.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg013.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg014.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg016.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg021.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg020.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg022.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg023.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg018.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg024.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg029.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg025.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg027.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg030.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg031.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc3"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg039.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg041.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg042.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg044.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg043.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg049.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg051.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg048.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg047.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg046.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg045.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg053.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg052.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg054.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg050.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg056.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg055.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg059.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg057.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg058.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg003.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg062.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg004.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg002.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg060.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg061.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg066.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg064.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg065.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg067.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg068.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg063.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg075.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg017.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg006.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg107.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg103.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg037.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019.opp-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg040.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg012.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg033.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg005.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg029.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg114.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg032.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg079.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg043.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg102.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg101.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg100.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg099.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg093.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg087.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg085.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg084.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg083.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg082.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg070.1st1K-grc1"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg069.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc2"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg082.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg087.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg085.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg093.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg083.1st1K-grc1"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg084.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg068.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg067.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg066.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg065.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg064.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg063.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg061.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg060.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg002.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg004.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg003.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg062.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg059.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg055.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg058.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg057.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg056.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg052.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg050.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg054.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg053.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg051.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg048.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg049.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg046.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg045.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg047.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg043.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg041.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg044.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg042.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg039.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc3"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg031.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg030.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg029.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg027.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg025.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg024.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg023.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg022.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg020.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg018.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg021.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg016.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg014.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg013.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg015.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg012.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg011.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg010.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009.1st1K-grc2"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg007.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg006.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg008.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090.1st1K-grc1"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089.1st1K-grc1"/>
     </z:Collection>
-    <z:Collection rdf:about="veterae">
+    <z:Collection rdf:about="#collection_20">
         <dc:title>Editiones veterae</dc:title>
-        <dcterms:hasPart rdf:resource="#item_11227"/>
-        <dcterms:hasPart rdf:resource="#item_11226"/>
         <dcterms:hasPart rdf:resource="#item_11220"/>
-        <dcterms:hasPart rdf:resource="#item_11228"/>
         <dcterms:hasPart rdf:resource="#item_11221"/>
-        <dcterms:hasPart rdf:resource="#item_11242"/>
-        <dcterms:hasPart rdf:resource="#item_11240"/>
-        <dcterms:hasPart rdf:resource="#item_11238"/>
-        <dcterms:hasPart rdf:resource="#item_11229"/>
-        <dcterms:hasPart rdf:resource="#item_11241"/>
-        <dcterms:hasPart rdf:resource="#item_11224"/>
         <dcterms:hasPart rdf:resource="#item_11222"/>
         <dcterms:hasPart rdf:resource="#item_11223"/>
-        <dcterms:hasPart rdf:resource="#item_11237"/>
-        <dcterms:hasPart rdf:resource="#item_11233"/>
+        <dcterms:hasPart rdf:resource="#item_11224"/>
         <dcterms:hasPart rdf:resource="#item_11225"/>
-        <dcterms:hasPart rdf:resource="#item_11239"/>
-        <dcterms:hasPart rdf:resource="#item_11236"/>
-        <dcterms:hasPart rdf:resource="#item_11235"/>
-        <dcterms:hasPart rdf:resource="#item_11234"/>
-        <dcterms:hasPart rdf:resource="#item_11232"/>
-        <dcterms:hasPart rdf:resource="#item_11231"/>
+        <dcterms:hasPart rdf:resource="#item_11226"/>
+        <dcterms:hasPart rdf:resource="#item_11227"/>
+        <dcterms:hasPart rdf:resource="#item_11228"/>
+        <dcterms:hasPart rdf:resource="#item_11229"/>
         <dcterms:hasPart rdf:resource="#item_11230"/>
+        <dcterms:hasPart rdf:resource="#item_11231"/>
+        <dcterms:hasPart rdf:resource="#item_11232"/>
+        <dcterms:hasPart rdf:resource="#item_11233"/>
+        <dcterms:hasPart rdf:resource="#item_11234"/>
+        <dcterms:hasPart rdf:resource="#item_11235"/>
+        <dcterms:hasPart rdf:resource="#item_11236"/>
+        <dcterms:hasPart rdf:resource="#item_11237"/>
+        <dcterms:hasPart rdf:resource="#item_11238"/>
+        <dcterms:hasPart rdf:resource="#item_11239"/>
+        <dcterms:hasPart rdf:resource="#item_11240"/>
+        <dcterms:hasPart rdf:resource="#item_11241"/>
+        <dcterms:hasPart rdf:resource="#item_11242"/>
     </z:Collection>
-    <z:Collection rdf:about="opera">
+    <z:Collection rdf:about="#collection_21">
         <dc:title>Galeni et Pseudo-Galeni opera</dc:title>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg012"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg043"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg047"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg029"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg103"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg037"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg006"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg107"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg040"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg005"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg033"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg029"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg032"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg005"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg006"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg033"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg063"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg003"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg027"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg066"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg081"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg099"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg087"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg079"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg043"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0530.tlg012"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg101"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg085"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg086"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg100"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg096"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg019"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg013"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg068"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg069"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg016"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg020"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg031"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg017"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg048"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg054"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg051"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg043"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg044"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg084"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg075"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg021"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg004"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg059"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg058"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg039"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg062"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg083"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg050"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg012"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg002"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg024"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg014"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg102"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg018"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg046"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg047"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg042"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg053"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg057"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg015"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg055"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg022"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg010"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg107"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg008"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg060"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg056"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg041"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg045"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg065"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg070"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg064"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg103"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg006"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg076"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg052"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg114"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg061"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg082"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg025"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg030"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg029"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg011"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg037"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg007"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg023"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg102"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg100"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg099"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg093"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg049"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg095"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg094"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg088"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg087"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg083"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg085"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg084"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg078"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg082"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg077"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg076"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg075"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg072"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg074"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg071"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg070"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg068"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg067"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg069"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg066"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg065"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg064"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg063"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg061"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg006"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg004"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg003"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg002"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg001"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg060"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg062"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg058"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg056"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg055"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg059"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg057"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg053"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg051"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg050"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg054"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg052"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg049"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg048"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg046"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg045"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg039"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg044"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg043"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg042"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg041"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg038"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg036"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg034"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg028"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg032"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg031"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg030"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg027"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg025"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg024"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg023"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg022"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg021"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg020"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg017"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg018"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg016"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg014"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg013"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg015"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg012"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg011"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg010"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg007"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg009"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg008"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg091"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg090"/>
+        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg089"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_22">
+        <dc:title>Oribasii excerpta</dc:title>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg073"/>
         <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg035"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg079"/>
-        <dcterms:hasPart rdf:resource="https://galenus-verbatim.huma-num.fr/tlg0057.tlg040"/>
+    </z:Collection>
+    <z:Collection rdf:about="#collection_23">
+       <dc:title>Orphani</dc:title><dcterms:hasPart rdf:resource="#item_11438"/>
     </z:Collection>
 </rdf:RDF>
