@@ -86,7 +86,7 @@
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x17a&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
         "17b": {
-            "pdiff": 9,
+            "pdiff": 3,
             "url": "https://www.biusante.parisdescartes.fr/iiif/2/bibnum:45674x17b:%%/full/full/0/default.jpg",
             "title": "<a target=\"_blank\" class=\"external\" href=\"https://www.biusante.parisdescartes.fr/histmed/medica/page?45674x17b&p=%%\">Université Paris Cité, Bibliothèque numérique Medica</a>"
         },
@@ -499,6 +499,14 @@
         "chartier": "11"
     },
     "tlg0057.tlg089.1st1K-grc1": {
+        "bale": "5",
+        "chartier": "9"
+    },
+    "tlg0057.tlg090.1st1K-grc1": {
+        "bale": "5",
+        "chartier": "9"
+    },
+    "tlg0057.tlg091.1st1K-grc1": {
         "bale": "5",
         "chartier": "9"
     },
