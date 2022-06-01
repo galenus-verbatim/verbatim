@@ -7,6 +7,7 @@
 
 return array(
     'app' => 'Verbatim',
+    'claves' => 'Liste des textes en base',
     'conc.noq' => 'Pour obtenir un résultat, entrez un mot ou un lemme soit en caractères grecs (les accents, esprits et iotas souscrits ne sont pas pris en compte), soit en caractères latins (en suivant les conventions du Beta code : z = ζ, h = η, q = θ, c = ξ, f = φ, x = χ, y = ψ, w = ω).',
     'conc.nowords' => '%s : mot non trouvé. Pour obtenir un résultat, entrez un mot ou un lemme soit en caractères grecs (les accents, esprits et iotas souscrits ne sont pas pris en compte), soit en caractères latins (en suivant les conventions du Beta code : z = ζ, h = η, q = θ, c = ξ, f = φ, x = χ, y = ψ, w = ω).',
     'conc.search' => '%s occurences trouvées pour la requête : « %s »',

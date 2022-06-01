@@ -13,8 +13,12 @@ use Oeuvres\Kit\{I18n, Radio, Route, Web};
 Verbatim::init();
 class Verbatim
 {
+    /** Sqlite connection */
     static $pdo;
+    /** Something nice for betacode conversion */
     static $lat_grc;
+    /** Name of the app */
+    static private $name;
     /**
      * Init static fields
      */
@@ -29,6 +33,15 @@ class Verbatim
                 throw new Exception($mess);
             }
         }
+    }
+
+    /**
+     * Name the app, used in some generated messages
+     */
+    static public function name($name=null)
+    {
+        if ($name !== null) self::$name = $name;
+        return self::$name;
     }
 
     /**
@@ -54,6 +67,13 @@ class Verbatim
         self::$pdo->exec("PRAGMA temp_store = 2;");
     }
 
+    /**
+     * Get 
+     */
+
+    /**
+     * Normalize a greek form to lower with no accents
+     */
     static public function deform($form)
     {
         $form = Normalizer::normalize($form, Normalizer::FORM_D);
@@ -106,6 +126,62 @@ class Verbatim
         return $forms;
     }
 
+    /**
+     * Display nav with possible freqs by chapter
+     */
+    public static function nav(&$editio, &$doc, &$formids)
+    {
+        // http param a bit hard coded here
+        $q = Web::par('q');
+        $f = Web::par('f', 'lem', '/lem|orth/');
+        $clavis = $doc['clavis'];
+        if (!isset($editio['nav']) || ! $editio['nav']) return '';
+        // no word searched
+        if (!count($formids)) {
+            $html = $editio['nav'];
+            $html = preg_replace(
+                '@ href="' . $clavis . '"@',
+                '$1 class="selected"',
+                $html
+            );
+            return $html;
+        }
+        $in  = str_repeat('?,', count($formids) - 1) . '?';
+        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND clavis = ?";
+        $qTok =  Verbatim::$pdo->prepare($sql);
+        $params = $formids;
+        $i = count($params);
+        // occurrences by chapter ?
+        $html = preg_replace_callback(
+            array(
+                '@<a href="([^"]+)">([^<]+)</a>@',
+            ),
+            function ($matches) use ($clavis, $q, $qTok, $params, $i){
+                $params[$i] = $matches[1];
+                $qTok->execute($params);
+                list($count) = $qTok->fetch();
+                $ret = '';
+                $ret .= '<a';
+                if ($matches[1] == $clavis) {
+                    $ret .= ' class="selected"';
+                }
+                $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
+                $ret .= '>';
+                $ret .= $matches[2];
+                if ($count) {
+                    $ret .= ' <small>(' . $count . ' occ.)</small>';
+                }
+                $ret .= '</a>';
+                return $ret;
+            },
+            $editio['nav']
+        );
+        return $html;
+    }
+
+    /**
+     * Draw an html tab for a navigation with test if selected 
+     */
     public static function tab($href, $text)
     {
         $page = Route::$url_parts[0];
@@ -117,10 +193,13 @@ class Verbatim
             $href = '.';
         }
         return '<a class="tab'. $selected . '"'
-        . ' href="'. Route::home(). $href . '"' 
+        . ' href="'. Route::home_href(). $href . '"' 
         . '>' . $text . '</a>';
     }
 
+    /**
+     * A search form
+     */
     public static function qform($down=false, $route='conc')
     {
         $selected = Route::match($route)?' selected':'';
@@ -129,7 +208,7 @@ class Verbatim
         $radio->add('lem', I18n::_('Lem'));
         $radio->add('orth', I18n::_('Form'));
         echo '
-<form action="' . Route::home() . $route . '" class="qform' . $selected . '">
+<form action="' . Route::home_href() . $route . '" class="qform' . $selected . '">
     <div class="radios">' . $radio . '    </div>
     <div  class="input">';
         if ($down) {
@@ -144,26 +223,32 @@ class Verbatim
 ';    
     }
 
-    static public function edition(&$edition)
+    /**
+     * Build a kind of biblio record, not perfect
+     */
+    static public function editio(&$editio)
     {
         $line = '';
-        $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
+        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
+        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $edition['editor'] . '</span>';
-        if (isset($edition['volumen']) && $edition['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $edition['volumen'] . '</volumen>';
+        $line .= 'ed. <span class="editor">' . $editio['editor'] . '</span>';
+        if (isset($editio['volumen']) && $editio['volumen']) {
+            $line .= ', <span class="volumen">vol. ' . $editio['volumen'] . '</volumen>';
         }
-        if (isset($edition['pagad']) && $edition['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $edition['pagde'] . '-' . $edition['pagad'] . '</span>';
+        if (isset($editio['pagad']) && $editio['pagad']) {
+            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '-' . $editio['pagad'] . '</span>';
         }
-        else if (isset($edition['pagde']) && $edition['pagde']){
-            $line .= ', <span class="pagina">p. ' . $edition['pagde'] . '</span>';
+        else if (isset($editio['pagde']) && $editio['pagde']){
+            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '</span>';
         }
         $line .= ')';
         return $line;
     }
 
+    /**
+     * best numerotation of a section
+     */
     static public function num(&$doc)
     {
         $num = array();
@@ -199,15 +284,18 @@ class Verbatim
         return $line;
     }
 
-    static public function bibl(&$edition, &$doc)
+    /**
+     * All this bib, not well optimized
+     */
+    static public function bibl(&$editio, &$doc)
     {
         // parts
         $line = '';
-        $line .= '<span class="auctor">' . $edition['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $edition['titulus'] . '</em>';
+        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
+        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
         $num = self::num($doc);
         if ($num) $line .= ', ' . $num;
-        $line .= ', ed. <span class="editor">' . $edition['editor'] . '</span>';
+        $line .= ', ed. <span class="editor">' . $editio['editor'] . '</span>';
         $line .= self::scope($doc);
         return $line;
     }

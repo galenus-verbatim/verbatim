@@ -11,9 +11,9 @@ use Oeuvres\Kit\{I18n};
 function main() {
     $href = 'conc?f=lem&amp;q=%s';
     echo '
-<article style="background-color: #fff">
-<table>
-    <caption>Liste des textes en base</caption>
+<article class="table">
+<table class="table claves">
+    <caption>' . I18n::_('claves') . '</caption>
     <thead>
         <tr>
             <th></th>
@@ -27,7 +27,7 @@ function main() {
     <thead>
     <tbody>
 ';
-    $sql = "SELECT clavis, auctor, titulus, editor, volumen, annuspub FROM edition";
+    $sql = "SELECT clavis, auctor, titulus, editor, volumen, annuspub FROM editio";
     $q = Verbatim::$pdo->prepare($sql);
     $q->execute();
     $i = 1;

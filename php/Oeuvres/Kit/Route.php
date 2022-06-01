@@ -22,10 +22,10 @@ Route::init();
 class Route {
     /** root directory of the app = directory of index.php */
     private static $app_dir;
-    /** home href for routing */
-    private static $home;
     /** Href to app resources */
     private static $app_href;
+    /** Home href for routing */
+    private static $home_href;
     /** Default php template */
     private static $templates = array();
     /** An html file to include as main */
@@ -41,7 +41,7 @@ class Route {
 
     public static function init()
     {
-        self::$app_dir = dirname(dirname(dirname(__DIR__))) . DIRECTORY_SEPARATOR ;
+        self::$app_dir = dirname(__DIR__, 3). DIRECTORY_SEPARATOR ;
 
         $url_request = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
         $url_request = strtok($url_request, '?'); // old
@@ -53,9 +53,9 @@ class Route {
         }
         self::$url_request = $url_request;
         self::$url_parts = explode('/', ltrim($url_request, '/'));
-        self::$home = str_repeat('../', count(self::$url_parts) - 1);
-        // get relative path from index.php caller to the root of app to calculate href for res
-        self::$app_href = self::$home . File::relpath(
+        self::$home_href = str_repeat('../', count(self::$url_parts) - 1);
+        // get relative path from index.php caller to the root of app to calculate href for resources in this folder
+        self::$app_href = self::$home_href . File::relpath(
             dirname($_SERVER['SCRIPT_FILENAME']), 
             self::$app_dir
         );
@@ -262,9 +262,9 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
     /**
      * Set app_href prefix, optional, if the index.php is outside app_dir
      */
-    static public function home(): string
+    static public function home_href(): string
     {
-        return self::$home;
+        return self::$home_href;
     }
 
     /**

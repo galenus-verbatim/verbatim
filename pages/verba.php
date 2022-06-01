@@ -17,7 +17,8 @@ function main() {
     $percol = Web::par("percol");
     $href = 'conc?q=%s&amp;f=%s';
     echo '
-    <table class="freqs">
+<article class="table">
+    <table class="table freqs">
         <caption>
             <form action="">
             ' . $select . '
@@ -70,6 +71,7 @@ function main() {
     }
     echo '
         </tbody>
-    </table>';
+    </table>
+</article>';
 };
 ?>

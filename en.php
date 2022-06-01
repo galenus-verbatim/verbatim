@@ -12,10 +12,12 @@ I18n::load(require_once(__DIR__ .'/en.php'));
 */
 return array(
     'app' => 'Verbatim',
+    'claves' => 'Franglish : claves',
     'hello' => 'Salut "%s"',
     'Form' => 'Forme',
     'Occs' => 'Occurrences',
     'Lem' => 'Lemme',
+    'nostop' => 'Full words',
     'pos.l' => 'art.',
     'pos.n' => 'nom',
     'pos.a' => 'adj.',
