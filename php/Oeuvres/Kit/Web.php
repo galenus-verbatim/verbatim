@@ -335,6 +335,24 @@ class Web
         self::$lang = $lang;
         return self::$lang;
     }
+
+    /**
+     * build an optimized query string from requested params
+     */
+    public static function qstring (
+       array $names 
+    ): string {
+        if (!self::$pars) self::$pars = self::parse();
+        $query = array();
+        foreach ($names as $name) {
+            if (!isset(self::$pars[$name])) continue;
+            foreach (self::$pars[$name] as $value) {
+                $query[] =  rawurlencode($name) . '=' . rawurlencode($value);
+            }
+        }
+        if (count($query) < 1) return '';
+        return '?' . implode('&amp;', $query);
+    }
     /**
      * build a clean query string from get or post, especially
      * to get multiple params from select

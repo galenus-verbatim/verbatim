@@ -67,9 +67,54 @@ class Verbatim
         self::$pdo->exec("PRAGMA temp_store = 2;");
     }
 
+    static public function ante(&$doc, &$pars=array('q'))
+    {
+        return self::antepost('ante', $doc, $pars);
+    }
+
+    static public function post(&$doc, &$pars=array('q'))
+    {
+        return self::antepost('post', $doc, $pars);
+    }
     /**
-     * Get 
+     * a prev / next link from database 
      */
+    static private function antepost($key, &$doc, &$pars=array('q'))
+    {
+        if (!isset($doc[$key]) || !$doc[$key]) return; 
+        $qstring = Web::qstring($pars);
+        $chars = array('ante' => '⟨', 'post' => '⟩');
+        echo '<a class="prevnext antepost ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $chars[$key] .'</a>';
+    }
+
+    /**
+     * Hilite doc
+     */
+    static public function hidoc(&$doc,&$formids)
+    {
+        $html = $doc['html'];
+        if (!count($formids)) {
+            return $html;
+        }
+        // http param a bit hard coded here
+        $f = Web::par('f', 'lem', '/lem|orth/');
+        $out = '';
+        // Words to hilite
+        $in  = str_repeat('?,', count($formids) - 1) . '?';
+        $sql = "SELECT * FROM tok WHERE $f IN ($in) AND doc = {$doc['id']}";
+        $qTok =  Verbatim::$pdo->prepare($sql);
+        $qTok->execute($formids);
+        $start = 0;
+        while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
+            $out .= mb_substr($html, $start, $tok['charde'] - $start);
+            $out .= "<mark>";
+            $out .= mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']);
+            $out .= "</mark>";
+            $start = $tok['charad'];
+        }
+        $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        return $out;
+    }
 
     /**
      * Normalize a greek form to lower with no accents
