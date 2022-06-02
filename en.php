@@ -35,7 +35,7 @@ return array(
     'conc.nowords' => '%s : Word not found.',
     'conc.lem' => '%s occurences found for the lemma : « %s »',
     'conc.lems' => '%s occurences found for the lemmata: « %s »',
-    'conc.orth' => '%s occurences found for inflexion : « %s »',
-    'conc.orths' => '%s occurences foundfor inflexions : « %s »',
+    'conc.orth' => '%s occurences found for inflexion: « %s »',
+    'conc.orths' => '%s occurences foundfor inflexions: « %s »',
     'doc.notfound' => '<p>No document found for this cts identifier: "%s"</p>'."\n",
 );
