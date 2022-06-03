@@ -21,6 +21,7 @@ $cts = Web::par('kuhn', '');
         <title><?= Route::title('Galenus Verbatim') ?></title>
         <link  href="https://cdnjs.cloudflare.com/ajax/libs/viewerjs/1.10.5/viewer.min.css" rel="stylesheet"/>
         <link rel="stylesheet" href="<?= Route::app_href() ?>theme/verbatim.css"/>
+        <link rel="stylesheet" href="<?= Route::app_href() ?>theme/galenus.css"/>
     </head>
     <body class="<?=$body_class?>">
 <div id="all">

@@ -245,9 +245,7 @@ body {
     padding: 0;
 }
 
-*,
-::after,
-::before {
+* {
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     -ms-box-sizing: border-box;
@@ -557,8 +555,7 @@ nav a {
     user-select: none;
 }
 
-span.pageview {
-    color: var(--link);
+.pageview {
     cursor: pointer;
     padding: 0 1em;
     text-indent: 0;
@@ -569,28 +566,12 @@ span.pageview {
     z-index: 10;
 }
 
-span.pageview.selected,
-span.pageview:hover {
+.pageview.selected,
+.pageview:hover {
+    /*
     background-color: var(--bg2);
     color: var(--text2hi);
-}
-
-span.ed1page,
-span.ed2page {
-    padding-left: 0.5ex;
-    background-color: var(--link2);
-}
-
-span.ed1page.page1,
-span.ed2page.page1 {
-    /* no index for first page */
-    padding-left: 0;
-    background-color: transparent;
-}
-
-span.ed1page:hover,
-span.ed2page:hover {
-    background-color: var(--bg2);
+    */
 }
 
 span.pb[data-page]::before {
