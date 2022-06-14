@@ -568,10 +568,8 @@ nav a {
 
 .pageview.selected,
 .pageview:hover {
-    /*
     background-color: var(--bg2);
     color: var(--text2hi);
-    */
 }
 
 span.pb[data-page]::before {
