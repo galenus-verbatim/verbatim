@@ -6,7 +6,7 @@
  */
 
 
-include_once(__DIR__ . '/php/autoload.php');
+require_once(__DIR__ . '/php/autoload.php');
 
 use Oeuvres\Kit\{I18n, Radio, Route, Web};
 
@@ -14,11 +14,14 @@ Verbatim::init();
 class Verbatim
 {
     /** Sqlite connection */
-    static $pdo;
+    public static $pdo;
     /** Something nice for betacode conversion */
-    static $lat_grc;
+    public static $lat_grc;
     /** Name of the app */
-    static private $name;
+    private static $name;
+    /** File path of the base */
+    private static $db_file;
+
     /**
      * Init static fields
      */
@@ -35,6 +38,40 @@ class Verbatim
         }
     }
 
+
+    /**
+     * Generate sitemap, requires absolute url based of resources
+     */
+    static public function sitemap($url_base, $sitemap_file=null)
+    {
+        if (! Verbatim::$pdo) {
+            $mess = "<h1>Connect your verbapie database before, ex: Verbatim::connect(__DIR__ . '/mycorpus.db');</h1>";
+            throw new Exception($mess);
+        }
+        if (!$sitemap_file) $sitemap_file = Route::home_dir() . 'sitemap.xml';
+        // regenerate sitemap.xml if needed
+        if (
+            file_exists($sitemap_file) 
+            && filemtime($sitemap_file) > self::$db_file
+        ) {
+            return;
+        }
+        $write = fopen($sitemap_file, "w");
+        fwrite($write, '<?xml version="1.0" encoding="UTF-8"?>');
+        fwrite($write, '
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
+        $sql = "SELECT clavis FROM doc ORDER BY id;";
+        $q = self::$pdo->prepare($sql);
+        $q->execute(array());
+        while($row = $q->fetch(PDO::FETCH_ASSOC)) {
+            fwrite($write, '
+    <url><loc>' . $url_base . $row['clavis'] . '</loc></url>');
+        }
+        fwrite($write, '
+</urlset>
+        ');
+    }
+
     /**
      * Name the app, used in some generated messages
      */
@@ -47,12 +84,13 @@ class Verbatim
     /**
      * Database should be connected if something is desired to be displayed
      */
-    static public function connect($sqlite, $persistent=false)
+    static public function connect($db_file, $persistent=false)
     {
-        if (!file_exists($sqlite)) {
-            echo "<p>Database ".$sqlite." not found</p>";
+        if (!file_exists($db_file)) {
+            echo "<p>Database ".$db_file." not found</p>";
             exit();
         }
+        self::$db_file = $db_file;
         $dsn = "sqlite:" . $sqlite;
         if ($persistent) {
             self::$pdo = new PDO($dsn, null, null, array(
