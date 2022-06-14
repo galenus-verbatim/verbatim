@@ -303,7 +303,7 @@ class File
                 echo $tsvfile,'#',$l,' not unique key:', $data[0], "\n";
             }
             */
-            $ret[$data[0]] = $data[1];
+            $ret[$data[0]] = stripslashes($data[1]);
         }
         return $ret;
     }
