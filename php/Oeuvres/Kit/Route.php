@@ -18,7 +18,6 @@ use Exception;
 
 
 Route::init();
-
 class Route {
     /** root directory of the app when outside site */
     private static $app_dir;
@@ -34,10 +33,10 @@ class Route {
     private static $main_inc;
     /** A file to include */
     private static $main_contents;
-    /** Path relative to the root app */
-    private static $url_request;
+    /** Path relative to home */
+    private static $request_path;
     /** Split of url parts */
-    private static $url_parts;
+    private static $request_chunks;
     /** The resource to deliver */
     private static $resource;
     /** Has a routage been done ? */
@@ -47,19 +46,19 @@ class Route {
     {
         self::$app_dir = dirname(__DIR__, 3). DIRECTORY_SEPARATOR ;
 
-        $url_request = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
-        $url_request = strtok($url_request, '?'); // old
+        $request_url = filter_var($_SERVER['REQUEST_URI'], FILTER_SANITIZE_URL);
+        $request_url = strtok($request_url, '?'); // old
         // maybe not robust, this should interpret path relative to the webapp
         // domain.com/subdir/verbatim/path/perso -> /path/perso
         $url_prefix = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-        if ($url_prefix && strpos($url_request, $url_prefix) !== FALSE) {
-            $url_request = substr($url_request, strlen($url_prefix));
+        if ($url_prefix && strpos($request_url, $url_prefix) !== FALSE) {
+            $request_url = substr($request_url, strlen($url_prefix));
         }
-        self::$url_request = $url_request;
-        self::$url_parts = explode('/', ltrim($url_request, '/'));
+        self::$request_path = $request_url;
+        self::$request_chunks = explode('/', ltrim($request_url, '/'));
 
         self::$home_dir = getcwd();
-        self::$home_href = str_repeat('../', count(self::$url_parts) - 1);
+        self::$home_href = str_repeat('../', count(self::$request_chunks) - 1);
         // get relative path from index.php caller to the root of app to calculate href for resources in this folder
         self::$app_href = self::$home_href . File::relpath(
             dirname($_SERVER['SCRIPT_FILENAME']), 
@@ -129,9 +128,8 @@ class Route {
      */
     public static function tab($href, $text)
     {
-        $page = self::$url_parts[0];
         $selected = '';
-        if ($page == $href) {
+        if (ltrim(self::$request_path, '/') == $href) {
             $selected = " selected";
         }
         if(!$href) {
@@ -147,16 +145,16 @@ class Route {
      */
     public static function match($route)
     {
-        $route_parts = explode('/', ltrim($route, '/'));
+        $route_chunks = explode('/', ltrim($route, '/'));
         // too long url
-        if (count($route_parts) != count(self::$url_parts)) {
+        if (count($route_chunks) != count(self::$request_chunks)) {
             return false;
         }
         // test if path is matching
-        for ($i = 0; $i < count($route_parts); $i++) {
+        for ($i = 0; $i < count($route_chunks); $i++) {
             // escape ^and $ ?
-            $search = '/^'.$route_parts[$i].'$/';
-            if(!preg_match($search, self::$url_parts[$i])) {
+            $search = '/^'.$route_chunks[$i].'$/';
+            if(!preg_match($search, self::$request_chunks[$i])) {
                 return false;
             }
         }
@@ -181,7 +179,7 @@ class Route {
             return false;
         }
         // rewrite file destination according to $route url
-        preg_match('@'.$route.'@', self::$url_request, $route_match);
+        preg_match('@'.$route.'@', self::$request_path, $route_match);
         $resource = self::replace($resource, $route_match);
         if (!File::isabs($resource)) {
             // resolve links from welcome page
@@ -278,6 +276,7 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
             self::$templates[] = $tmpl_php;
         }
     }
+
     /**
      * Return app_dir, optional, useful if the index.php is outside app_dir
      */
@@ -285,6 +284,16 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
     {
         return self::$app_dir;
     }
+
+    /**
+     * Request has been routed
+     */
+    static public function found(): bool
+    {
+        return self::$routed;
+    }
+
+
     /**
      * Return app_href, optional, if the index.php is outside app_dir
      */
@@ -306,6 +315,14 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
     {
         if ($home_dir !== null) self::$home_dir = $home_dir; 
         return self::$home_dir;
+    }
+
+    /**
+     * Return request_href, the requested path relative to home dir
+     */
+    static public function request_path(): string
+    {
+        return self::$request_path;
     }
 
     /**

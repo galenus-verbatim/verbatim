@@ -91,7 +91,7 @@ class Verbatim
             exit();
         }
         self::$db_file = $db_file;
-        $dsn = "sqlite:" . $sqlite;
+        $dsn = "sqlite:" . $db_file;
         if ($persistent) {
             self::$pdo = new PDO($dsn, null, null, array(
                 PDO::ATTR_PERSISTENT => true
@@ -260,24 +260,6 @@ class Verbatim
             $editio['nav']
         );
         return $html;
-    }
-
-    /**
-     * Draw an html tab for a navigation with test if selected 
-     */
-    public static function tab($href, $text)
-    {
-        $page = Route::$url_parts[0];
-        $selected = '';
-        if ($page == $href) {
-            $selected = " selected";
-        }
-        if(!$href) {
-            $href = '.';
-        }
-        return '<a class="tab'. $selected . '"'
-        . ' href="'. Route::home_href(). $href . '"' 
-        . '>' . $text . '</a>';
     }
 
     /**

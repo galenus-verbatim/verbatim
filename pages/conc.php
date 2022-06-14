@@ -74,7 +74,7 @@ function main()
 
             $qed->execute(array($doc['editio']));
             $editio = $qed->fetch(PDO::FETCH_ASSOC);
-            if (Route::$routed) $href = '%s?q=%s';
+            if (Route::found()) $href = '%s?q=%s';
             else $href = "doc.php?cts=%s&amp;q=%s";
             echo '<h4 class="doc">'
                 . '<a href="' . sprintf($href, $doc['clavis'], $qprint) . '">'
