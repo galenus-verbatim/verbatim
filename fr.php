@@ -15,7 +15,7 @@ return array(
     'conc.lems' => '%s occurences trouvées pour les lemmes : « %s »',
     'conc.orth' => '%s occurences trouvées pour la forme : « %s »',
     'conc.orths' => '%s occurences trouvées pour les formes : « %s »',
-    'cts.bad' => '<p><b>%s</b> n’est pas un motif cts valide sur ce site (les ressources servies ici sont identifiées par des urn de type <b>urn:cts:greekLit:tlg…</b>, cf. <a href="http://cite-architecture.github.io/ctsurn_spec/">Spécification</a>)</p>',
+    'cts.bad' => '<p><b>%s</b> n’est pas un motif cts valide sur ce site (les ressources servies ici sont identifiées par des urn de type <b>urn:cts:greekLit:tlg…</b>, cf. <a href="http://cite-architecture.github.io/ctsurn_spec/">Spécifications</a>)</p>',
     'cts.notfound' => '<p>L’identifiant <b>%s</b> ne correspond pas à un document connu sur ce site. Voyez la <a href="opera">liste des œuvres</a>.</p>',
     'doc.notfound' => '<p>Pas de document trouvé pour l’identifiant cts : <b>%s</b></p>'."\n",
     'Form' => 'Forme',
