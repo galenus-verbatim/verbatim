@@ -178,6 +178,8 @@ class Verbatim
         for ($i = 0; $i < count($words); $i++) {
             $w = $words[$i];
             $w = Normalizer::normalize($w, Normalizer::FORM_KC);
+            $w = str_replace(array('*', '?'), array('%', '_'), $w);
+
             /*
             if ($field == 'lem' && $w == 'NUM');
             // maybe latin letters to translitterate
@@ -185,16 +187,21 @@ class Verbatim
             */
             $qform->execute(array($w));
             // rowcount do not work
+            $found = false;
             while ($row = $qform->fetch(PDO::FETCH_NUM)) {
                 $forms[$row[0]] = $row[1]; // .' ' . I18n::_('pos.' . $row[2]) ;
+                $found = true;
                 if (--$limit <= 0) return $forms;
             }
+            // direct forms found, go next
+            if ($found) continue;
+
             // nothing found in form, try deform (without accents)
             if (!$row) {
                 // decompose letters and accents
                 $w = Normalizer::normalize($w, Normalizer::FORM_D);
-                // strip non letter (accents)
-                $w = preg_replace("/\PL/u", '', $w);
+                // strip non letter (accents), but keep wildcards
+                $w = preg_replace("/[^\pL_%]/u", '', $w);
                 // lower case folding, should regule final ς
                 $w = mb_convert_case($w, MB_CASE_FOLD, "UTF-8");
                 // translitterate possible beta code
