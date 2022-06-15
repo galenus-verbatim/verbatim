@@ -637,6 +637,7 @@ nav.bibl>a {
     padding-left: 2rem;
 }
 
+nav>a.selected,
 nav>a:hover,
 div.toc a:hover {
     background-color: var(--bg);
