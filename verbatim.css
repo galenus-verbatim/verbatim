@@ -318,11 +318,6 @@ div.banner .moto {
     margin: 2rem 2rem;
 }
 
-#body {
-    position: relative;
-    display: flex;
-}
-
 #aside {
     background-color: var(--bg3);
     color: var(--text3);
