@@ -21,8 +21,6 @@ Route::init();
 class Route {
     /** root directory of the app when outside site */
     private static $app_dir;
-    /** Href to app resources */
-    private static $app_href;
     /** Home dir where is the index.php answering */
     private static $home_dir;
     /** Home href for routing */
@@ -59,11 +57,6 @@ class Route {
 
         self::$home_dir = getcwd();
         self::$home_href = str_repeat('../', count(self::$request_chunks) - 1);
-        // get relative path from index.php caller to the root of app to calculate href for resources in this folder
-        self::$app_href = self::$home_href . File::relpath(
-            dirname($_SERVER['SCRIPT_FILENAME']), 
-            self::$app_dir
-        );
     }
     public static function get($route, $php, $pars=null)
     {
@@ -293,23 +286,33 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
         return self::$routed;
     }
 
+    /**
+     * Href for a resource, resolved from the php caller, usually, a template, 
+     * and relative to request
+     */
+    static public function res_href($path): string
+    {
+        // get the path of the caller
+        $bt = debug_backtrace();
+        $php_file = $bt[0]['file'];
+        $res_file = dirname($php_file) . '/' . $path;
+        // get relative path from php_file caller to the root of app to calculate href for resources in this folder
+        $res_href = self::$home_href . File::relpath(
+            dirname($_SERVER['SCRIPT_FILENAME']), 
+            $res_file
+        );
+        return $res_href;
+    }
 
     /**
-     * Return app_href, optional, if the index.php is outside app_dir
-     */
-    static public function app_href(): string
-    {
-        return self::$app_href;
-    }
-    /**
-     * Set app_href prefix, optional, if the index.php is outside app_dir
+     * Returns a relative href link to the root of the site (the first index.php handler)
      */
     static public function home_href(): string
     {
         return self::$home_href;
     }
     /**
-     * home_dir, default is the index.php caller. Could be modified if needed.
+     * home_dir, default is the index.php caller.
      */
     static public function home_dir($home_dir=null): string
     {
@@ -318,7 +321,7 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
     }
 
     /**
-     * Return request_href, the requested path relative to home dir
+     * Return the original request path
      */
     static public function request_path(): string
     {
