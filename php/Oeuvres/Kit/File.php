@@ -103,7 +103,7 @@ class File
                     $relpath = array_pad($relpath, $padLength, '..');
                     break;
                 } else {
-                    $relpath[0] = './' . $relpath[0];
+                    $relpath[0] =  $relpath[0];
                 }
             }
         }
