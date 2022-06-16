@@ -666,28 +666,50 @@ div.doc {
     padding: 0;
 }
 
+header.opus {
+    background-color: var(--bg3);
+    padding: 1rem 0.5rem 0.7rem 0.5rem;
+}
+
 header.doc {
+    padding: 0;
+    margin: 0;
     background-color: var(--bg3);
     display: flex;
     align-items: stretch;
     justify-content: space-between;
-    min-height: 6rem;
+}
+
+header.doc h1 {
+    padding: 0.5rem 0;
+    margin: 0;
+    text-align: center;
+    font-size: 1.2rem;
+    min-height: 2rem;
 }
 
 header.doc section {
-    padding: 1rem 0.5rem 0.7rem 0.5rem;
     margin: 0;
 }
 
 a.prevnext {
     padding: 0rem 0.5rem;
-    font-size: 4rem;
+    font-size: 2.5rem;
+    line-height: 110%;
     width: 3rem;
     text-decoration: none;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+a.prevnext.next {
+    text-align: right;
+    justify-content: flex-end;
 }
 
 a.prevnext>* {
+    /*
     position: absolute;
     bottom: 0.3rem;
     left: 0;
@@ -695,6 +717,7 @@ a.prevnext>* {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    */
 }
 
 a.prevnext:hover {
