@@ -1,8 +1,4 @@
 *.db
-test.sqlite
-test.php
-pars.php
-BibNorm.php
-italikos*
+test*
 sitemap.xml
 *.db-*
