@@ -28,7 +28,7 @@ class LoggerFile extends LoggerBase
     }
 
     public function __construct(
-        string $file,
+        mixed $file,
         ?string $level = LogLevel::ERROR, 
         ?string $prefix = "[{level}] {time} "
     ) {
