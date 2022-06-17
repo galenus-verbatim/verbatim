@@ -678,6 +678,7 @@ header.doc h1 {
     text-align: center;
     font-size: 1.2rem;
     min-height: 2rem;
+    color: var(--text);
 }
 
 header.doc section {
