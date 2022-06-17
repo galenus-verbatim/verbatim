@@ -7,6 +7,8 @@
  * BSD-3-Clause https://opensource.org/licenses/BSD-3-Clause
  */
 
+// declare(strict_types=1);
+
 namespace Oeuvres\Kit;
 
 use Psr\Log\LogLevel;
@@ -26,7 +28,7 @@ class LoggerFile extends LoggerBase
     }
 
     public function __construct(
-        mixed $file,
+        $file,
         ?string $level = LogLevel::ERROR, 
         ?string $prefix = "[{level}] {time} "
     ) {
