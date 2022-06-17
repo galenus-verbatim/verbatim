@@ -292,10 +292,16 @@ Use Route::template('tmpl_my.php', '$tmpl_key');"
      */
     static public function res_href($path): string
     {
-        // get the path of the caller
-        $bt = debug_backtrace();
-        $php_file = $bt[0]['file'];
-        $res_file = dirname($php_file) . '/' . $path;
+        // seems an absolute path
+        if (preg_match('@^/|^[A-Z]:[/\\\\]@', $path)) {
+            $res_file = $path;
+        }
+        else {
+            // get the path of the caller
+            $bt = debug_backtrace();
+            $php_file = $bt[0]['file'];
+            $res_file = dirname($php_file) . '/' . $path;            
+        }
         // get relative path from php_file caller to the root of app to calculate href for resources in this folder
         $res_href = self::$home_href . File::relpath(
             dirname($_SERVER['SCRIPT_FILENAME']), 
