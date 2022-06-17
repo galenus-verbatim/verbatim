@@ -1,26 +1,23 @@
 :root {
-    --bg: #fff;
-    --text: #333;
-    --bghi: #e09143;
-    --texthi: #fff;
-    --bglo: rgb(236, 214, 190);
-    --bgloa: rgba(236, 214, 190, 0.85);
+    --bg: #000;
+    --text: #fff;
+    --bglo: rgb(66, 66, 66);
+    --texta: rgb(255, 255, 255, 0.5);
+    --link: #00ff00;
+    --bghi: #003300;
+    --bg2: rgb(102, 102, 102);
+    --text2: rgb(33, 33, 33);
+    --bgmark: #006600;
+    /*
+    --bgloa: rgba(255, 255, 255, 0.35);
     --textlo: #666;
     --textinv: #000;
-    --link: #e09143;
-    --link2: rgba(224, 145, 67, 0.5);
-    --link3: #9c652e;
-    --bg2: rgb(102, 102, 102);
     --bg2a: rgba(102, 102, 102, 0.8);
-    /*
-    --bg2: rgba(71, 50, 29, 0.8);
-    --bg2a: rgba(71, 50, 29, 0.8);
-    */
-    --text2: rgb(236, 214, 190);
     --text2hi: #fff;
     --text2inv: #fff;
     --bg3: #f0f0f0;
     --text3: #666;
+    */
 }
 
 html,
@@ -270,7 +267,7 @@ body {
 
 div.banner {
     position: relative;
-    color: var(--bg2);
+    color: var(--bg);
 }
 
 div.banner img.banner {
@@ -278,13 +275,17 @@ div.banner img.banner {
     width: 100%;
 }
 
+div.banner .moto,
+div.banner .titles {
+    background-color: var(--texta);
+    box-shadow: 0px 0px 0 var(--texta);
+}
+
 div.banner .titles {
     position: absolute;
     font-weight: bold;
     top: 1vw;
     left: 2vw;
-    background-color: var(--bgloa);
-    box-shadow: 0px 0px 0.2vw var(--bglo);
 }
 
 div.banner .title {
@@ -304,8 +305,6 @@ div.banner .moto {
     bottom: 1vw;
     right: 1vw;
     padding: 0.5ex 1em;
-    background-color: var(--bgloa);
-    box-shadow: 0px 0px 0 var(--bglo);
 }
 
 #header {
@@ -419,10 +418,11 @@ nav.tabs a.tab {
     width: 100%;
 }
 
+nav.tabs form.selected,
 nav.tabs a.tab.selected,
 nav.tabs a.tab:hover {
     background-color: var(--bglo);
-    color: var(--bg2);
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -432,11 +432,6 @@ nav.tabs form.selected input[type=radio] {
 
 nav.tabs form.selected input[type=radio]:checked {
     border-color: var(--bg2);
-}
-
-nav.tabs form.selected {
-    background-color: var(--bglo);
-    color: var(--bg2);
 }
 
 form.qform div {
@@ -492,8 +487,9 @@ form.qform input.q {
 }
 
 mark {
-    background-color: var(--bglo);
+    background-color: var(--bgmark);
     color: var(--text);
+    padding: 0 1ex;
 }
 
 p {
@@ -502,10 +498,6 @@ p {
 }
 
 div.lg {
-    margin: 1rem 0 1rem 2rem;
-}
-
-div.l {
     margin: 1rem 0 1rem 2rem;
 }
 
@@ -771,6 +763,11 @@ h1.title * {
     color: inherit;
 }
 
+h1 {
+    text-align: center;
+    color: var(--link);
+}
+
 h1 a {
     color: inherit;
     text-decoration: none;
@@ -969,6 +966,7 @@ td.lem a:hover {
 
 /** Static texts */
 
+.container>article,
 article.table,
 article.text {
     margin-top: 3vw;

@@ -1,6 +1,6 @@
 <?php
 
-require_once(dirname(__DIR__) . "/Italikos.php");
+require_once(dirname(__DIR__) . "/Verbatim.php");
 
 use Oeuvres\Kit\{I18n,Web};
 
