@@ -32,7 +32,11 @@ class LoggerFile extends LoggerBase
         ?string $level = LogLevel::ERROR, 
         ?string $prefix = "[{level}] {time} "
     ) {
-        $this->handle = fopen($file, 'a+'); // append by default
+        if (is_resource($file)) {
+            $this->handle = $file;
+        } else {
+            $this->handle = fopen($file, 'a+'); // append by default
+        }
         $this->level($level);
         $this->prefix($prefix);
     }
