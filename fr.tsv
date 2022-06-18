@@ -18,8 +18,6 @@ conc.orths	%s occurences trouvées pour les formes : « %s »
 cts.bad	"<p><b>%s</b> n’est pas un motif cts valide sur ce site (les ressources servies ici sont identifiées par des urn de type <b>urn:cts:greekLit:tlg…</b>, cf. <a href=""http://cite-architecture.github.io/ctsurn_spec/"">Spécifications</a>)</p>"
 cts.notfound	"<p>L’identifiant <b>%s</b> ne correspond pas à un document connu sur ce site. Voyez la <a href=""opera"">liste des œuvres</a>.</p>"
 doc.notfound	<p>Pas de document trouvé pour l’identifiant cts : <b>%s</b></p>',
-Form	Forme
-Lem	Lemme
 nostop	Sans “mots vides”
 Occs	Occurrences
 pos.l	art.
@@ -35,3 +33,5 @@ pos.u	punct.
 pos.x	irr.
 pos.-	?
 search.indoc	Rechercher dans ce document
+search.form	Forme
+search.lem	Lemme

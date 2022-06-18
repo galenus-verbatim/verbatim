@@ -8,9 +8,6 @@ editio.clavis	Code
 editio.editor	Editor
 editio.titulus	Title
 editio.volumen	Volume
-Form	Forme
-Occs	Occurrences
-Lem	Lemme
 nostop	Full words
 pos.l	art.
 pos.n	nom
@@ -33,3 +30,5 @@ conc.orth	%s occurences found for inflexion: « %s »
 conc.orths	%s occurences found for inflexions: « %s »
 conc.search	%s occurences found for query : « %s »
 doc.notfound	<p>No document found for this cts identifier: “%s”</p>\n
+search.form	Form
+search.lem	Lemma

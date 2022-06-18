@@ -285,8 +285,8 @@ class Verbatim
         $selected = Route::match($route)?' selected':'';
         $q = Web::par('q');
         $radio = new Radio('f');
-        $radio->add('lem', I18n::_('Lem'));
-        $radio->add('orth', I18n::_('Form'));
+        $radio->add('lem', I18n::_('search.lem'));
+        $radio->add('orth', I18n::_('search.form'));
         echo '
 <form action="' . Route::home_href() . $route . '" class="qform' . $selected . '">
     <div class="radios">' . $radio . '    </div>
