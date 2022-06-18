@@ -1,13 +1,13 @@
 key	message
 app	Verbatim
-editiones	Titles
-editiones.annus	Year
-editiones.auctor	Author
-editiones.caption	Table of titles
-editiones.clavis	Code
-editiones.editor	Editor
-editiones.titulus	Title
-editiones.volumen	Volume
+editio	Titles
+editio.annus	Year
+editio.auctor	Author
+editio.caption	Table of titles
+editio.clavis	Code
+editio.editor	Editor
+editio.titulus	Title
+editio.volumen	Volume
 Form	Forme
 Occs	Occurrences
 Lem	Lemme

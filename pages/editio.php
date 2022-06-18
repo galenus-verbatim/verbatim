@@ -13,16 +13,16 @@ function main() {
     echo '
 <article class="table">
 <table class="table claves">
-    <caption>' . I18n::_('editiones.caption') . '</caption>
+    <caption>' . I18n::_('editio.caption') . '</caption>
     <thead>
         <tr>
             <th></th>
-            <th>'. I18n::_('editiones.clavis') .'</th>
-            <th>'. I18n::_('editiones.auctor') .'</th>
-            <th>'. I18n::_('editiones.titulus') .'</th>
-            <th>'. I18n::_('editiones.editor') .'</th>
-            <th>'. I18n::_('editiones.volumen') .'</th>
-            <th>'. I18n::_('editiones.annus') .'</th>
+            <th>'. I18n::_('editio.clavis') .'</th>
+            <th>'. I18n::_('editio.auctor') .'</th>
+            <th>'. I18n::_('editio.titulus') .'</th>
+            <th>'. I18n::_('editio.editor') .'</th>
+            <th>'. I18n::_('editio.volumen') .'</th>
+            <th>'. I18n::_('editio.annus') .'</th>
         </tr>
     <thead>
     <tbody>
