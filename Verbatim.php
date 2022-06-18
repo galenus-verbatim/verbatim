@@ -90,7 +90,7 @@ class Verbatim
             echo "<p>Database ".$db_file." not found</p>";
             exit();
         }
-        self::$db_file = $db_file;
+        self::$db_file = realpath($db_file);
         $dsn = "sqlite:" . $db_file;
         if ($persistent) {
             self::$pdo = new PDO($dsn, null, null, array(
@@ -103,6 +103,14 @@ class Verbatim
         }
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
         self::$pdo->exec("PRAGMA temp_store = 2;");
+    }
+
+    /**
+     * Returns the file path of sqlite file
+     */
+    static public function db_file():string
+    {
+        return self::$db_file;
     }
 
     static public function ante(&$doc, &$pars=array('q'))

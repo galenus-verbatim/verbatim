@@ -299,18 +299,24 @@ class File
     {
         $ret = array();
         $handle = fopen($tsvfile, "r");
-        $l = 1;
+        $l = 0;
         while (($data = fgetcsv($handle, 0, $sep)) !== FALSE) {
-            if (!$data || !count($data)) {
-                continue;
+            $l++;
+            if (!$data || !count($data) || !$data[0]) {
+                continue; // empty lines
             }
             /* Log ?
             if (isset($ret[$data[0]])) {
                 echo $tsvfile,'#',$l,' not unique key:', $data[0], "\n";
             }
             */
+            if (!isset($data[1])) {  // shall we log for user
+                continue;
+            }
+
             $ret[$data[0]] = stripslashes($data[1]);
         }
+        fclose($handle);
         return $ret;
     }
 }
