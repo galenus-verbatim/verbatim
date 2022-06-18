@@ -733,6 +733,7 @@ footer.doc>* {
 
 footer.doc a.post {
     text-align: right;
+    display: block;
 }
 
 div.text {
