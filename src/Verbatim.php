@@ -37,6 +37,14 @@ class Verbatim
         }
     }
 
+    /**
+     * return the dir of this file, ueful for page file path
+     */
+    static public function dir()
+    {
+        return __DIR__;
+    }
+
 
     /**
      * Generate sitemap, requires absolute url based of resources
