@@ -7,6 +7,7 @@
 require_once(__DIR__ . "/Verbatim.php");
 
 use Oeuvres\Kit\{Route, I18n, Http, Xml};
+use GalenusVerbatim\Verbatim\{Verbatim};
 
 
 

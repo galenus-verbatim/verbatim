@@ -7,6 +7,7 @@
 require_once(__DIR__ . "/Verbatim.php");
 
 use Oeuvres\Kit\{I18n, Http};
+use GalenusVerbatim\Verbatim\{Verbatim};
 
 $urn = preg_replace('@_@', ':', trim(Http::par('URN')));
 $prefix = 'urn:cts:greekLit:';

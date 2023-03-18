@@ -7,6 +7,7 @@
 require_once(dirname(__DIR__) . "/Verbatim.php");
 
 use Oeuvres\Kit\{I18n,Http};
+use GalenusVerbatim\Verbatim\{Verbatim};
 
 function main() {
     $q = Http::par('q');
