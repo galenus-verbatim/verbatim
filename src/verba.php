@@ -6,7 +6,7 @@
  */
 require_once(dirname(__DIR__) . "/Verbatim.php");
 
-use Oeuvres\Kit\{I18n, Select, Web};
+use Oeuvres\Kit\{I18n, Select, Http};
 
 function main() {
     $select = new Select("percol");
@@ -14,7 +14,7 @@ function main() {
         ->add("", "")
         ->add("nostop", I18n::_('nostop'))
     ;
-    $percol = Web::par("percol");
+    $percol = Http::par("percol");
     $href = 'conc?q=%s&amp;f=%s';
     echo '
 <article class="table">

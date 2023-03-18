@@ -6,11 +6,11 @@
  */
 require_once(dirname(__DIR__) . "/Verbatim.php");
 
-use Oeuvres\Kit\{I18n,Web};
+use Oeuvres\Kit\{I18n,Http};
 
 function main() {
-    $q = Web::par('q');
-    $cts = Web::par('cts');
+    $q = Http::par('q');
+    $cts = Http::par('cts');
     $sql = "SELECT * FROM opus WHERE clavis = ? LIMIT 1";
     $qDoc = Verbatim::$pdo->prepare($sql);
     $qDoc->execute(array($cts));

@@ -4,22 +4,22 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-require_once(dirname(__DIR__) . "/Verbatim.php");
+require_once(__DIR__ . "/Verbatim.php");
 
-use Oeuvres\Kit\{Route, I18n, Web, Xml};
+use Oeuvres\Kit\{Route, I18n, Http, Xml};
 
 
 
 function main()
 {
-    $q = Web::par('q');
+    $q = Http::par('q');
     // sanitize for display
     $qprint = htmlspecialchars($q);
     if (!$q) {
         echo I18n::_('conc.noq');
         return;
     }
-    $field = Web::par('f', 'lem', '/lem|orth/');
+    $field = Http::par('f', 'lem', '/lem|orth/');
     $forms = Verbatim::forms($q, $field);
     $formids = array_keys($forms);
 

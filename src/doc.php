@@ -1,8 +1,8 @@
 <?php
 
-require_once(dirname(__DIR__) . "/Verbatim.php");
+require_once(__DIR__ . "/Verbatim.php");
 
-use Oeuvres\Kit\{I18n,Web};
+use Oeuvres\Kit\{I18n,Http};
 
 
 class Data {
@@ -14,7 +14,7 @@ class Data {
     public static $editio;
     /** init param */
     public static function init() {
-        $cts = Web::par('cts');
+        $cts = Http::par('cts');
         self::$cts = $cts;
         if (strpos($cts, '_') === false) { // cover
             $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
@@ -69,13 +69,13 @@ function main() {
         echo I18n::_('doc.notfound', Data::$cts);
         return;
     }
-    $q = Web::par('q');
+    $q = Http::par('q');
     $clavis = $doc['clavis'];
 
     // Get existing formids (int) from a free query
     $forms = array();
     if ($q) {
-        $field = Web::par('f', 'lem', '/lem|orth/');
+        $field = Http::par('f', 'lem', '/lem|orth/');
         $forms = Verbatim::forms($q, $field);
     }
     $formids = array_keys($forms); // array of ints

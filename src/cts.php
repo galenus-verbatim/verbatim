@@ -4,11 +4,11 @@
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-require_once(dirname(__DIR__) . "/Verbatim.php");
+require_once(__DIR__ . "/Verbatim.php");
 
-use Oeuvres\Kit\{I18n,Web};
+use Oeuvres\Kit\{I18n, Http};
 
-$urn = preg_replace('@_@', ':', trim(Web::par('URN')));
+$urn = preg_replace('@_@', ':', trim(Http::par('URN')));
 $prefix = 'urn:cts:greekLit:';
 if (strpos($urn, $prefix) !== 0) {
     echo '<article class="text">', I18n::_('cts.bad', $urn), '</article>';

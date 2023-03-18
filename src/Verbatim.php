@@ -7,7 +7,8 @@ declare(strict_types=1);
  */
 namespace GalenusVerbatim\Verbatim;
 
-use Oeuvres\Kit\{I18n, Radio, Route, Web};
+use Oeuvres\Kit\{I18n, Radio, Route, Http};
+use PDO;
 
 Verbatim::init();
 class Verbatim
@@ -135,7 +136,7 @@ class Verbatim
     static private function antepost($key, &$doc, &$pars=array('q'))
     {
         if (!isset($doc[$key]) || !$doc[$key]) return; 
-        $qstring = Web::qstring($pars);
+        $qstring = Http::qstring($pars);
         $chars = array('ante' => '⟨', 'post' => '⟩');
         echo '<a class="prevnext antepost ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $chars[$key] .'</a>';
     }
@@ -150,7 +151,7 @@ class Verbatim
             return $html;
         }
         // http param a bit hard coded here
-        $f = Web::par('f', 'lem', '/lem|orth/');
+        $f = Http::par('f', 'lem', '/lem|orth/');
         $out = '';
         // Words to hilite
         $in  = str_repeat('?,', count($formids) - 1) . '?';
@@ -237,8 +238,8 @@ class Verbatim
     public static function nav(&$editio, &$doc, &$formids)
     {
         // http param a bit hard coded here
-        $q = Web::par('q');
-        $f = Web::par('f', 'lem', '/lem|orth/');
+        $q = Http::par('q');
+        $f = Http::par('f', 'lem', '/lem|orth/');
         $clavis = $doc['clavis'];
         if (!isset($editio['nav']) || ! $editio['nav']) return '';
         // no word searched
@@ -290,7 +291,8 @@ class Verbatim
     public static function qform($down=false, $route='conc')
     {
         $selected = Route::match($route)?' selected':'';
-        $q = Web::par('q');
+        $q = Http::par('q');
+        if ($q === null) $q = '';
         $radio = new Radio('f');
         $radio->add('lem', I18n::_('search.lem'));
         $radio->add('orth', I18n::_('search.form'));
