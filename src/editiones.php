@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau

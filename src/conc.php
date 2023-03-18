@@ -1,4 +1,5 @@
 <?php
+declare(strict_types=1);
 /**
  * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
@@ -86,14 +87,18 @@ function main()
             $lastDoc = $tok['doc'];
             $html = Xt::detag($doc['html']);
         }
-        $start = $tok['charde'] - 50;
+        // be careful, PDO output all fields as String, fixed in php 8.1
+        $de = intval($tok['charde']);
+        $ad = intval($tok['charad']);
+        
+        $start = $de - 50;
         if ($start < 0) $start = 0;
         echo "<div><span class=\"kwicl\">";
-        echo mb_substr($html, $start, $tok['charde'] - $start);
+        echo mb_substr($html, $start, $de - $start);
         echo "</span>";
-        echo "<mark>" . mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']) . "</mark>";
+        echo "<mark>" . mb_substr($html, $de, $ad - $de) . "</mark>";
         $len = 50;
-        echo mb_substr($html, $tok['charad'], $len);
+        echo mb_substr($html, $ad, $len);
         echo "</div>\n";
     }
     echo "</div>\n";

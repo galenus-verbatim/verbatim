@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 /**
  * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
@@ -52,7 +54,7 @@ function main() {
     $n = 1;
     while ($freq = $qFreqs->fetch(PDO::FETCH_ASSOC)) {
         $orthId = $freq['orth'];
-        $count = $freq['count'];
+        $count = intval($freq['count']); // PDO sqlite bad typing
         $qForm->execute(array($orthId));
         $forms = $qForm->fetch(PDO::FETCH_ASSOC);
         // bug not found

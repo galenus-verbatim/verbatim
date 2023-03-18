@@ -110,6 +110,8 @@ class Verbatim
             self::$pdo = new PDO($dsn);
         }
         self::$pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+        // shoulkd num to string fron int fields, but…
+        self::$pdo->setAttribute(PDO::ATTR_STRINGIFY_FETCHES, false);
         self::$pdo->exec("PRAGMA temp_store = 2;");
     }
 
@@ -160,13 +162,16 @@ class Verbatim
         $qTok->execute($formids);
         $start = 0;
         while ($tok = $qTok->fetch(PDO::FETCH_ASSOC)) {
-            $out .= mb_substr($html, $start, $tok['charde'] - $start);
+            // be careful, PDO output all fields as String, fixed in php 8.1
+            $de = intval($tok['charde']);
+            $ad = intval($tok['charad']);
+            $out .= mb_substr($html, $start, $de - $start);
             $out .= "<mark>";
-            $out .= mb_substr($html, $tok['charde'], $tok['charad'] - $tok['charde']);
+            $out .= mb_substr($html, $de, $ad - $de);
             $out .= "</mark>";
-            $start = $tok['charad'];
+            $start = $ad;
         }
-        $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        // $out .= mb_substr($html, $start, mb_strlen($html) - $start);
         return $out;
     }
 
