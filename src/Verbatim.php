@@ -42,7 +42,7 @@ class Verbatim
      */
     static public function dir()
     {
-        return __DIR__;
+        return __DIR__ . '/';
     }
 
 
