@@ -6,11 +6,11 @@
  */
 require_once(__DIR__ . "/Verbatim.php");
 
-use Oeuvres\Kit\{Route, I18n, Http, Xml};
+use Oeuvres\Kit\{Route, I18n, Http, Xt};
 use GalenusVerbatim\Verbatim\{Verbatim};
 
 
-
+// suppose clean URL, mabe better should be done
 function main()
 {
     $q = Http::par('q');
@@ -75,8 +75,8 @@ function main()
 
             $qed->execute(array($doc['editio']));
             $editio = $qed->fetch(PDO::FETCH_ASSOC);
-            if (Route::found()) $href = '%s?q=%s';
-            else $href = "doc.php?cts=%s&amp;q=%s";
+            // here URL are supposed clean
+            $href = '%s?q=%s';
             echo '<h4 class="doc">'
                 . '<a href="' . sprintf($href, $doc['clavis'], $qprint) . '">'
                 . Verbatim::bibl($editio, $doc)
@@ -84,7 +84,7 @@ function main()
                 . "</h4>\n"
             ;
             $lastDoc = $tok['doc'];
-            $html = Xml::detag($doc['html']);
+            $html = Xt::detag($doc['html']);
         }
         $start = $tok['charde'] - 50;
         if ($start < 0) $start = 0;
