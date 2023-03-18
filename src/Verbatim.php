@@ -7,8 +7,8 @@ declare(strict_types=1);
  */
 namespace GalenusVerbatim\Verbatim;
 
-use Oeuvres\Kit\{I18n, Radio, Route, Http};
-use PDO;
+use Oeuvres\Kit\{Http, I18n, Radio, Route};
+use Exception, Normalizer, PDO;
 
 Verbatim::init();
 class Verbatim
