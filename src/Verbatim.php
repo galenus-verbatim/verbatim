@@ -1,12 +1,11 @@
 <?php
+declare(strict_types=1);
 /**
  * Part of verbatim https://github.com/galenus-verbatim/verbatim
  * Copyright (c) 2021 Nathalie Rousseau
  * MIT License https://opensource.org/licenses/mit-license.php
  */
-
-
-require_once(__DIR__ . '/php/autoload.php');
+namespace GalenusVerbatim\Verbatim;
 
 use Oeuvres\Kit\{I18n, Radio, Route, Web};
 
@@ -28,7 +27,7 @@ class Verbatim
     static public function init()
     {
         mb_internal_encoding("UTF-8");
-        self::$lat_grc = include(__DIR__ . '/pages/lat_grc.php');
+        self::$lat_grc = include(__DIR__ . '/lat_grc.php');
         // test needed extension
         foreach (array('intl', 'pdo_sqlite') as $ext) {
             if (!extension_loaded($ext)) {
