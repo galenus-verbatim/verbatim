@@ -19,7 +19,9 @@
     --text3: #666;
     */
 }
-
+* {
+    box-sizing: border-box;
+}
 html,
 body {
     min-height: 100vh;
@@ -569,6 +571,19 @@ span.lb::before {
     content: '\A';
 }
 
+span.lb[data-line]::after,
+span.lb.rule[data-line]::before {
+    box-sizing: border-box;
+    text-indent: 0;
+    font-size: 0.7rem;
+    font-weight: normal;
+    display: inline-block;
+    content: attr(data-line) " ";
+    width: 2rem;
+    padding-left: 1ex;
+    color: var(--textlo);
+}
+
 div.l>span.lb:first-child::before {
     content: '';
 }
@@ -581,17 +596,7 @@ span.pb[data-line]::before {
 }
 */
 
-span.lb[data-line]::after {
-    text-indent: 0;
-    font-size: 0.7rem;
-    font-weight: normal;
-    display: inline-block;
-    content: attr(data-line) " ";
-    width: 2rem;
-    padding-left: 1ex;
-    margin-right: 2px;
-    color: var(--textlo);
-}
+
 
 span.lb[data-line]:target::after {
     background-color: var(--link);
@@ -1031,28 +1036,6 @@ blockquote {
 blockquote.lemma {
     padding: 0;
     margin: 0;
-}
-
-blockquote.lemma::before {
-    content: ' ';
-    display: block;
-    position: relative;
-    top: 2em;
-    height: 0;
-    width: 20%;
-    left: 30%;
-    border-bottom: 1px solid var(--link);
-}
-
-blockquote.lemma::after {
-    content: ' ';
-    display: block;
-    position: relative;
-    height: 0;
-    bottom: 0.5em;
-    width: 20%;
-    left: 30%;
-    border-bottom: 1px solid var(--link);
 }
 
 .note p {
