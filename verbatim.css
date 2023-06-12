@@ -418,6 +418,7 @@ input[type=radio]:checked {
 
 nav.tabs a.tab {
     display: flex;
+    justify-content: center;
     text-decoration: none;
     padding: 0.2rem 0.5rem 0.7rem 0.5rem;
     text-align: center;
@@ -598,8 +599,8 @@ nav.toc,
 div.toc {
     background-color: var(--bg3);
     color: var(--bg2);
-    padding: 1em 0 10vh 1em;
-    font-size: 85%;
+    padding: 1em 0 10vh 0;
+    font-size: x-small;
 }
 
 nav>a,
@@ -778,7 +779,7 @@ div.reader {
     top: 60px;
     height: calc(100vh - 60px);
     overflow: auto;
-    min-width: 20ex;
+    min-width: 10rem;
 }
 
 .reader .doc {
@@ -926,7 +927,7 @@ table.freqs {
     background-color: var(--bg);
 }
 
-td.clavis {
+td.cts {
     white-space: nowrap;
 }
 
@@ -938,7 +939,7 @@ td.nb {
     padding-right: 3px;
 }
 
-td.clavis a,
+td.cts a,
 td.orth a,
 td.lem a {
     display: block;
@@ -1120,4 +1121,8 @@ a.external:hover::after {
 .viewer-reset::before {
     background-position: -200px 0;
     content: "Image height";
+}
+
+label.head {
+    font-weight: bold;
 }

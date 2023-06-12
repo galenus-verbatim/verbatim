@@ -18,21 +18,21 @@ class Data {
         $cts = Http::par('cts');
         self::$cts = $cts;
         if (strpos($cts, '_') === false) { // cover
-            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
+            $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
             $qDoc = Verbatim::$pdo->prepare($sql);
             $qDoc->execute(array($cts . '%'));
         }
         else { // should be a document
-            $sql = "SELECT * FROM doc WHERE clavis LIKE ? LIMIT 1";
+            $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
             $qDoc = Verbatim::$pdo->prepare($sql);
             $qDoc->execute(array($cts. '%'));
         }
         self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
         
-        $edclavis = strtok($cts, '_');
-        $sql = "SELECT * FROM editio WHERE clavis = ? LIMIT 1";
+        $edcts = strtok($cts, '_');
+        $sql = "SELECT * FROM editio WHERE cts = ? LIMIT 1";
         $qed = Verbatim::$pdo->prepare($sql);
-        $qed->execute(array($edclavis));
+        $qed->execute(array($edcts));
         self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
     }
 }
@@ -52,7 +52,7 @@ $title = function() {
     if ($num) $title .= ', ' . $num;
     $title .= ', ed. ' . $editio['editor'];
     $title .= Verbatim::scope($doc);
-    $title .= '. urn:cts:greekLit:' . preg_replace('@_@', ':', $doc['clavis']);
+    $title .= '.  ' . $doc['cts'];
     $title .= ' — ' . Verbatim::name();
     $title = strip_tags($title);
     return $title;
@@ -71,7 +71,7 @@ $main = function() {
         return;
     }
     $q = Http::par('q');
-    $clavis = $doc['clavis'];
+    $cts = $doc['cts'];
 
     // Get existing formids (int) from a free query
     $forms = array();

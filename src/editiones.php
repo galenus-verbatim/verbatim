@@ -20,7 +20,7 @@ $main = function() {
     <thead>
         <tr>
             <th></th>
-            <th>'. I18n::_('editio.clavis') .'</th>
+            <th>'. I18n::_('editio.cts') .'</th>
             <th>'. I18n::_('editio.auctor') .'</th>
             <th>'. I18n::_('editio.titulus') .'</th>
             <th>'. I18n::_('editio.editor') .'</th>
@@ -30,7 +30,7 @@ $main = function() {
     <thead>
     <tbody>
 ';
-    $sql = "SELECT clavis, auctor, titulus, editor, volumen, annuspub FROM editio";
+    $sql = "SELECT cts, auctor, titulus, editor, volumen, annuspub FROM editio";
     $q = Verbatim::$pdo->prepare($sql);
     $q->execute();
     $i = 1;
@@ -38,7 +38,7 @@ $main = function() {
         echo  '
         <tr>
             <td class="no">' . $i++ . '</td>
-            <td class="clavis"><a href="' . $row['clavis'] . '">' . $row['clavis'] . '</a></td> 
+            <td class="cts"><a href="' . $row['cts'] . '">' . $row['cts'] . '</a></td> 
             <td>' . $row['auctor'] . '</td>
             <td>' . $row['titulus'] . '</td>
             <td>' . $row['editor'] . '</td>

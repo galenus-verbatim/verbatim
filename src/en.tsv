@@ -4,7 +4,7 @@ editio	Titles
 editio.annus	Year
 editio.auctor	Author
 editio.caption	Table of titles
-editio.clavis	Code
+editio.cts	CTS URN
 editio.editor	Editor
 editio.titulus	Title
 editio.volumen	Volume

@@ -68,12 +68,12 @@ class Verbatim
         fwrite($write, '<?xml version="1.0" encoding="UTF-8"?>');
         fwrite($write, '
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">');
-        $sql = "SELECT clavis FROM doc ORDER BY id;";
+        $sql = "SELECT cts FROM doc ORDER BY id;";
         $q = self::$pdo->prepare($sql);
         $q->execute(array());
         while($row = $q->fetch(PDO::FETCH_ASSOC)) {
             fwrite($write, '
-    <url><loc>' . $url_base . $row['clavis'] . '</loc></url>');
+    <url><loc>' . $url_base . $row['cts'] . '</loc></url>');
         }
         fwrite($write, '
 </urlset>
@@ -245,20 +245,20 @@ class Verbatim
         // http param a bit hard coded here
         $q = Http::par('q');
         $f = Http::par('f', 'lem', '/lem|orth/');
-        $clavis = $doc['clavis'];
+        $cts = $doc['cts'];
         if (!isset($editio['nav']) || ! $editio['nav']) return '';
         // no word searched
         if (!count($formids)) {
             $html = $editio['nav'];
             $html = preg_replace(
-                '@ href="' . $clavis . '"@',
+                '@ href="' . $cts . '"@',
                 '$1 class="selected"',
                 $html
             );
             return $html;
         }
         $in  = str_repeat('?,', count($formids) - 1) . '?';
-        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND clavis = ?";
+        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND cts = ?";
         $qTok =  Verbatim::$pdo->prepare($sql);
         $params = $formids;
         $i = count($params);
@@ -267,13 +267,13 @@ class Verbatim
             array(
                 '@<a href="([^"]+)">([^<]+)</a>@',
             ),
-            function ($matches) use ($clavis, $q, $qTok, $params, $i){
+            function ($matches) use ($cts, $q, $qTok, $params, $i){
                 $params[$i] = $matches[1];
                 $qTok->execute($params);
                 list($count) = $qTok->fetch();
                 $ret = '';
                 $ret .= '<a';
-                if ($matches[1] == $clavis) {
+                if ($matches[1] == $cts) {
                     $ret .= ' class="selected"';
                 }
                 $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
@@ -346,10 +346,10 @@ class Verbatim
     static public function num(&$doc)
     {
         $num = array();
-        foreach (array('liber', 'capitulum', 'sectio') as $clavis) {
-            if (!isset($doc[$clavis])) continue;
-            if (!$doc[$clavis]) continue;
-            $num[] = $doc[$clavis];
+        foreach (array('liber', 'capitulum', 'sectio') as $cts) {
+            if (!isset($doc[$cts])) continue;
+            if (!$doc[$cts]) continue;
+            $num[] = $doc[$cts];
         }
         return implode('.', $num);
     }
