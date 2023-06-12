@@ -79,7 +79,7 @@ $main = function()
             // here URL are supposed clean
             $href = './%s?q=%s';
             echo '<h4 class="doc">'
-                . '<a href="' . sprintf($href, $doc['cts'], $qprint) . '">'
+                . '<a href="' . sprintf($href, Verbatim::cts_href($doc['cts']), $qprint) . '">'
                 . Verbatim::bibl($editio, $doc)
                 . "</a>"
                 . "</h4>\n"

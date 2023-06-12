@@ -29,6 +29,6 @@ conc.lems	%s occurences found for the lemmata: « %s »
 conc.orth	%s occurences found for inflexion: « %s »
 conc.orths	%s occurences found for inflexions: « %s »
 conc.search	%s occurences found for query : « %s »
-doc.notfound	<p>No document found for this cts identifier: “%s”</p>\n
+doc.notfound	<p>No document found for this cts identifier: “%s”</p>
 search.form	Form
 search.lem	Lemma

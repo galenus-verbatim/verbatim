@@ -16,23 +16,18 @@ class Data {
     /** init param */
     public static function init() {
         $cts = Http::par('cts');
+        // hack for Apache on windows with ':'
+        $cts = str_replace('urn/', 'urn:', $cts);
         self::$cts = $cts;
-        if (strpos($cts, '_') === false) { // cover
-            $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
-            $qDoc = Verbatim::$pdo->prepare($sql);
-            $qDoc->execute(array($cts . '%'));
-        }
-        else { // should be a document
-            $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
-            $qDoc = Verbatim::$pdo->prepare($sql);
-            $qDoc->execute(array($cts. '%'));
-        }
+        // take the first doc starting with this cts
+        $sql = "SELECT * FROM doc WHERE cts LIKE ? LIMIT 1";
+        $qDoc = Verbatim::$pdo->prepare($sql);
+        $qDoc->execute(array($cts. '%'));
         self::$doc = $qDoc->fetch(PDO::FETCH_ASSOC);
         
-        $edcts = strtok($cts, '_');
-        $sql = "SELECT * FROM editio WHERE cts = ? LIMIT 1";
+        $sql = "SELECT * FROM editio WHERE id = ? LIMIT 1";
         $qed = Verbatim::$pdo->prepare($sql);
-        $qed->execute(array($edcts));
+        $qed->execute([self::$doc['editio']]);
         self::$editio = $qed->fetch(PDO::FETCH_ASSOC);
     }
 }
@@ -45,17 +40,17 @@ $title = function() {
     $doc = Data::$doc;
     $editio = Data::$editio;
     if (!$doc || !$editio) return null;
-    $title = '';
-    $title .= $editio['auctor'];
-    $title .= '. ' .$editio['titulus'];
+    $s = '';
+    $s .= $editio['auctor'];
+    $s .= '. ' .$editio['titulus'];
     $num = Verbatim::num($doc);
-    if ($num) $title .= ', ' . $num;
-    $title .= ', ed. ' . $editio['editor'];
-    $title .= Verbatim::scope($doc);
-    $title .= '.  ' . $doc['cts'];
-    $title .= ' — ' . Verbatim::name();
-    $title = strip_tags($title);
-    return $title;
+    if ($num) $s .= ', ' . $num;
+    $s .= ', ed. ' . $editio['editor'];
+    $s .= Verbatim::scope($doc);
+    $s .= '.  ' . $doc['cts'];
+    $s .= ' — ' . Verbatim::name();
+    $s = strip_tags($s);
+    return $s;
 };
 
 /**

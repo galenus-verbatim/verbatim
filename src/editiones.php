@@ -35,10 +35,12 @@ $main = function() {
     $q->execute();
     $i = 1;
     while ($row = $q->fetch(PDO::FETCH_ASSOC)) {
+        $href = './' . $row['cts'];
+        if (Verbatim::win()) $href = str_replace('./urn:', './urn/', $href);
         echo  '
         <tr>
             <td class="no">' . $i++ . '</td>
-            <td class="cts"><a href="' . $row['cts'] . '">' . $row['cts'] . '</a></td> 
+            <td class="cts"><a href="' . $href . '">' . $row['cts'] . '</a></td> 
             <td>' . $row['auctor'] . '</td>
             <td>' . $row['titulus'] . '</td>
             <td>' . $row['editor'] . '</td>

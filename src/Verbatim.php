@@ -21,12 +21,15 @@ class Verbatim
     private static $name;
     /** File path of the base */
     private static $db_file;
+    /** Pb with win for url  */
+    private static $win;
 
     /**
      * Init static fields
      */
     static public function init()
     {
+        self::$win = (strtoupper(substr(PHP_OS, 0, 3)) === 'WIN');
         mb_internal_encoding("UTF-8");
         self::$lat_grc = include(__DIR__ . '/lat_grc.php');
         // test needed extension
@@ -36,6 +39,25 @@ class Verbatim
                 throw new Exception($mess);
             }
         }
+    }
+
+    /**
+     * Is win ?
+     */
+    static public function win()
+    {
+        return self::$win;
+    }
+
+    /**
+     * Rewrite some links for win
+     */
+    static public function cts_href($cts)
+    {
+        $cts = ltrim($cts, ' ./');
+        $href = "./" . $cts;
+        if (self::$win) $href = Route::home_href() . str_replace('./urn:', './urn/', $href);
+        return $href;
     }
 
     /**
@@ -137,10 +159,11 @@ class Verbatim
      */
     static private function antepost($key, &$doc, &$pars=array('q'))
     {
-        if (!isset($doc[$key]) || !$doc[$key]) return; 
+        if (!isset($doc[$key]) || !$doc[$key]) return;
+        $href = Verbatim::cts_href($doc[$key]);
         $qstring = Http::qstring($pars);
         $chars = array('ante' => '⟨', 'post' => '⟩');
-        echo '<a class="prevnext antepost ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $chars[$key] .'</a>';
+        echo '<a class="prevnext antepost ' . $key .'" href="' . $href . $qstring . '">' . $chars[$key] .'</a>';
     }
 
     /**
@@ -251,10 +274,11 @@ class Verbatim
         if (!count($formids)) {
             $html = $editio['nav'];
             $html = preg_replace(
-                '@ href="' . $cts . '"@',
+                '@ href="[^"]*' . $cts . '"@',
                 '$1 class="selected"',
                 $html
             );
+            if (self::$win) $html = str_replace('./urn:', './', $html);
             return $html;
         }
         $in  = str_repeat('?,', count($formids) - 1) . '?';
@@ -287,6 +311,7 @@ class Verbatim
             },
             $editio['nav']
         );
+        if (self::$win) $html = str_replace('./urn:', './', $html);
         return $html;
     }
 
