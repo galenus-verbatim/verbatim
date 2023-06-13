@@ -159,11 +159,10 @@ class Verbatim
      */
     static private function antepost($key, &$doc, &$pars=array('q'))
     {
-        if (!isset($doc[$key]) || !$doc[$key]) return;
-        $href = Verbatim::cts_href($doc[$key]);
+        if (!isset($doc[$key]) || !$doc[$key]) return; 
         $qstring = Http::qstring($pars);
         $chars = array('ante' => '⟨', 'post' => '⟩');
-        echo '<a class="prevnext antepost ' . $key .'" href="' . $href . $qstring . '">' . $chars[$key] .'</a>';
+        echo '<a class="prevnext antepost ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $chars[$key] .'</a>';
     }
 
     /**
@@ -263,22 +262,21 @@ class Verbatim
     /**
      * Display nav with possible freqs by chapter
      */
-    public static function nav(&$editio, &$doc, &$formids)
+    public static function nav(&$edition, &$doc, &$formids)
     {
         // http param a bit hard coded here
         $q = Http::par('q');
         $f = Http::par('f', 'lem', '/lem|orth/');
         $cts = $doc['cts'];
-        if (!isset($editio['nav']) || ! $editio['nav']) return '';
+        if (!isset($edition['nav']) || ! $edition['nav']) return '';
         // no word searched
         if (!count($formids)) {
-            $html = $editio['nav'];
+            $html = $edition['nav'];
             $html = preg_replace(
-                '@ href="[^"]*' . $cts . '"@',
+                '@ href="' . $cts . '"@',
                 '$1 class="selected"',
                 $html
             );
-            if (self::$win) $html = str_replace('./urn:', './', $html);
             return $html;
         }
         $in  = str_repeat('?,', count($formids) - 1) . '?';
@@ -309,9 +307,8 @@ class Verbatim
                 $ret .= '</a>';
                 return $ret;
             },
-            $editio['nav']
+            $edition['nav']
         );
-        if (self::$win) $html = str_replace('./urn:', './', $html);
         return $html;
     }
 
@@ -345,21 +342,21 @@ class Verbatim
     /**
      * Build a kind of biblio record, not perfect
      */
-    static public function editio(&$editio)
+    static public function edition(&$edition)
     {
         $line = '';
-        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
+        $line .= '<span class="authors">' . $edition['authors'] . '</span>';
+        $line .= ', <em class="title">' . $edition['title'] . '</em>';
         $line .= ' (';
-        $line .= 'ed. <span class="editor">' . $editio['editor'] . '</span>';
-        if (isset($editio['volumen']) && $editio['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $editio['volumen'] . '</volumen>';
+        $line .= 'ed. <span class="editors">' . $edition['editors'] . '</span>';
+        if (isset($edition['volume']) && $edition['volume']) {
+            $line .= ', <span class="volume">vol. ' . $edition['volume'] . '</span>';
         }
-        if (isset($editio['pagad']) && $editio['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '-' . $editio['pagad'] . '</span>';
+        if (isset($editio['page_end']) && $edition['page_end']) {
+            $line .= ', <span class="page">p. ' . $editio['page_start'] . '-' . $editio['page_end'] . '</span>';
         }
-        else if (isset($editio['pagde']) && $editio['pagde']){
-            $line .= ', <span class="pagina">p. ' . $editio['pagde'] . '</span>';
+        else if (isset($editio['page_start']) && $edition['page_start']){
+            $line .= ', <span class="page">p. ' . $edition['page_start'] . '</span>';
         }
         $line .= ')';
         return $line;
@@ -385,8 +382,8 @@ class Verbatim
     static public function scope(&$doc)
     {
         $line = '';
-        if (isset($doc['volumen']) && $doc['volumen']) {
-            $line .= ', <span class="volumen">vol. ' . $doc['volumen'] . '</span>';
+        if (isset($doc['volume']) && $doc['volume']) {
+            $line .= ', <span class="volume">vol. ' . $doc['volume'] . '</span>';
         }
         /*
         else if (isset($edition['volumen']) && $edition['volumen']) {
@@ -394,11 +391,11 @@ class Verbatim
         }
         */
         // a bug, but could be found
-       if (isset($doc['pagad']) && $doc['pagad']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '-' . $doc['pagad'] . '</span>';
+       if (isset($doc['page_end']) && $doc['page_end']) {
+            $line .= ', <span class="page">p. ' . $doc['page_start'] . '-' . $doc['page_end'] . '</span>';
         }
-        else if (isset($doc['pagde']) && $doc['pagde']) {
-            $line .= ', <span class="pagina">p. ' . $doc['pagde'] . '</span>';
+        else if (isset($doc['page_start']) && $doc['page_start']) {
+            $line .= ', <span class="page">p. ' . $doc['page_start'] . '</span>';
         }
         return $line;
     }
@@ -406,15 +403,15 @@ class Verbatim
     /**
      * All this bib, not well optimized
      */
-    static public function bibl(&$editio, &$doc)
+    static public function bibl(&$edition, &$doc)
     {
         // parts
         $line = '';
-        $line .= '<span class="auctor">' . $editio['auctor'] . '</span>';
-        $line .= ', <em class="titulus">' . $editio['titulus'] . '</em>';
+        $line .= '<span class="authors">' . $edition['authors'] . '</span>';
+        $line .= ', <em class="title">' . $edition['title'] . '</em>';
         $num = self::num($doc);
         if ($num) $line .= ', ' . $num;
-        $line .= ', ed. <span class="editor">' . $editio['editor'] . '</span>';
+        $line .= ', ed. <span class="editors">' . $edition['editors'] . '</span>';
         $line .= self::scope($doc);
         return $line;
     }
