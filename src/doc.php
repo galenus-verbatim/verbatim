@@ -90,7 +90,7 @@ $main = function() {
                 </div>
                 <?= Verbatim::next($doc) ?>
             </header>
-            <div class="doc">
+            <div class="doc text">
                 <?= Verbatim::hidoc($doc, $formids) ?>
             </div>
             <footer class="doc">

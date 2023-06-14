@@ -162,7 +162,7 @@ class Verbatim
         if (!isset($doc[$key]) || !$doc[$key]) return; 
         $qstring = Http::qstring($pars);
         $chars = array('prev' => '⟨', 'next' => '⟩');
-        echo '<a class="prevnext ' . $key .'" href="' . $doc[$key] . $qstring . '">' . $chars[$key] .'</a>';
+        echo '<a class="prevnext ' . $key .'" href="' . Verbatim::cts_href($doc[$key]) . $qstring . '">' . $chars[$key] .'</a>';
     }
 
     /**
@@ -269,46 +269,57 @@ class Verbatim
         $f = Http::par('f', 'lem', '/lem|orth/');
         $cts = $doc['cts'];
         if (!isset($edition['nav']) || ! $edition['nav']) return '';
+        // rewrite links for urn:
+        $html = $edition['nav'];
+        // normalize url
+        $html = preg_replace('@href="[\./]*urn:@', 'href="urn:', $html);
         // no word searched
         if (!count($formids)) {
-            $html = $edition['nav'];
             $html = preg_replace(
                 '@ href="' . $cts . '"@',
                 '$1 class="selected"',
                 $html
             );
-            return $html;
         }
-        $in  = str_repeat('?,', count($formids) - 1) . '?';
-        $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND cts = ?";
-        $qTok =  Verbatim::$pdo->prepare($sql);
-        $params = $formids;
-        $i = count($params);
-        // occurrences by chapter ?
-        $html = preg_replace_callback(
-            array(
-                '@<a href="([^"]+)">([^<]+)</a>@',
-            ),
-            function ($matches) use ($cts, $q, $qTok, $params, $i){
-                $params[$i] = $matches[1];
-                $qTok->execute($params);
-                list($count) = $qTok->fetch();
-                $ret = '';
-                $ret .= '<a';
-                if ($matches[1] == $cts) {
-                    $ret .= ' class="selected"';
-                }
-                $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
-                $ret .= '>';
-                $ret .= $matches[2];
-                if ($count) {
-                    $ret .= ' <small>(' . $count . ' occ.)</small>';
-                }
-                $ret .= '</a>';
-                return $ret;
-            },
-            $edition['nav']
-        );
+        else {
+
+            $in  = str_repeat('?,', count($formids) - 1) . '?';
+            $sql = "SELECT COUNT(*) FROM tok, doc WHERE $f IN ($in) AND doc = doc.id AND cts = ?";
+            $qTok =  Verbatim::$pdo->prepare($sql);
+            $params = $formids;
+            $i = count($params);
+            // occurrences by chapter ?
+            $html = preg_replace_callback(
+                array(
+                    '@<a href="([^"]+)">([^<]+)</a>@',
+                ),
+                function ($matches) use ($cts, $q, $qTok, $params, $i){
+                    $params[$i] = $matches[1];
+                    $qTok->execute($params);
+                    list($count) = $qTok->fetch();
+                    $ret = '';
+                    $ret .= '<a';
+                    if ($matches[1] == $cts) {
+                        $ret .= ' class="selected"';
+                    }
+                    $ret .= ' href="' . $matches[1] . '?q=' . $q . '"';
+                    $ret .= '>';
+                    $ret .= $matches[2];
+                    if ($count) {
+                        $ret .= ' <small>(' . $count . ' occ.)</small>';
+                    }
+                    $ret .= '</a>';
+                    return $ret;
+                },
+                $html
+            );
+        }
+        // rewrite links for context
+        if (self::win()) {
+            $html = preg_replace('@href="[\./]*urn:@', 'href="../urn/', $html);
+        } else {
+            $html = preg_replace('@href="[\./]*urn:@', 'href="./urn:', $html);
+        }
         return $html;
     }
 
