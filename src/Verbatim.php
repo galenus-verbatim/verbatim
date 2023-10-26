@@ -7,7 +7,7 @@ declare(strict_types=1);
  */
 namespace GalenusVerbatim\Verbatim;
 
-use Oeuvres\Kit\{Http, I18n, Radio, Route};
+use Oeuvres\Kit\{Http, I18n, Route, Select};
 use Exception, Normalizer, PDO;
 
 Verbatim::init();
@@ -193,7 +193,7 @@ class Verbatim
             $out .= "</mark>";
             $offset = $end;
         }
-        // $out .= mb_substr($html, $start, mb_strlen($html) - $start);
+        $out .= mb_substr($html, $offset, mb_strlen($html) - $offset);
         return $out;
     }
 
@@ -331,9 +331,9 @@ class Verbatim
         $selected = Route::match($route)?' selected':'';
         $q = Http::par('q');
         if ($q === null) $q = '';
-        $radio = new Radio('f');
-        $radio->add('lem', I18n::_('search.lem'));
-        $radio->add('orth', I18n::_('search.form'));
+        $radio = new Select('f', Select::RADIO);
+        $radio->add('lem', true, I18n::_('search.lem'));
+        $radio->add('orth', false, I18n::_('search.form'));
         echo '
 <form action="' . Route::home_href() . $route . '" class="qform' . $selected . '">
     <div class="radios">' . $radio . '    </div>
